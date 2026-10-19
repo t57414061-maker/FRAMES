@@ -453,7 +453,7 @@ function makePath(file,userId){const ext=(file.name.split('.').pop()||'jpg').toL
 async function signedPhotoUrl(path, mode='view'){
   const {data:{session:currentSession}} = await supabase.auth.getSession();
   const token = currentSession?.access_token || SUPABASE_ANON_KEY;
-  const response = await fetch(SUPABASE_URL+'/functions/v1/photo-access',{
+  const response = await fetch(SUPABASE_URL+'/functions/v1/Photo-access',{
     method:'POST',headers:{'Content-Type':'application/json','apikey':SUPABASE_ANON_KEY,'Authorization':'Bearer '+token},
     body:JSON.stringify({storage_path:path,mode})
   });
