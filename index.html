@@ -413,6 +413,16 @@ body.bar-hidden .frame-dock{opacity:0;pointer-events:none;transform:translate(-5
   .filter,.btn.outline,.iconbtn,.field,.search,.empty,.filters,.hero-content,.gi-go,#inSkip,.upload-card,.admin-item,.accountbar,.settings-card,.comment-card,.modal-card,#lb,#settingsPanel{backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
 }
 </style>
+
+<style id="frame-new-design-integration">
+:root,:root[data-theme="dark"]{--bg:#090909;--fg:#ede6d6;--mut:#958f82;--card:#121110;--line:rgba(237,230,214,.14);--acc:#c9a46a;--accfg:#090909;--navbg:rgba(9,9,9,.92);--shadow:0 24px 70px rgba(0,0,0,.48);color-scheme:dark}
+body{background:var(--bg);color:var(--fg)} nav{backdrop-filter:blur(18px)} .brand,.serif{letter-spacing:.04em} .hero{background:#090909} .section-head h2,.section-title,.hero h1{letter-spacing:.015em} .btn.primary,.btn:not(.outline){background:var(--acc);color:#090909;border-color:var(--acc)} .filter.active,.genre-tag{background:var(--acc);color:#090909;border-color:var(--acc)}
+#arc{perspective:1400px;transform-style:preserve-3d;touch-action:pan-y;overflow:hidden}
+.arc-card{backface-visibility:hidden;transform-style:preserve-3d;border:1px solid rgba(201,164,106,.32)!important;border-radius:10px!important;box-shadow:0 28px 65px rgba(0,0,0,.62)!important;transition:filter .35s ease,border-color .35s ease}
+.arc-card img{border-radius:9px;object-fit:cover} .arc-card:hover{border-color:rgba(201,164,106,.85)!important}
+@media(prefers-reduced-motion:reduce){.arc-card{transition:none!important}}
+</style>
+
 </head>
 <body>
 <a class="skip" href="#collection">Skip to gallery</a>
@@ -505,7 +515,7 @@ async function signedPhotoUrl(path, mode='view'){
 async function fetchSignedPhotoUrl(path, mode='view'){
   const {data:{session:currentSession}} = await supabase.auth.getSession();
   const token = currentSession?.access_token || SUPABASE_ANON_KEY;
-  const response = await fetch(SUPABASE_URL+'/functions/v1/Photo-access',{
+  const response = await fetch(SUPABASE_URL+'/functions/v1/photo-access',{
     method:'POST',headers:{'Content-Type':'application/json','apikey':SUPABASE_ANON_KEY,'Authorization':'Bearer '+token},
     body:JSON.stringify({storage_path:path,mode})
   });
@@ -800,8 +810,7 @@ function arcW(){const W=arcEl.clientWidth;return Math.min(W*(W<700?.36:.25),280)
 function arcStep(){return arcW()*1.12;}
 function buildArc(list){if(!arcEl){arcPending=list;return;}const sig=list.map(p=>p.id).join('|');if(sig===arcSig)return;arcSig=sig;let items=list.slice(0,14);while(items.length&&items.length<8)items=items.concat(items);arcItems=items;arcEl.innerHTML='';
  items.forEach((p,i)=>{const c=document.createElement('button');c.type='button';c.className='arc-card';c.setAttribute('aria-label',p.caption||'Open photograph');const im=document.createElement('img');im.alt='';im.decoding='async';im.draggable=false;im.src=p.url;c.appendChild(im);c.addEventListener('click',()=>{if(arcMoved)return;savedCurrent=current;current=items;openLightbox(i);});arcEl.appendChild(c);});arcDraw();}
-function arcDraw(){const N=arcItems.length;if(!N)return;const cw=arcW(),st=cw*1.12,k=arcEl.children;for(let i=0;i<N;i++){let d=((i-arcA)%N+N)%N;if(d>N/2)d-=N;const ad=Math.abs(d),x=d*st,rot=Math.max(-40,Math.min(40,-d*15)),z=-Math.min(ad,4)*60,sc=1-Math.min(ad,4)*.05,y=(i%2?1:-1)*Math.min(ad,2)*cw*.04,op=ad>2.6?0:(ad>2?(2.6-ad)/.6:1),c=k[i];
- c.style.width=cw+'px';c.style.transform='translate(-50%,-50%) translateX('+x.toFixed(1)+'px) translateY('+y.toFixed(1)+'px) translateZ('+z+'px) rotateY('+rot.toFixed(1)+'deg) scale('+sc.toFixed(3)+')';c.style.opacity=op.toFixed(2);c.style.zIndex=50-Math.round(ad*5);c.style.pointerEvents=op<.2?'none':'auto';}}
+function arcDraw(){const N=arcItems.length;if(!N)return;const cw=arcW(),st=cw*1.02,k=arcEl.children;for(let i=0;i<N;i++){let d=((i-arcA)%N+N)%N;if(d>N/2)d-=N;const ad=Math.abs(d),angle=Math.max(-1.12,Math.min(1.12,d*.34)),x=Math.sin(angle)*st*2.35,z=-(1-Math.cos(angle))*cw*1.05-Math.min(ad,4)*20,rot=Math.max(-58,Math.min(58,-d*24)),sc=1-Math.min(ad,4)*.075,y=(1-Math.cos(angle))*cw*.24,op=ad>3.05?0:(ad>2.3?(3.05-ad)/.75:1),c=k[i];c.style.width=cw+'px';c.style.transform='translate(-50%,-50%) translateX('+x.toFixed(1)+'px) translateY('+y.toFixed(1)+'px) translateZ('+z.toFixed(1)+'px) rotateY('+rot.toFixed(1)+'deg) scale('+sc.toFixed(3)+')';c.style.opacity=op.toFixed(2);c.style.zIndex=50-Math.round(ad*5);c.style.pointerEvents=op<.2?'none':'auto';}}
 arcEl.addEventListener('pointerdown',e=>{arcDrag={x:e.clientX,a:arcA};arcMoved=false;});
 addEventListener('pointermove',e=>{if(!arcDrag)return;const dx=e.clientX-arcDrag.x;if(Math.abs(dx)>6)arcMoved=true;if(arcMoved){arcA=arcDrag.a-dx/arcStep();arcDraw();}});
 addEventListener('pointerup',()=>{arcDrag=null;setTimeout(()=>{arcMoved=false;},0);});addEventListener('pointercancel',()=>{arcDrag=null;});
