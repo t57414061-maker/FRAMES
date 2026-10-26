@@ -75,10 +75,11 @@ Deno.serve(async (req: Request) => {
         && photo.moderation_status === "clear";
 
       let allowed = isPublic;
-      if (!allowed && userId && photo.deleted_at === null) {
+      if (!allowed && userId) {
         if (photo.owner === userId || adminUser) {
+          // Owners and admins can inspect their own/administered items, including Recently Deleted.
           allowed = true;
-        } else {
+        } else if (photo.deleted_at === null && photo.visibility === "private" && photo.approved === true) {
           const { data: share, error: shareError } = await admin
             .from("photo_shares")
             .select("id")
@@ -86,7 +87,7 @@ Deno.serve(async (req: Request) => {
             .eq("shared_with_user_id", userId)
             .maybeSingle();
           if (shareError) throw shareError;
-          allowed = Boolean(share) && photo.visibility === "private" && photo.approved === true;
+          allowed = Boolean(share);
         }
       }
       if (!allowed) return respond({ error: "This photo is private or unavailable" }, 403);
