@@ -498,10 +498,10 @@
     <div class="hero-content">
       <div class="eyebrow">Photography without friction</div>
       <h1>Find your <span class="accent">frame</span>.</h1>
-      <p>Browse thoughtful, original photography. When you sign in and publish a photo, it goes live automatically for the entire gallery.</p>
+      <p>Browse thoughtful, original photography. Sign in with Google and submit your work for admin review before it appears in the public gallery.</p>
       <div class="hero-actions">
         <a class="btn" href="#collection">Browse collection</a>
-        <a class="btn outline" href="#share">Publish photos</a>
+        <a class="btn outline" href="#share">Submit a frame</a>
       </div>
       <div id="authStatus" class="hero-note">Signed out</div>
     </div>
@@ -557,11 +557,11 @@
         <div class="upload-copy">
           <div class="eyebrow">For the things you notice</div>
           <h2>Share a little of yours.</h2>
-          <p>When you are signed in, your uploaded photos are published automatically and appear in the gallery immediately.</p>
+          <p>When you are signed in, your photos are submitted for admin review before appearing in the public gallery.</p>
           <ul class="steps">
             <li>Sign in with Google.</li>
             <li>Choose an image and add a caption.</li>
-            <li>Click “Publish photos” and it goes live automatically.</li>
+            <li>Click “Submit for approval”. Your photo appears publicly only after an admin approves it.</li>
           </ul>
         </div>
 
@@ -587,7 +587,7 @@
             <option value="Other" selected>Other</option>
           </select>
 
-          <button id="uploadBtn" class="btn" type="submit">Publish photos</button>
+          <button id="uploadBtn" class="btn" type="submit">Submit for approval</button>
           <div id="uploadStatus" class="notice" aria-live="polite"></div>
         </form>
       </div>
@@ -617,8 +617,8 @@
     (() => {
       'use strict';
 
-      const SUPABASE_URL = 'https://ormqpiueafyqjmsyaysl.supabase.co';
-      const SUPABASE_ANON_KEY = 'sb_publishable_40ZH_t539QUu0mg1de8jcQ_L5UjvN4h';
+      const SUPABASE_URL = 'https://wnuyqitwvhkjlpuaugjx.supabase.co';
+      const SUPABASE_ANON_KEY = 'sb_publishable_NjbpiHkfoTWkD1dL_s18RQ_DIXhRk-H';
       const BUCKET = 'frame-photos';
       const MAX_BYTES = 5 * 1024 * 1024;
       const $ = (id) => document.getElementById(id);
@@ -945,20 +945,20 @@
 
         const files = Array.from($('files').files || []);
         if (!files.length) {
-          notice('Choose at least one photo to publish.', 'error');
+          notice('Choose at least one photo to submit.', 'error');
           return;
         }
 
         const button = $('uploadBtn');
         button.disabled = true;
-        notice('Publishing your photos…');
+        notice('Submitting your photos for admin approval…');
 
         try {
           for (const file of files) {
             const fileType = file.type || 'image/jpeg';
             const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
             if (!allowedTypes.includes(fileType)) {
-              throw new Error('Only JPG, PNG, WEBP, and GIF files can be published.');
+              throw new Error('Only JPG, PNG, WEBP, and GIF files can be submitted.');
             }
 
             let uploadFile = file;
@@ -988,7 +988,8 @@
               caption: caption || 'Untitled frame',
               genre,
               storage_path: storagePath,
-              approved: true,
+              approved: false,
+              moderation_status: 'pending',
               created_at: new Date().toISOString()
             }]);
 
@@ -997,14 +998,14 @@
             }
           }
 
-          notice('Published successfully and now live in the gallery.', 'success');
+          notice('Submitted successfully. Your photos are waiting for admin approval.', 'success');
           $('uploadForm').reset();
           $('previews').innerHTML = '';
           $('caption').value = '';
           await refreshGallery();
         } catch (error) {
           console.error('Upload failed:', error);
-          notice(error.message || 'Your photo could not be published. Please try again.', 'error');
+          notice(error.message || 'Your photo could not be submitted. Please try again.', 'error');
         } finally {
           button.disabled = false;
         }
