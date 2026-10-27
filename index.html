@@ -832,7 +832,7 @@
         if (!supabase) throw new Error('Supabase is not configured.');
         const { data: { session: activeSession } } = await supabase.auth.getSession();
         const token = activeSession?.access_token || SUPABASE_ANON_KEY;
-        const response = await fetch(`${SUPABASE_URL}/functions/v1/photo-access`, {
+        const response = await fetch(`${SUPABASE_URL}/functions/v1/Photo-access`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
