@@ -480,11 +480,76 @@
       #grid, .controls, .upload-wrap, .featured-wrap { padding-left: 18px; padding-right: 18px; }
       .btn { width: 100%; }
     }
+
+    /* FRAME live cinematic/mobile upgrade */
+    .frame-menu-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);background:rgba(255,255,255,.035);color:var(--fg);border-radius:999px;padding:11px 15px;font:700 11px Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+    .frame-menu-btn .bars{font-size:18px;line-height:1}
+    nav{backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+    .hero{position:relative;isolation:isolate;overflow:hidden}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,rgba(0,0,0,.78),rgba(0,0,0,.22) 65%,rgba(0,0,0,.55))}
+    .hero h1{font-size:clamp(58px,10vw,132px);line-height:.9;letter-spacing:-.055em;max-width:950px}
+    .hero .eyebrow,.section-head .eyebrow{letter-spacing:.28em;text-transform:uppercase}
+    .accent{background:linear-gradient(110deg,#f5e6bd,#c29b55 55%,#fff1cc);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .featured-wrap{overflow:hidden}
+    .featured-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin;scrollbar-color:#927444 transparent}
+    .featured-card{flex:0 0 min(72vw,390px);scroll-snap-align:center;min-height:390px}
+    .featured-card img{transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(.86)}
+    .featured-card:hover img{transform:scale(1.045)}
+    .section-head h2{letter-spacing:-.045em}
+    .frame-drawer-scrim{position:fixed;inset:0;z-index:900;background:rgba(0,0,0,.64);backdrop-filter:blur(5px);opacity:0;visibility:hidden;transition:opacity .24s,visibility .24s}
+    .frame-drawer{position:fixed;z-index:901;inset:0 auto 0 0;width:min( min(88vw,380px), 100%);padding:calc(24px + env(safe-area-inset-top)) 22px calc(24px + env(safe-area-inset-bottom));background:linear-gradient(160deg,#171614,#090909 65%);border-right:1px solid rgba(214,183,119,.24);box-shadow:30px 0 80px rgba(0,0,0,.42);transform:translateX(-105%);transition:transform .3s cubic-bezier(.2,.75,.2,1);display:flex;flex-direction:column;gap:20px;overflow-y:auto}
+    body.drawer-open .frame-drawer{transform:translateX(0)} body.drawer-open .frame-drawer-scrim{opacity:1;visibility:visible}
+    .frame-drawer-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:18px;border-bottom:1px solid var(--line)}
+    .frame-drawer-logo{font:42px/1 'Bebas Neue',sans-serif;letter-spacing:.12em}
+    .frame-drawer-sub{font-size:10px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-top:6px}
+    .frame-drawer-label{font-size:10px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:3px 0}
+    .frame-drawer-link{display:flex;align-items:center;gap:13px;width:100%;text-align:left;padding:14px 13px;border:1px solid transparent;border-radius:14px;color:var(--fg);background:transparent;text-decoration:none;font:600 13px Manrope,sans-serif;cursor:pointer}
+    .frame-drawer-link:hover,.frame-drawer-link:focus-visible{outline:none;border-color:rgba(214,183,119,.3);background:rgba(214,183,119,.08)}
+    .frame-drawer-icon{width:30px;height:30px;display:grid;place-items:center;border:1px solid var(--line);border-radius:10px;color:#d8b977;font-size:15px}
+    .frame-drawer-foot{margin-top:auto;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:11px;line-height:1.8}
+    .frame-setting-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 13px;border-radius:12px;background:rgba(255,255,255,.035);font-size:12px}
+    .frame-setting-row input{accent-color:#c8a35f}
+    .frame-toast{position:fixed;z-index:950;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,20px);opacity:0;pointer-events:none;max-width:calc(100vw - 28px);padding:13px 18px;border:1px solid rgba(214,183,119,.28);border-radius:14px;background:#171614;color:var(--fg);box-shadow:0 12px 40px #0008;font-size:12px;transition:.22s}
+    .frame-toast.visible{opacity:1;transform:translate(-50%,0)}
+    .frame-curtain{position:fixed;inset:0;z-index:1000;background:#050505;display:grid;place-items:center;text-align:center;padding:24px;transition:opacity .7s,visibility .7s}
+    .frame-curtain.dismissed{opacity:0;visibility:hidden;pointer-events:none}
+    .frame-curtain-kicker{font-size:10px;letter-spacing:.42em;color:#bfa16b;text-transform:uppercase;margin-bottom:20px}
+    .frame-curtain-title{font:clamp(76px,20vw,180px)/.78 'Bebas Neue',sans-serif;letter-spacing:.12em;background:linear-gradient(110deg,#f5e6bd,#b08a47,#fff0c9);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .frame-curtain-copy{color:#aaa39a;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin:28px 0}
+    .frame-curtain-enter{border:1px solid rgba(214,183,119,.6);background:transparent;color:#ead5a6;padding:14px 24px;border-radius:999px;font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer}
+    html.frame-reduced-motion *,html.frame-reduced-motion *:before,html.frame-reduced-motion *:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+    @media(max-width:700px){nav{padding-left:15px!important;padding-right:15px!important;gap:10px}.brand{font-size:24px!important}.frame-menu-btn{padding:10px 12px}.frame-menu-btn .menu-word{display:none}.featured-card{flex-basis:82vw;min-height:320px}.hero h1{font-size:clamp(58px,17vw,94px)}.frame-drawer{width:min(88vw,360px)}}
+    @media(prefers-reduced-motion:reduce){.frame-curtain{display:none}.frame-drawer,.frame-drawer-scrim,.frame-toast{transition:none}}
+
   </style>
 </head>
 <body>
+
+  <div class="frame-curtain" id="frameCurtain" role="dialog" aria-modal="true" aria-label="Welcome to FRAME">
+    <div><div class="frame-curtain-kicker">A living photography collection</div><div class="frame-curtain-title">FRAME</div><div class="frame-curtain-copy">Look closer. Feel more.</div><button class="frame-curtain-enter" id="frameEnter" type="button">Enter the gallery&nbsp; ↗</button></div>
+  </div>
+  <div class="frame-drawer-scrim" id="frameDrawerScrim" aria-hidden="true"></div>
+  <aside class="frame-drawer" id="frameDrawer" aria-label="FRAME tools" aria-hidden="true">
+    <div class="frame-drawer-top"><div><div class="frame-drawer-logo">FRAME</div><div class="frame-drawer-sub">Your creative space</div></div><button class="mini-btn" id="frameDrawerClose" type="button" aria-label="Close tools">×</button></div>
+    <div class="frame-drawer-label">Explore</div>
+    <a class="frame-drawer-link" href="#top"><span class="frame-drawer-icon">⌂</span>Home / cinematic intro</a>
+    <a class="frame-drawer-link" href="#featured"><span class="frame-drawer-icon">✧</span>Featured frames</a>
+    <a class="frame-drawer-link" href="#collection"><span class="frame-drawer-icon">▦</span>All genres & gallery</a>
+    <button class="frame-drawer-link" id="frameSearchAction" type="button"><span class="frame-drawer-icon">⌕</span>Search photographs</button>
+    <a class="frame-drawer-link" href="#share"><span class="frame-drawer-icon">＋</span>Upload a frame</a>
+    <div class="frame-drawer-label">Your FRAME</div>
+    <button class="frame-drawer-link" id="frameProfileAction" type="button"><span class="frame-drawer-icon">◉</span><span id="frameProfileLabel">Sign in / Profile</span></button>
+    <button class="frame-drawer-link" id="frameNotificationsAction" type="button"><span class="frame-drawer-icon">♧</span>Notifications & activity</button>
+    <div class="frame-drawer-label">Settings</div>
+    <label class="frame-setting-row"><span>Reduce motion</span><input id="frameReduceMotion" type="checkbox"></label>
+    <label class="frame-setting-row"><span>Warm gold accent</span><input id="frameWarmAccent" type="checkbox" checked></label>
+    <div class="frame-drawer-foot">FRAME · Made for people who notice.<br><span id="frameDrawerStatus">Sign in with Google to publish.</span></div>
+  </aside>
+  <div class="frame-toast" id="frameToast" role="status" aria-live="polite"></div>
+
   <nav>
     <a href="#top" class="brand" aria-label="FRAME home">FRAME</a>
+    <button class="frame-menu-btn" id="frameMenuBtn" type="button" aria-controls="frameDrawer" aria-expanded="false"><span class="bars">☰</span><span class="menu-word">Tools</span></button>
     <div class="nav-links">
       <a href="#featured">Featured</a>
       <a href="#collection">Collection</a>
@@ -636,6 +701,66 @@
       }
 
       $('year').textContent = new Date().getFullYear();
+
+      // FRAME tools drawer, cinematic entry, and mobile edge-swipe
+      const drawer = $('frameDrawer'), scrim = $('frameDrawerScrim'), menuBtn = $('frameMenuBtn');
+      let toastTimer = null, touchStartX = 0, touchStartY = 0;
+      function frameToast(message) {
+        const el = $('frameToast'); if (!el) return;
+        el.textContent = message; el.classList.add('visible');
+        clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('visible'), 2600);
+      }
+      function openFrameDrawer() {
+        document.body.classList.add('drawer-open');
+        drawer?.setAttribute('aria-hidden','false'); menuBtn?.setAttribute('aria-expanded','true');
+        scrim?.setAttribute('aria-hidden','false');
+      }
+      function closeFrameDrawer() {
+        document.body.classList.remove('drawer-open');
+        drawer?.setAttribute('aria-hidden','true'); menuBtn?.setAttribute('aria-expanded','false');
+        scrim?.setAttribute('aria-hidden','true');
+      }
+      menuBtn?.addEventListener('click', openFrameDrawer);
+      $('frameDrawerClose')?.addEventListener('click', closeFrameDrawer);
+      scrim?.addEventListener('click', closeFrameDrawer);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') { closeFrameDrawer(); $('frameCurtain')?.classList.add('dismissed'); } });
+      document.addEventListener('touchstart', e => {
+        if (!e.touches?.length) return;
+        touchStartX = e.touches[0].clientX; touchStartY = e.touches[0].clientY;
+      }, {passive:true});
+      document.addEventListener('touchend', e => {
+        if (!e.changedTouches?.length) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dy) > 75) return;
+        if (touchStartX < 28 && dx > 85) openFrameDrawer();
+        if (document.body.classList.contains('drawer-open') && dx < -85) closeFrameDrawer();
+      }, {passive:true});
+      $('frameEnter')?.addEventListener('click', () => $('frameCurtain')?.classList.add('dismissed'));
+      $('frameSearchAction')?.addEventListener('click', () => { closeFrameDrawer(); $('collection')?.scrollIntoView({behavior:'smooth'}); setTimeout(() => $('search')?.focus(), 350); });
+      $('frameProfileAction')?.addEventListener('click', async () => {
+        closeFrameDrawer();
+        if (session?.user) frameToast('Signed in as ' + (session.user.email || 'Google user'));
+        else $('googleSignIn')?.click();
+      });
+      $('frameNotificationsAction')?.addEventListener('click', () => {
+        closeFrameDrawer();
+        frameToast(session?.user ? 'You are all caught up. New activity will appear here as FRAME grows.' : 'Sign in with Google to access your FRAME activity.');
+      });
+      $('frameReduceMotion')?.addEventListener('change', e => {
+        document.documentElement.classList.toggle('frame-reduced-motion', e.target.checked);
+        try { localStorage.setItem('frame-reduced-motion', e.target.checked ? '1' : '0'); } catch {}
+      });
+      $('frameWarmAccent')?.addEventListener('change', e => {
+        document.documentElement.style.setProperty('--accent', e.target.checked ? '#c8a35f' : '#f3efe8');
+        document.documentElement.style.setProperty('--gold', e.target.checked ? '#c8a35f' : '#f3efe8');
+      });
+      try {
+        const reduce = localStorage.getItem('frame-reduced-motion') === '1';
+        $('frameReduceMotion').checked = reduce;
+        document.documentElement.classList.toggle('frame-reduced-motion', reduce);
+      } catch {}
+
       const emptyState = $('emptyState');
       const uploadStatus = $('uploadStatus');
 
@@ -699,6 +824,8 @@
         const signed = !!session?.user;
         $('authStatus').textContent = signed ? `Signed in as ${session.user.email || 'Google user'}` : 'Signed out';
         $('googleSignIn').textContent = signed ? 'Sign out' : 'Sign in with Google';
+        if ($('frameProfileLabel')) $('frameProfileLabel').textContent = signed ? (session.user.email || 'Your profile') : 'Sign in / Profile';
+        if ($('frameDrawerStatus')) $('frameDrawerStatus').textContent = signed ? 'Signed in · ready to publish.' : 'Sign in with Google to publish.'
       }
 
       async function getSignedPhotoUrl(path, mode = 'view') {
