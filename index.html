@@ -522,6 +522,106 @@
     @media(max-width:700px){nav{padding-left:15px!important;padding-right:15px!important;gap:10px}.brand{font-size:24px!important}.frame-menu-btn{padding:10px 12px}.frame-menu-btn .menu-word{display:none}.featured-card{flex-basis:82vw;min-height:320px}.hero h1{font-size:clamp(58px,17vw,94px)}.frame-drawer{width:min(88vw,360px)}}
     @media(prefers-reduced-motion:reduce){.frame-curtain{display:none}.frame-drawer,.frame-drawer-scrim,.frame-toast{transition:none}}
 
+
+    /* FRAME COMPLETE REDESIGN — presentation layer only */
+    :root{--bg:#080909;--fg:#f4f1e9;--muted:#aaa69d;--card:#111211;--line:rgba(239,226,198,.17);--gold:#d8bb80;--gold-ink:#15110a;--shadow:0 28px 80px rgba(0,0,0,.42)}
+    body{background:#080909;background-image:radial-gradient(ellipse at 50% -15%,rgba(216,187,128,.13),transparent 42rem);letter-spacing:-.01em}
+    nav{padding:calc(16px + env(safe-area-inset-top,0px)) clamp(16px,4vw,52px) 16px;background:rgba(8,9,9,.76);border-bottom-color:rgba(239,226,198,.13)}
+    .brand{font-size:34px;letter-spacing:.15em}
+    .hero{min-height:min(920px,100svh);min-height:min(920px,100vh);padding:140px clamp(18px,5vw,72px) 80px;align-items:end;background:#080909}
+    .hero-bg{inset:0;background-image:linear-gradient(90deg,rgba(4,5,5,.84) 0%,rgba(4,5,5,.38) 55%,rgba(4,5,5,.18) 100%),linear-gradient(0deg,#080909 0%,transparent 43%),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90');background-size:cover;background-position:center 48%;transform:scale(1.02);animation:frameHeroReveal 1.6s ease-out both}
+    @keyframes frameHeroReveal{from{transform:scale(1.1);filter:brightness(.55)}to{transform:scale(1.02);filter:brightness(1)}}
+    .hero:after{background:linear-gradient(0deg,rgba(8,9,9,.96),transparent 48%),linear-gradient(90deg,rgba(0,0,0,.25),transparent 78%)}
+    .hero-content{width:min(1180px,100%);max-width:1180px;padding:clamp(24px,4vw,52px) 0;border:0;border-radius:0;background:transparent;box-shadow:none}
+    .hero .eyebrow{font-size:10px;letter-spacing:.32em;color:#e2c992}
+    .hero h1{font-family:'Bebas Neue','Arial Narrow',Impact,sans-serif;font-size:clamp(78px,17vw,220px);font-weight:400;letter-spacing:.005em;line-height:.78;max-width:1100px;text-transform:uppercase;margin:0 0 26px}
+    .hero h1 .accent{color:var(--gold);background:none;-webkit-text-fill-color:var(--gold)}
+    .hero p{max-width:520px;font-size:clamp(14px,1.4vw,18px);line-height:1.85;color:rgba(244,241,233,.78)}
+    .hero-actions{margin-top:32px;flex-direction:row;align-items:center}
+    .btn{min-height:48px;padding:13px 22px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-radius:3px}
+    .btn.outline{border-color:rgba(244,241,233,.35);background:rgba(10,10,10,.2)}
+    .hero-note{font-size:10px;letter-spacing:.18em}
+    section{padding-top:clamp(76px,10vw,136px)}
+    .section-head{max-width:1440px;margin-bottom:28px;padding:0 clamp(18px,5vw,72px)}
+    .section-head h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(42px,7vw,86px);font-weight:400;letter-spacing:.015em;line-height:.95;text-transform:uppercase}
+    .section-head p{font-size:13px}
+    .featured-wrap{max-width:none;padding:0 clamp(18px,5vw,72px);overflow:visible}
+    .featured-grid{gap:14px;padding-bottom:18px}
+    .featured-card{flex-basis:min(34vw,440px);min-height:clamp(300px,42vw,540px);border-radius:3px;border-color:rgba(239,226,198,.16);box-shadow:none}
+    .featured-card .overlay{padding:24px;background:linear-gradient(180deg,transparent 10%,rgba(0,0,0,.76));}
+    .featured-card .overlay strong{font-size:21px;letter-spacing:-.03em}
+    .featured-card .overlay div{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#dfc68e;margin-top:5px}
+    .controls{max-width:none;padding:0 clamp(18px,5vw,72px);margin-bottom:22px}
+    .search,.filter-select{border-radius:3px;background:#101110;border-color:var(--line);min-height:50px}
+    #grid{max-width:none;padding:0 clamp(18px,5vw,72px);grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+    .photo-card{grid-column:span 4;border-radius:3px;background:#0e0f0e;border-color:rgba(239,226,198,.12);box-shadow:none;position:relative}
+    .photo-card img{aspect-ratio:4/5;object-fit:cover;cursor:zoom-in;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+    .photo-card:hover img{transform:scale(1.025);filter:brightness(1.06)}
+    .photo-body{padding:16px}
+    .photo-title{font-size:14px;letter-spacing:-.02em}
+    .meta-row{font-size:10px;letter-spacing:.04em}
+    .genre-tag{border-radius:2px;padding:4px 7px;text-transform:uppercase;letter-spacing:.08em;font-size:9px}
+    .mini-btn{border-radius:2px;border-color:rgba(239,226,198,.22);padding:8px 12px;text-transform:uppercase;letter-spacing:.1em;font-size:9px}
+    .empty-state{max-width:none;padding:0 clamp(18px,5vw,72px)}
+    .empty-box{border-radius:3px;padding:48px 20px}
+    .upload-wrap{max-width:none;padding:0 clamp(18px,5vw,72px)}
+    .upload-card{border-radius:3px;border-color:var(--line);background:linear-gradient(130deg,#111210,#0b0c0b);grid-template-columns:1fr .85fr;padding:clamp(24px,5vw,72px)}
+    .upload-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,8vw,100px);font-weight:400;letter-spacing:.01em;text-transform:uppercase;line-height:.86}
+    .upload-copy p,.upload-copy .steps{font-size:13px;line-height:1.9}
+    .field,textarea,select{border-radius:3px;background:#0c0d0c;border-color:var(--line)}
+    .dropzone{border-radius:3px}
+    .lightbox{backdrop-filter:blur(14px)}
+    .lightbox-panel{border-radius:3px;border-color:rgba(239,226,198,.2)}
+    footer{margin-top:120px;padding:42px 24px calc(44px + env(safe-area-inset-bottom,0px));border-color:var(--line)}
+    footer strong{font:40px/1 'Bebas Neue',sans-serif;letter-spacing:.18em}
+    .frame-curtain{background:radial-gradient(ellipse at center,rgba(216,187,128,.1),transparent 42%),#050606}
+    .frame-curtain-title{font-size:clamp(100px,24vw,250px);letter-spacing:.18em;line-height:.7}
+    .frame-curtain-kicker{letter-spacing:.34em}
+    .frame-curtain-enter{border-radius:3px;padding:16px 25px;transition:background .25s,color .25s}
+    .frame-curtain-enter:hover{background:var(--gold);color:#111}
+    .frame-drawer{background:linear-gradient(160deg,#171816,#080908 72%);border-right-color:rgba(216,187,128,.24)}
+    .frame-drawer-link{border-radius:3px}
+    .frame-setting-row{border-radius:3px}
+    .frame-toast{border-radius:3px}
+    .frame-genre-rail{display:flex;gap:9px;overflow-x:auto;padding:0 clamp(18px,5vw,72px) 18px;scrollbar-width:none}
+    .frame-genre-rail::-webkit-scrollbar{display:none}
+    .frame-genre-chip{flex:0 0 auto;border:1px solid var(--line);background:transparent;color:var(--muted);padding:11px 16px;border-radius:2px;text-transform:uppercase;letter-spacing:.13em;font-size:9px;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+    .frame-genre-chip.active,.frame-genre-chip:hover{color:#0d0d0b;background:var(--gold);border-color:var(--gold)}
+    .frame-bottom-dock{display:none}
+    @media(min-width:1200px){.photo-card:nth-child(7n+2){grid-column:span 5}.photo-card:nth-child(7n+2) img{aspect-ratio:5/4}.photo-card:nth-child(7n+3){grid-column:span 3}.photo-card:nth-child(7n+3) img{aspect-ratio:3/4}}
+    @media(max-width:900px){.photo-card{grid-column:span 6}.upload-card{grid-template-columns:1fr}.featured-card{flex-basis:58vw}}
+    @media(max-width:700px){
+      nav{padding-top:calc(12px + env(safe-area-inset-top,0px));padding-bottom:12px}
+      .brand{font-size:27px!important;letter-spacing:.16em}
+      #googleSignIn{width:auto;min-height:40px;padding:9px 12px;font-size:9px}
+      .hero{min-height:88svh;min-height:88vh;padding:110px 20px 74px;align-items:end}
+      .hero-bg{background-position:56% center}
+      .hero-content{padding:24px 0}
+      .hero h1{font-size:clamp(82px,23vw,142px);line-height:.78;margin-bottom:22px}
+      .hero p{font-size:14px;max-width:34ch}
+      .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+      .hero-actions .btn{width:100%;padding:12px 8px;font-size:9px}
+      .hero-note{font-size:9px}
+      section{padding-top:82px}
+      .section-head{align-items:start;flex-direction:column}
+      .featured-card{flex-basis:78vw;min-height:380px}
+      #grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+      .photo-card{grid-column:span 1!important}
+      .photo-card img{aspect-ratio:3/4}
+      .photo-body{padding:11px}
+      .photo-title{font-size:12px}
+      .meta-row{align-items:flex-start;flex-direction:column;gap:6px}
+      .actions{gap:5px}
+      .mini-btn{padding:7px 8px}
+      .upload-card{padding:22px 17px}
+      .frame-bottom-dock{position:fixed;display:flex;z-index:19;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:8px 5px;background:rgba(15,16,15,.88);border:1px solid rgba(239,226,198,.18);backdrop-filter:blur(20px);border-radius:4px;justify-content:space-around;box-shadow:0 10px 35px #0008}
+      .frame-bottom-dock a,.frame-bottom-dock button{display:flex;flex:1;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:3px;border:0;background:transparent;color:#c7c3ba;font-size:9px;letter-spacing:.04em;padding:5px 2px}
+      .frame-bottom-dock .dock-icon{font-size:18px;line-height:1.2;color:var(--gold)}
+      footer{padding-bottom:calc(100px + env(safe-area-inset-bottom,0px))}
+    }
+    @media(max-width:390px){.hero-actions{grid-template-columns:1fr}.hero-actions .btn{min-height:44px}.featured-card{min-height:330px}}
+    @media(prefers-reduced-motion:reduce){.hero-bg{animation:none}}
+
   </style>
 </head>
 <body>
@@ -564,7 +664,7 @@
     <div class="hero-content">
       <div class="eyebrow">Photography without friction</div>
       <h1>Find your <span class="accent">frame</span>.</h1>
-      <p>Browse thoughtful, original photography. When you sign in and publish a photo, it goes live automatically for the entire gallery.</p>
+      <p>A living collection of photography, perspectives, and visual stories. Explore by genre, discover new creators, and share the moments only you notice.</p>
       <div class="hero-actions">
         <a class="btn" href="#collection">Browse collection</a>
         <a class="btn outline" href="#share">Publish photos</a>
@@ -608,6 +708,20 @@
       </select>
     </div>
 
+
+    <div class="frame-genre-rail" id="frameGenreRail" aria-label="Explore genres">
+      <button type="button" class="frame-genre-chip active" data-genre="all">All frames</button>
+      <button type="button" class="frame-genre-chip" data-genre="Landscape">Landscape</button>
+      <button type="button" class="frame-genre-chip" data-genre="Architecture">Architecture</button>
+      <button type="button" class="frame-genre-chip" data-genre="Portrait">Portrait</button>
+      <button type="button" class="frame-genre-chip" data-genre="Nature">Nature</button>
+      <button type="button" class="frame-genre-chip" data-genre="Fine art">Fine art</button>
+      <button type="button" class="frame-genre-chip" data-genre="Anime">Anime</button>
+      <button type="button" class="frame-genre-chip" data-genre="Cars">Cars</button>
+      <button type="button" class="frame-genre-chip" data-genre="City lights">City lights</button>
+      <button type="button" class="frame-genre-chip" data-genre="Seascape">Seascape</button>
+    </div>
+
     <div id="grid" aria-live="polite"></div>
 
     <div class="empty-state hidden" id="emptyState">
@@ -623,11 +737,11 @@
         <div class="upload-copy">
           <div class="eyebrow">For the things you notice</div>
           <h2>Share a little of yours.</h2>
-          <p>When you are signed in, your uploaded photos are published automatically and appear in the gallery immediately.</p>
+          <p>Submit your photographs for review. Approved frames join the public collection; your original image and caption stay yours.</p>
           <ul class="steps">
             <li>Sign in with Google.</li>
             <li>Choose an image and add a caption.</li>
-            <li>Click “Publish photos” and it goes live automatically.</li>
+            <li>Submit your frame for approval before it appears publicly.</li>
           </ul>
         </div>
 
@@ -673,6 +787,15 @@
       </div>
     </div>
   </div>
+
+
+  <nav class="frame-bottom-dock" aria-label="Quick navigation">
+    <a href="#top"><span class="dock-icon">⌂</span><span>Home</span></a>
+    <a href="#collection"><span class="dock-icon">▦</span><span>Gallery</span></a>
+    <button id="frameDockSearch" type="button"><span class="dock-icon">⌕</span><span>Search</span></button>
+    <a href="#share"><span class="dock-icon">＋</span><span>Upload</span></a>
+    <button id="frameDockMenu" type="button"><span class="dock-icon">☰</span><span>Menu</span></button>
+  </nav>
 
   <footer>
     <strong>FRAME</strong>
@@ -1002,7 +1125,20 @@
       $('lbNext').addEventListener('click', () => openLightbox(lightboxIndex + 1));
 
       $('search').addEventListener('input', () => renderGallery());
-      $('genreFilter').addEventListener('change', () => renderGallery());
+      $('genreFilter').addEventListener('change', () => {
+        renderGallery();
+        document.querySelectorAll('.frame-genre-chip').forEach(chip => chip.classList.toggle('active', chip.dataset.genre === $('genreFilter').value));
+      });
+      document.querySelectorAll('.frame-genre-chip').forEach(chip => chip.addEventListener('click', () => {
+        $('genreFilter').value = chip.dataset.genre;
+        document.querySelectorAll('.frame-genre-chip').forEach(item => item.classList.toggle('active', item === chip));
+        renderGallery();
+      }));
+      $('frameDockSearch')?.addEventListener('click', () => {
+        $('collection')?.scrollIntoView({behavior:'smooth'});
+        setTimeout(() => $('search')?.focus(), 350);
+      });
+      $('frameDockMenu')?.addEventListener('click', openFrameDrawer);
 
       async function handleGoogleSignIn() {
         if (!supabase) {
