@@ -1096,7 +1096,7 @@ if(arcPending)buildArc(arcPending);
  let introTouchY=0;
  it.addEventListener('touchstart',e=>{introTouchY=e.changedTouches[0].clientY},{passive:true});
  it.addEventListener('touchend',e=>{if(Math.abs(e.changedTouches[0].clientY-introTouchY)>24)finish()},{passive:true});
- setTimeout(finish,3900);
+ setTimeout(finish,6500);
 })();
 const GI={'Landscape':{t:'Where the land breathes',k:'mountain',l:'Landscapes',s:'Mountains, light and open sky.'},'Architecture':{t:'Lines that hold the light',k:'arch',l:'Architecture',s:'Structure, shadow and the shape of space.'},'Portrait':{t:'Every face tells a story',k:'portrait',l:'Portraits',s:'People, seen the way only a lens can.'},'Nature':{t:'A walk in nature',k:'nature',l:'Nature',s:'Wild details, close and quiet.'},'Anime':{t:'Worlds made of light',k:'anime',l:'Anime',s:'Imagined places, frame by frame.'},'Cars':{t:'Built for motion',k:'car',l:'Cars',s:'Machines, speed and polished metal.'},};
 var giTimer=null;
