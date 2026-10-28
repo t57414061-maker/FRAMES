@@ -673,10 +673,12 @@
       .upload-wrap{padding:0 19px}
       .upload-card{padding:24px 17px;gap:26px}
       .upload-copy h2{font-size:61px}
-      .frame-bottom-dock{position:fixed;display:flex;z-index:800;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:8px 5px;background:rgba(14,14,12,.88);border:1px solid rgba(239,226,198,.19);backdrop-filter:blur(22px);border-radius:0;justify-content:space-around;box-shadow:0 12px 40px #0009}
+      /* Reserve space for the fixed dock so it never hides the last content. */
+      body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+      .frame-bottom-dock{position:fixed;display:flex;z-index:800;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:8px 5px;background:rgba(14,14,12,.94);border:1px solid rgba(239,226,198,.22);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-radius:0;justify-content:space-around;box-shadow:0 12px 40px #0009}
       .frame-bottom-dock a,.frame-bottom-dock button{display:flex;flex:1;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:3px;border:0;background:transparent;color:#c7c3ba;font-size:8px;letter-spacing:.06em;padding:5px 2px}
       .frame-bottom-dock .dock-icon{font-size:18px;line-height:1.2;color:var(--gold)}
-      footer{padding-bottom:calc(105px + env(safe-area-inset-bottom,0px))}
+      footer{padding-bottom:calc(28px + env(safe-area-inset-bottom,0px))}
     }
     @media(max-width:360px){.frame-menu-btn .menu-word{display:none}#googleSignIn{font-size:7px}.hero h1{font-size:23vw}.featured-card{height:370px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.frame-curtain{display:none}}
