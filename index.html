@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#090909">
-  <title>FRAME — Photography Gallery</title>
-  <meta name="description" content="Discover photography from new creators. Share your frame with FRAME Gallery.">
+  <title>FRAME — For the moments that stay</title>
+  <meta name="description" content="A cinematic home for photographs, perspectives, and visual stories.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -522,7 +522,167 @@
     @media(max-width:700px){nav{padding-left:15px!important;padding-right:15px!important;gap:10px}.brand{font-size:24px!important}.frame-menu-btn{padding:10px 12px}.frame-menu-btn .menu-word{display:none}.featured-card{flex-basis:82vw;min-height:320px}.hero h1{font-size:clamp(58px,17vw,94px)}.frame-drawer{width:min(88vw,360px)}}
     @media(prefers-reduced-motion:reduce){.frame-curtain{display:none}.frame-drawer,.frame-drawer-scrim,.frame-toast{transition:none}}
 
-  </style>
+
+    /* FRAME / ART-DIRECTION V2 — visual layer only; application logic remains untouched */
+    :root{
+      --bg:#080807;--fg:#f4f0e7;--muted:#a9a397;--card:#10100f;
+      --line:rgba(244,236,217,.16);--gold:#d8b879;--gold-ink:#151109;
+      --shadow:0 30px 90px rgba(0,0,0,.48);
+    }
+    html{scroll-behavior:smooth;scroll-padding-top:82px;background:var(--bg)}
+    body{background:var(--bg);color:var(--fg);font-family:Manrope,Arial,sans-serif;letter-spacing:-.025em;overflow-x:clip}
+    body:before{content:"";position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+    nav{height:auto;min-height:72px;padding:calc(17px + env(safe-area-inset-top,0px)) clamp(16px,5vw,76px) 16px;background:rgba(8,8,7,.72);border:0;border-bottom:1px solid rgba(255,255,255,.12);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+    .brand{font:34px/.85 'Bebas Neue',Impact,sans-serif;letter-spacing:.18em;color:#f5f0e5}
+    .nav-links{gap:clamp(12px,2.5vw,34px);font-size:10px;letter-spacing:.2em;color:#d0c9bb}
+    .frame-menu-btn{border:1px solid rgba(216,184,121,.38);border-radius:2px;background:transparent;color:#f2e6c9;padding:11px 14px;letter-spacing:.18em}
+    .frame-menu-btn .bars{font-size:15px}
+    #googleSignIn{width:auto;min-height:42px;padding:10px 16px;border-radius:2px;background:#d8b879;border:1px solid #d8b879;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .btn{border-radius:2px;background:#e3c68d;color:#18140c;border:1px solid #e3c68d;min-height:50px;padding:14px 22px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;transition:background .25s,color .25s,transform .25s}
+    .btn.outline{background:rgba(8,8,7,.16);border-color:rgba(244,236,217,.48);color:#f5f0e7}
+    .btn:hover{transform:translateY(-2px);filter:none;background:#f2dfb6}
+    .btn.outline:hover{background:#f2dfb6;color:#16120b;border-color:#f2dfb6}
+    .hero{min-height:calc(100svh - 1px);min-height:calc(100vh - 1px);padding:clamp(120px,18vh,190px) clamp(20px,7vw,112px) 76px;display:flex;align-items:flex-end;justify-content:flex-start;background:#090a09;isolation:isolate}
+    .hero-bg{position:absolute;inset:0;z-index:-2;background-image:linear-gradient(90deg,rgba(5,6,5,.86) 0%,rgba(5,6,5,.35) 58%,rgba(5,6,5,.12) 100%),linear-gradient(0deg,#080807 0%,transparent 43%,rgba(0,0,0,.25) 100%),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2400&q=90');background-position:center;background-size:cover;filter:saturate(.68);animation:frameLandscapeReveal 1.6s ease-out both}
+    .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 65%,#080807 100%);pointer-events:none}
+    @keyframes frameLandscapeReveal{from{transform:scale(1.07);filter:saturate(.3) brightness(.55)}to{transform:scale(1);filter:saturate(.68) brightness(1)}}
+    .hero-content{width:min(1100px,100%);max-width:1100px;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+    .hero .eyebrow{display:flex;align-items:center;gap:12px;color:#e1c58d;font-size:9px;letter-spacing:.32em;margin-bottom:25px}
+    .hero .eyebrow:before{content:"";width:34px;height:1px;background:#d8b879}
+    .hero h1{font:clamp(76px,17vw,210px)/.76 'Bebas Neue',Impact,sans-serif;letter-spacing:.015em;text-transform:uppercase;max-width:1100px;margin:0 0 32px;color:#f4f0e7}
+    .hero h1 .accent{display:block;margin-left:clamp(18px,9vw,130px);font:inherit;background:linear-gradient(100deg,#f0dbac,#b99253 55%,#e7d2a6);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{max-width:440px;margin-left:clamp(18px,9vw,130px);font-size:clamp(13px,1.35vw,16px);line-height:1.9;color:#d3d0c7;letter-spacing:.005em}
+    .hero-actions{margin:30px 0 0 clamp(18px,9vw,130px);display:flex;flex-wrap:wrap;gap:10px}
+    .hero-note{margin:28px 0 0 clamp(18px,9vw,130px);font-size:9px;letter-spacing:.18em;color:#c3bba9;text-transform:uppercase}
+    section{padding-top:clamp(86px,12vw,150px)}
+    .section-head{max-width:1440px;padding:0 clamp(18px,5vw,76px);margin:0 auto 34px;align-items:flex-end}
+    .section-head h2{font:clamp(42px,8vw,104px)/.82 'Bebas Neue',Impact,sans-serif;letter-spacing:.01em;text-transform:uppercase;max-width:850px}
+    .section-head p{font-size:12px;line-height:1.9;color:var(--muted)}
+    .section-head .eyebrow{color:var(--gold)}
+    #featured .section-head h2:before{content:"01 / ";display:block;font:10px/1.5 Manrope,sans-serif;letter-spacing:.25em;color:var(--gold);margin-bottom:15px}
+    .featured-wrap{max-width:none;padding:0 0 0 clamp(18px,5vw,76px);overflow:hidden}
+    .featured-grid{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:0;padding:0 clamp(18px,5vw,76px) 20px 0;scrollbar-width:none}
+    .featured-grid::-webkit-scrollbar{display:none}
+    .featured-card{position:relative;flex:0 0 clamp(260px,37vw,520px);height:clamp(340px,54vw,610px);min-height:0;border:0;border-radius:0;overflow:hidden;background:#151513;box-shadow:none;scroll-snap-align:start}
+    .featured-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 46%,rgba(0,0,0,.05));pointer-events:none}
+    .featured-card img{height:100%;object-fit:cover;filter:grayscale(.18) saturate(.72);transition:transform .8s cubic-bezier(.2,.7,.2,1),filter .6s}
+    .featured-card:hover img{transform:scale(1.045);filter:grayscale(0) saturate(.92)}
+    .featured-card .overlay{z-index:1;padding:24px;background:transparent}
+    .featured-card .overlay strong{display:block;font:clamp(24px,3vw,38px)/1 'Bebas Neue',sans-serif;letter-spacing:.04em;text-transform:uppercase}
+    .featured-card .overlay div{margin-top:8px;color:#ddc48f;font-size:9px;letter-spacing:.22em;text-transform:uppercase}
+    #collection{padding-bottom:30px}
+    #collection .section-head h2:before{content:"02 / ";display:block;font:10px/1.5 Manrope,sans-serif;letter-spacing:.25em;color:var(--gold);margin-bottom:15px}
+    .controls{max-width:1440px;padding:0 clamp(18px,5vw,76px);margin:0 auto 18px;gap:10px}
+    .search,.filter-select{min-height:50px;border-radius:0;border:1px solid rgba(244,236,217,.2);background:#10100f;color:var(--fg);padding:0 16px;font-size:12px}
+    .search{flex:1 1 280px}
+    .frame-genre-rail{display:flex;gap:8px;overflow-x:auto;padding:0 clamp(18px,5vw,76px) 22px;scrollbar-width:none;max-width:1440px;margin:0 auto}
+    .frame-genre-rail::-webkit-scrollbar{display:none}
+    .frame-genre-chip{white-space:nowrap;border:1px solid rgba(244,236,217,.19);background:transparent;color:#c6c0b4;padding:10px 15px;border-radius:0;font-size:9px;letter-spacing:.14em;text-transform:uppercase}
+    .frame-genre-chip.active,.frame-genre-chip:hover{border-color:#d8b879;background:#d8b879;color:#17130b}
+    #grid{max-width:1440px;padding:0 clamp(18px,5vw,76px);grid-template-columns:repeat(12,minmax(0,1fr));gap:12px}
+    .photo-card{grid-column:span 3;background:#10100f;border:0;border-radius:0;box-shadow:none;overflow:hidden;position:relative}
+    .photo-card:nth-child(7n+1),.photo-card:nth-child(7n+5){grid-column:span 6}
+    .photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover;background:#171715;filter:saturate(.78);transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .45s}
+    .photo-card:nth-child(7n+1) img,.photo-card:nth-child(7n+5) img{aspect-ratio:1.18/1}
+    .photo-card:hover img{transform:scale(1.025);filter:saturate(1)}
+    .photo-body{padding:15px 1px 17px}
+    .photo-title{font-size:13px;letter-spacing:-.02em;margin-bottom:10px}
+    .meta-row{font-size:9px;letter-spacing:.05em;text-transform:uppercase;align-items:center}
+    .genre-tag{border:0;border-radius:0;background:transparent;padding:0;color:#d7b97b;font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+    .actions{margin-top:13px}
+    .mini-btn{border-radius:0;padding:9px 12px;border-color:rgba(244,236,217,.2);font-size:9px;letter-spacing:.12em;text-transform:uppercase}
+    .mini-btn:hover{background:#d8b879;color:#17130b;border-color:#d8b879}
+    .empty-state{max-width:1440px;padding:0 clamp(18px,5vw,76px)}
+    .empty-box{padding:48px 20px;border-radius:0;border:1px solid rgba(244,236,217,.18);background:linear-gradient(135deg,#11110f,#0a0a09);font-size:12px}
+    .upload-wrap{max-width:1440px;padding:0 clamp(18px,5vw,76px)}
+    #share .section-head h2:before{content:"03 / ";display:block;font:10px/1.5 Manrope,sans-serif;letter-spacing:.25em;color:var(--gold);margin-bottom:15px}
+    .upload-card{border:1px solid rgba(244,236,217,.17);border-radius:0;background:#0e0e0d;box-shadow:none;padding:clamp(22px,5vw,72px);gap:clamp(25px,6vw,90px)}
+    .upload-copy h2{font:clamp(44px,7vw,84px)/.82 'Bebas Neue',sans-serif;letter-spacing:.015em;text-transform:uppercase}
+    .upload-copy p,.upload-copy .steps{font-size:12px;line-height:1.9}
+    .field,textarea,select{border-radius:0;background:#090909;border-color:rgba(244,236,217,.19);font-size:12px}
+    .dropzone{border-radius:0;background:#11110f;border-color:rgba(216,184,121,.4);padding:18px}
+    .previews img{border-radius:0}
+    .notice{font-size:12px}
+    .lightbox{padding:12px;background:rgba(0,0,0,.94);backdrop-filter:blur(12px)}
+    .lightbox-panel{width:min(1200px,100%);max-height:94vh;border:1px solid rgba(216,184,121,.22);border-radius:0;background:#090909}
+    .lightbox-panel img{max-height:82vh}
+    .lightbox-bar{background:#090909;padding:15px 18px}
+    .close-btn{border-radius:0;background:#111;border-color:rgba(244,236,217,.3)}
+    footer{margin-top:110px;padding:35px 20px calc(45px + env(safe-area-inset-bottom,0px));border-color:rgba(244,236,217,.12);background:#080807;color:#827e74}
+    footer strong{font:28px 'Bebas Neue',sans-serif;letter-spacing:.25em}
+    .frame-curtain{background:#080807;z-index:1000;overflow:hidden}
+    .frame-curtain:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,7,.95),rgba(8,8,7,.3)),url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1800&q=85') center/cover;opacity:.7;animation:frameCurtainZoom 2.4s ease-out both}
+    .frame-curtain>div{position:relative;z-index:1}
+    @keyframes frameCurtainZoom{from{transform:scale(1.12);filter:blur(5px)}to{transform:scale(1);filter:blur(0)}}
+    .frame-curtain-kicker{font-size:9px;letter-spacing:.38em;color:#dfc58f}
+    .frame-curtain-title{font:clamp(100px,26vw,250px)/.72 'Bebas Neue',sans-serif;letter-spacing:.08em;background:linear-gradient(110deg,#fff0ca,#b38b48 50%,#f5e5bd);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}
+    .frame-curtain-copy{font-size:10px;letter-spacing:.32em;color:#ded6c6;margin:35px 0}
+    .frame-curtain-enter{border:1px solid #d8b879;background:#d8b879;color:#17130b;border-radius:0;padding:15px 25px;font-size:9px;font-weight:800;letter-spacing:.22em;transition:transform .2s,background .2s}
+    .frame-curtain-enter:hover{transform:translateY(-2px);background:#f0d9a8}
+    .frame-drawer-scrim{z-index:900}
+    .frame-drawer{background:linear-gradient(160deg,#171714,#080807 68%);border-right:1px solid rgba(216,184,121,.28);border-radius:0}
+    .frame-drawer-logo{font:48px/.8 'Bebas Neue',sans-serif;letter-spacing:.18em}
+    .frame-drawer-sub,.frame-drawer-label{font-size:9px;letter-spacing:.25em}
+    .frame-drawer-link{border-radius:0;font-size:12px}
+    .frame-drawer-icon{border-radius:0;border-color:rgba(216,184,121,.25)}
+    .frame-toast{border-radius:0;background:#141411;font-size:11px}
+    .frame-bottom-dock{display:none}
+    @media(min-width:1100px){.hero-content{padding-bottom:20px}.featured-card{flex-basis:clamp(360px,31vw,520px)}}
+    @media(max-width:900px){
+      .nav-links{display:none}
+      #grid{grid-template-columns:repeat(6,minmax(0,1fr))}
+      .photo-card{grid-column:span 3}
+      .photo-card:nth-child(7n+1),.photo-card:nth-child(7n+5){grid-column:span 3}
+      .photo-card img,.photo-card:nth-child(7n+1) img,.photo-card:nth-child(7n+5) img{aspect-ratio:3/4}
+      .upload-card{grid-template-columns:1fr}
+    }
+    @media(max-width:600px){
+      nav{min-height:62px;padding:calc(13px + env(safe-area-inset-top,0px)) 14px 12px;gap:9px}
+      .brand{font-size:29px}
+      .frame-menu-btn{padding:10px 11px;font-size:9px}
+      .frame-menu-btn .menu-word{display:inline}
+      #googleSignIn{font-size:8px;min-height:38px;padding:9px 10px;letter-spacing:.04em}
+      .hero{min-height:92svh;min-height:92vh;padding:120px 19px 65px}
+      .hero-bg{background-position:57% center}
+      .hero .eyebrow{font-size:8px;letter-spacing:.22em;margin-bottom:25px}
+      .hero h1{font-size:clamp(84px,24vw,142px);line-height:.72;letter-spacing:0;margin-bottom:26px}
+      .hero h1 .accent{margin-left:9vw}
+      .hero p{margin-left:9vw;font-size:12px;line-height:1.8;max-width:30ch}
+      .hero-actions{margin:24px 0 0 9vw;display:grid;grid-template-columns:1fr;max-width:240px;gap:8px}
+      .hero-actions .btn{width:100%;min-height:46px;font-size:9px}
+      .hero-note{margin:22px 0 0 9vw;font-size:8px;letter-spacing:.13em}
+      section{padding-top:92px}
+      .section-head{padding:0 19px;margin-bottom:24px}
+      .section-head h2{font-size:clamp(49px,14vw,78px);line-height:.8}
+      .featured-wrap{padding-left:19px}
+      .featured-grid{gap:10px;padding-right:19px}
+      .featured-card{flex-basis:83vw;height:430px}
+      .featured-card .overlay{padding:18px}
+      .controls{padding:0 19px;display:grid;grid-template-columns:1fr;gap:8px}
+      .search,.filter-select{width:100%;min-height:47px}
+      .frame-genre-rail{padding:0 19px 18px;gap:6px}
+      .frame-genre-chip{padding:10px 12px;font-size:8px}
+      #grid{padding:0 19px;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 10px}
+      .photo-card,.photo-card:nth-child(7n+1),.photo-card:nth-child(7n+5){grid-column:span 1}
+      .photo-card img,.photo-card:nth-child(7n+1) img,.photo-card:nth-child(7n+5) img{aspect-ratio:3/4}
+      .photo-body{padding:11px 0 14px}
+      .photo-title{font-size:11px;line-height:1.5}
+      .meta-row{font-size:8px;align-items:flex-start;flex-direction:column;gap:6px}
+      .actions{gap:5px}
+      .mini-btn{font-size:8px;padding:8px 9px}
+      .upload-wrap{padding:0 19px}
+      .upload-card{padding:24px 17px;gap:26px}
+      .upload-copy h2{font-size:61px}
+      /* Reserve space for the fixed dock so it never hides the last content. */
+      body{padding-bottom:calc(88px + env(safe-area-inset-bottom,0px))}
+      .frame-bottom-dock{position:fixed;display:flex;z-index:800;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom,0px));padding:8px 5px;background:rgba(14,14,12,.94);border:1px solid rgba(239,226,198,.22);backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px);border-radius:0;justify-content:space-around;box-shadow:0 12px 40px #0009}
+      .frame-bottom-dock a,.frame-bottom-dock button{display:flex;flex:1;min-width:0;align-items:center;justify-content:center;flex-direction:column;gap:3px;border:0;background:transparent;color:#c7c3ba;font-size:8px;letter-spacing:.06em;padding:5px 2px}
+      .frame-bottom-dock .dock-icon{font-size:18px;line-height:1.2;color:var(--gold)}
+      footer{padding-bottom:calc(28px + env(safe-area-inset-bottom,0px))}
+    }
+    @media(max-width:360px){.frame-menu-btn .menu-word{display:none}#googleSignIn{font-size:7px}.hero h1{font-size:23vw}.featured-card{height:370px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.frame-curtain{display:none}}
+</style>
 </head>
 <body>
 
@@ -562,12 +722,12 @@
   <header class="hero" id="top">
     <div class="hero-bg" aria-hidden="true"></div>
     <div class="hero-content">
-      <div class="eyebrow">Photography without friction</div>
-      <h1>Find your <span class="accent">frame</span>.</h1>
-      <p>Browse thoughtful, original photography. When you sign in and publish a photo, it goes live automatically for the entire gallery.</p>
+      <div class="eyebrow">An archive of how we see</div>
+      <h1>Look <span class="accent">closer.</span></h1>
+      <p>The world moves quickly. Your best frames ask us to stay. Wander through the unexpected, find a feeling, and leave a little of your own perspective behind.</p>
       <div class="hero-actions">
-        <a class="btn" href="#collection">Browse collection</a>
-        <a class="btn outline" href="#share">Publish photos</a>
+        <a class="btn" href="#collection">Explore the collection</a>
+        <a class="btn outline" href="#share">Share your perspective</a>
       </div>
       <div id="authStatus" class="hero-note">Signed out</div>
     </div>
@@ -576,7 +736,7 @@
   <section id="featured">
     <div class="section-head">
       <div>
-        <h2>Frames worth stopping for</h2>
+        <h2>A little longer with this moment</h2>
       </div>
     </div>
     <div class="featured-wrap">
@@ -587,7 +747,7 @@
   <section id="collection">
     <div class="section-head">
       <div>
-        <h2>Collected perspectives</h2>
+        <h2>The visual archive</h2>
       </div>
     </div>
 
@@ -608,6 +768,20 @@
       </select>
     </div>
 
+
+    <div class="frame-genre-rail" id="frameGenreRail" aria-label="Explore genres">
+      <button type="button" class="frame-genre-chip active" data-genre="all">All frames</button>
+      <button type="button" class="frame-genre-chip" data-genre="Landscape">Landscape</button>
+      <button type="button" class="frame-genre-chip" data-genre="Architecture">Architecture</button>
+      <button type="button" class="frame-genre-chip" data-genre="Portrait">Portrait</button>
+      <button type="button" class="frame-genre-chip" data-genre="Nature">Nature</button>
+      <button type="button" class="frame-genre-chip" data-genre="Fine art">Fine art</button>
+      <button type="button" class="frame-genre-chip" data-genre="Anime">Anime</button>
+      <button type="button" class="frame-genre-chip" data-genre="Cars">Cars</button>
+      <button type="button" class="frame-genre-chip" data-genre="City lights">City lights</button>
+      <button type="button" class="frame-genre-chip" data-genre="Seascape">Seascape</button>
+    </div>
+
     <div id="grid" aria-live="polite"></div>
 
     <div class="empty-state hidden" id="emptyState">
@@ -623,11 +797,11 @@
         <div class="upload-copy">
           <div class="eyebrow">For the things you notice</div>
           <h2>Share a little of yours.</h2>
-          <p>When you are signed in, your uploaded photos are published automatically and appear in the gallery immediately.</p>
+          <p>Submit your photographs for review. Approved frames join the public collection; your original image and caption stay yours.</p>
           <ul class="steps">
             <li>Sign in with Google.</li>
             <li>Choose an image and add a caption.</li>
-            <li>Click “Publish photos” and it goes live automatically.</li>
+            <li>Submit your frame for approval before it appears publicly.</li>
           </ul>
         </div>
 
@@ -673,6 +847,15 @@
       </div>
     </div>
   </div>
+
+
+  <nav class="frame-bottom-dock" aria-label="Quick navigation">
+    <a href="#top"><span class="dock-icon">⌂</span><span>Home</span></a>
+    <a href="#collection"><span class="dock-icon">▦</span><span>Gallery</span></a>
+    <button id="frameDockSearch" type="button"><span class="dock-icon">⌕</span><span>Search</span></button>
+    <a href="#share"><span class="dock-icon">＋</span><span>Upload</span></a>
+    <button id="frameDockMenu" type="button"><span class="dock-icon">☰</span><span>Menu</span></button>
+  </nav>
 
   <footer>
     <strong>FRAME</strong>
@@ -1002,7 +1185,20 @@
       $('lbNext').addEventListener('click', () => openLightbox(lightboxIndex + 1));
 
       $('search').addEventListener('input', () => renderGallery());
-      $('genreFilter').addEventListener('change', () => renderGallery());
+      $('genreFilter').addEventListener('change', () => {
+        renderGallery();
+        document.querySelectorAll('.frame-genre-chip').forEach(chip => chip.classList.toggle('active', chip.dataset.genre === $('genreFilter').value));
+      });
+      document.querySelectorAll('.frame-genre-chip').forEach(chip => chip.addEventListener('click', () => {
+        $('genreFilter').value = chip.dataset.genre;
+        document.querySelectorAll('.frame-genre-chip').forEach(item => item.classList.toggle('active', item === chip));
+        renderGallery();
+      }));
+      $('frameDockSearch')?.addEventListener('click', () => {
+        $('collection')?.scrollIntoView({behavior:'smooth'});
+        setTimeout(() => $('search')?.focus(), 350);
+      });
+      $('frameDockMenu')?.addEventListener('click', openFrameDrawer);
 
       async function handleGoogleSignIn() {
         if (!supabase) {
