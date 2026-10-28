@@ -1351,13 +1351,20 @@
         session = currentSession;
         showAuthState();
 
-        supabase.auth.onAuthStateChange(async (_event, nextSession) => {
+        // Keep this callback synchronous: awaiting Supabase work inside
+        // onAuthStateChange can block session/token processing.
+        supabase.auth.onAuthStateChange((_event, nextSession) => {
           session = nextSession;
           showAuthState();
           if (session?.user) {
             notice('');
           }
-          await refreshGallery();
+          // Refresh only after the auth callback has returned.
+          setTimeout(() => {
+            refreshGallery().catch(error => {
+              console.error('Gallery refresh after auth change failed:', error);
+            });
+          }, 0);
         });
 
         await refreshGallery();
