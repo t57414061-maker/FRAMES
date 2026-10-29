@@ -655,6 +655,8 @@ html,body{max-width:100%;overflow-x:clip}body{min-width:0}img,video,canvas,svg{m
 .frame-dock{width:min(520px,calc(100vw - 16px));max-width:calc(100vw - 16px);gap:2px;padding:5px;justify-content:space-between}
 .frame-dock button{flex:1;min-width:0;width:20%;padding:5px 2px;min-height:46px;border-radius:15px}
 .frame-dock button .fd-label{font-size:10px;white-space:nowrap}
+/* Keep primary navigation visible; the legacy hero scroll effect must not hide it. */
+body.bar-hidden .frame-dock{opacity:1!important;pointer-events:auto!important;transform:translateX(-50%)!important}
 @media(max-width:380px){.frame-dock{gap:0;padding:4px}.frame-dock button{padding:5px 1px}.frame-dock button .fd-icon{font-size:17px}.frame-dock button .fd-label{font-size:9px}}
 @media(max-width:700px){#grid{width:100%;padding-left:12px;padding-right:12px;columns:2 135px;column-gap:10px}.upload-wrap{padding-left:12px;padding-right:12px}.admin-panel{padding-left:12px;padding-right:12px}.section-head,.filters{padding-left:12px;padding-right:12px}}
 </style>
@@ -1364,6 +1366,8 @@ init().then(()=>{if(location.hash.indexOf('#ph-')===0)setTimeout(()=>{const e=do
   document.body.dataset.frameView='home';mark('home');window.scrollTo({top:0,behavior:'smooth'});
  }
  dock.addEventListener('click',e=>{const b=e.target.closest('[data-frame-tab]');if(b)view(b.dataset.frameTab)});
+ // Hero and featured CTAs must switch to a visible screen instead of scrolling to hidden sections.
+ document.addEventListener('click',e=>{const a=e.target.closest('a[href="#collection"],a[href="#share"]');if(!a)return;const href=a.getAttribute('href');if(href==='#collection'){e.preventDefault();view('explore')}else if(href==='#share'){e.preventDefault();view('upload')}});
  document.addEventListener('click',e=>{if(e.target.closest('[data-dr="admin"]'))view('admin')});
  document.body.dataset.frameView='home';window.frameSetView=view;
 })();
