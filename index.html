@@ -645,6 +645,19 @@ section{scroll-margin-top:88px}
 }
 </style>
 
+<style id="frame-separated-mobile-screens">
+body[data-frame-view="home"] #genres,body[data-frame-view="home"] #genres-grid,body[data-frame-view="home"] #challenge,body[data-frame-view="home"] #collection,body[data-frame-view="home"] #why,body[data-frame-view="home"] #share,body[data-frame-view="home"] #adminSection{display:none!important}
+body[data-frame-view="explore"] header.hero,body[data-frame-view="explore"] #statement,body[data-frame-view="explore"] #challenge,body[data-frame-view="explore"] #why,body[data-frame-view="explore"] #share,body[data-frame-view="explore"] #adminSection{display:none!important}
+body[data-frame-view="upload"] header.hero,body[data-frame-view="upload"] #featured,body[data-frame-view="upload"] #genres,body[data-frame-view="upload"] #statement,body[data-frame-view="upload"] #genres-grid,body[data-frame-view="upload"] #challenge,body[data-frame-view="upload"] #collection,body[data-frame-view="upload"] #why,body[data-frame-view="upload"] #adminSection{display:none!important}
+body[data-frame-view="admin"] header.hero,body[data-frame-view="admin"] #featured,body[data-frame-view="admin"] #genres,body[data-frame-view="admin"] #statement,body[data-frame-view="admin"] #genres-grid,body[data-frame-view="admin"] #challenge,body[data-frame-view="admin"] #collection,body[data-frame-view="admin"] #why,body[data-frame-view="admin"] #share{display:none!important}
+html,body{max-width:100%;overflow-x:clip}body{min-width:0}img,video,canvas,svg{max-width:100%}
+#grid,.upload-wrap,.admin-panel,.section-head,.filters{min-width:0;max-width:100%}
+.frame-dock{width:min(520px,calc(100vw - 16px));max-width:calc(100vw - 16px);gap:2px;padding:5px;justify-content:space-between}
+.frame-dock button{flex:1;min-width:0;width:20%;padding:5px 2px;min-height:46px;border-radius:15px}
+.frame-dock button .fd-label{font-size:10px;white-space:nowrap}
+@media(max-width:380px){.frame-dock{gap:0;padding:4px}.frame-dock button{padding:5px 1px}.frame-dock button .fd-icon{font-size:17px}.frame-dock button .fd-label{font-size:9px}}
+@media(max-width:700px){#grid{width:100%;padding-left:12px;padding-right:12px;columns:2 135px;column-gap:10px}.upload-wrap{padding-left:12px;padding-right:12px}.admin-panel{padding-left:12px;padding-right:12px}.section-head,.filters{padding-left:12px;padding-right:12px}}
+</style>
 </head>
 <body>
 <a class="skip" href="#collection">Skip to gallery</a>
@@ -1329,14 +1342,31 @@ init().then(()=>{if(location.hash.indexOf('#ph-')===0)setTimeout(()=>{const e=do
 })();
 </script>
 
-<nav class="frame-dock" id="frameDock" aria-label="Main tools">
+<nav class="frame-dock" id="frameDock" aria-label="Main navigation">
  <button type="button" data-frame-tab="home" aria-current="page"><span class="fd-icon" aria-hidden="true">⌂</span><span class="fd-label">Home</span></button>
- <button type="button" data-frame-tab="collections"><span class="fd-icon" aria-hidden="true">▤</span><span class="fd-label">Collections</span></button>
- <button type="button" data-frame-tab="search"><span class="fd-icon" aria-hidden="true">⌕</span><span class="fd-label">Search</span></button>
+ <button type="button" data-frame-tab="explore"><span class="fd-icon" aria-hidden="true">▤</span><span class="fd-label">Explore</span></button>
+ <button type="button" data-frame-tab="upload"><span class="fd-icon" aria-hidden="true">＋</span><span class="fd-label">Upload</span></button>
+ <button type="button" data-frame-tab="library"><span class="fd-icon" aria-hidden="true">▣</span><span class="fd-label">Library</span></button>
  <button type="button" data-frame-tab="menu"><span class="fd-icon" aria-hidden="true">☰</span><span class="fd-label">Menu</span></button>
 </nav>
-<script>
-(function(){const dock=document.getElementById('frameDock');if(!dock||dock.dataset.ready)return;dock.dataset.ready='1';const bs=[...dock.querySelectorAll('[data-frame-tab]')];function mark(t){bs.forEach(b=>{if(b.dataset.frameTab===t)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')})}function go(ss){for(const s of ss){const e=document.querySelector(s);if(e){e.scrollIntoView({behavior:'smooth',block:'start'});return true}}return false}dock.addEventListener('click',e=>{const b=e.target.closest('[data-frame-tab]');if(!b)return;const t=b.dataset.frameTab;mark(t);if(t==='home'){window.scrollTo({top:0,behavior:'smooth'});return}if(t==='collections'){go(['#collection','#featured','#genres-grid','#genres','main']);return}if(t==='search'){const s=document.getElementById('navSearch');if(s){s.click();return}const i=document.querySelector('input[type="search"],input[placeholder*="Search" i]');if(i){i.focus();i.scrollIntoView({behavior:'smooth',block:'center'});return}go(['#collection','#gallery','#featured']);return}if(t==='menu'){const d=document.querySelector('.menubtn');if(d){d.click();return}const set=document.getElementById('openSettings');if(set){set.click();return}go(['#share'])}});window.addEventListener('scroll',()=>{if(window.scrollY<100)mark('home')},{passive:true})})();
+<script id="frame-screen-navigation">
+(function(){
+ const dock=document.getElementById('frameDock');if(!dock||dock.dataset.ready)return;dock.dataset.ready='1';
+ const buttons=[...dock.querySelectorAll('[data-frame-tab]')];
+ function mark(tab){buttons.forEach(b=>{if(b.dataset.frameTab===tab)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')})}
+ function view(tab){
+  if(tab==='library'){const b=document.querySelector('[data-dr="library"]');if(b){b.click();mark('library');return}const p=document.getElementById('libraryPanel');if(p)p.classList.add('open');mark('library');return}
+  if(tab==='menu'){const b=document.querySelector('.menubtn');if(b){b.click();return}const drawer=document.getElementById('dr');if(drawer){drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');document.getElementById('drBg')?.classList.add('open');return}document.getElementById('openSettings')?.click();return}
+  if(tab==='search'){document.body.dataset.frameView='explore';mark('explore');const input=document.getElementById('search')||document.querySelector('input[type="search"],input[placeholder*="Search" i]');if(input)setTimeout(()=>input.focus(),80);return}
+  if(tab==='upload'){document.body.dataset.frameView='upload';mark('upload');window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>document.getElementById('share')?.scrollIntoView({behavior:'smooth',block:'start'}),50);return}
+  if(tab==='explore'){document.body.dataset.frameView='explore';mark('explore');window.scrollTo({top:0,behavior:'smooth'});return}
+  if(tab==='admin'){let ok=false;try{ok=!!(typeof session!=='undefined'&&session?.user&&typeof ADMIN_USER_ID!=='undefined'&&session.user.id===ADMIN_USER_ID)}catch(_){}if(!ok){document.body.dataset.frameView='home';mark('home');return}document.body.dataset.frameView='admin';mark('admin');window.scrollTo({top:0,behavior:'smooth'});return}
+  document.body.dataset.frameView='home';mark('home');window.scrollTo({top:0,behavior:'smooth'});
+ }
+ dock.addEventListener('click',e=>{const b=e.target.closest('[data-frame-tab]');if(b)view(b.dataset.frameTab)});
+ document.addEventListener('click',e=>{if(e.target.closest('[data-dr="admin"]'))view('admin')});
+ document.body.dataset.frameView='home';window.frameSetView=view;
+})();
 </script>
 
 <script>
