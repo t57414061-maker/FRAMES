@@ -1377,6 +1377,7 @@ init().then(()=>{if(location.hash.indexOf('#ph-')===0){window.frameSetView?.('ex
  document.addEventListener('click',e=>{const a=e.target.closest('a[href="#collection"],a[href="#share"]');if(!a)return;const href=a.getAttribute('href');if(href==='#collection'){e.preventDefault();view('explore')}else if(href==='#share'){e.preventDefault();view('upload')}});
  document.addEventListener('click',e=>{if(e.target.closest('[data-dr="admin"]'))view('admin')});
  document.body.dataset.frameView='home';window.frameSetView=view;
+ if(location.hash.indexOf('#ph-')===0)view('explore');
 })();
 </script>
 
