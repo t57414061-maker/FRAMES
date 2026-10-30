@@ -646,10 +646,13 @@ section{scroll-margin-top:88px}
 </style>
 
 <style id="frame-separated-mobile-screens">
+@media(max-width:700px){
 body[data-frame-view="home"] #genres,body[data-frame-view="home"] #genres-grid,body[data-frame-view="home"] #challenge,body[data-frame-view="home"] #collection,body[data-frame-view="home"] #why,body[data-frame-view="home"] #share,body[data-frame-view="home"] #adminSection{display:none!important}
 body[data-frame-view="explore"] header.hero,body[data-frame-view="explore"] #statement,body[data-frame-view="explore"] #challenge,body[data-frame-view="explore"] #why,body[data-frame-view="explore"] #share,body[data-frame-view="explore"] #adminSection{display:none!important}
 body[data-frame-view="upload"] header.hero,body[data-frame-view="upload"] #featured,body[data-frame-view="upload"] #genres,body[data-frame-view="upload"] #statement,body[data-frame-view="upload"] #genres-grid,body[data-frame-view="upload"] #challenge,body[data-frame-view="upload"] #collection,body[data-frame-view="upload"] #why,body[data-frame-view="upload"] #adminSection{display:none!important}
 body[data-frame-view="admin"] header.hero,body[data-frame-view="admin"] #featured,body[data-frame-view="admin"] #genres,body[data-frame-view="admin"] #statement,body[data-frame-view="admin"] #genres-grid,body[data-frame-view="admin"] #challenge,body[data-frame-view="admin"] #collection,body[data-frame-view="admin"] #why,body[data-frame-view="admin"] #share{display:none!important}
+body[data-frame-view="community"] header.hero,body[data-frame-view="community"] #featured,body[data-frame-view="community"] #genres,body[data-frame-view="community"] #genres-grid,body[data-frame-view="community"] #collection,body[data-frame-view="community"] #share,body[data-frame-view="community"] #adminSection{display:none!important}
+}
 html,body{max-width:100%;overflow-x:clip}body{min-width:0}img,video,canvas,svg{max-width:100%}
 #grid,.upload-wrap,.admin-panel,.section-head,.filters{min-width:0;max-width:100%}
 .frame-dock{width:min(520px,calc(100vw - 16px));max-width:calc(100vw - 16px);gap:2px;padding:5px;justify-content:space-between}
@@ -718,6 +721,7 @@ const GENRE_PHOTOS = {'Landscape':'','Architecture':'','Portrait':'','Nature':'d
 const SAMPLE_PHOTOS = [];          // preview gallery: [{url:'https://...',caption:'Alpine dusk',genre:'Landscape'}]
 // Weekly challenge: change these each week. Set title to '' to hide the banner.
 const CHALLENGE = {title:'Golden hour',blurb:'Show us your best light, at sunrise or sunset.',tag:'#goldenhour',ends:'2026-10-25'};
+if(Date.now()>Date.parse(CHALLENGE.ends+'T23:59:59')){const expiredEntry=document.getElementById('chEntry');if(expiredEntry){expiredEntry.checked=false;expiredEntry.closest('label')?.classList.add('hidden');}}
 // Optional: address of a small share-preview function on your host (see README in the reply). Empty = plain links.
 const SHARE_BASE = '';
 // Your contact email, shown in the Terms and Privacy pages and report messages.
@@ -765,9 +769,11 @@ async function fetchSignedPhotoUrl(path, mode='view'){
 async function refreshGallery(){
   if(!supabase){photos=[];renderGallery();return;}
   const {data,error}=await supabase.from('photos').select('*').eq('approved',true).eq('visibility','public').is('deleted_at',null).neq('moderation_status','reported').order('created_at',{ascending:false}).limit(100);
-  if(error){$('count').textContent='Gallery temporarily unavailable';return;}
+  if(error){$('count').textContent='Gallery temporarily unavailable';$('empty').textContent='The gallery could not be loaded. Please try again later.';$('empty').classList.remove('hidden');return;}
   const results=await Promise.all((data||[]).map(async p=>{try{return {...p,url:await signedPhotoUrl(p.storage_path,'view')}}catch{return {...p,url:''}}}));
-  photos=results.filter(p=>p.url);await Promise.all([loadSocial(),loadProfiles(),loadMine()]);renderGallery();
+  photos=results.filter(p=>p.url);const failed=(data||[]).length-photos.length;
+  await Promise.all([loadSocial(),loadProfiles(),loadMine()]);renderGallery();
+  if(failed>0){$('count').textContent=photos.length?String(photos.length)+' approved frames · some photos temporarily unavailable':'Gallery temporarily unavailable';if(!photos.length){$('empty').textContent='Photos exist, but their viewing links could not be prepared. Please try again later.';$('empty').classList.remove('hidden');}}
 }
 function fallbackCards(){
  if(SAMPLE_PHOTOS.length)return SAMPLE_PHOTOS.map((q,i)=>({id:'sample'+i,url:q.url,caption:q.caption||'Untitled frame',genre:q.genre||'Landscape',created_at:new Date().toISOString(),sample:true}));
@@ -786,7 +792,7 @@ function renderGallery(){
  if(!isConfigured || (!real && !supabase)) list=fallbackCards();
  current=list;$('grid').innerHTML='';$('empty').classList.toggle('hidden',list.length>0);$('empty').textContent=filterMode==='saved'?'No saved frames yet. Tap the bookmark on any photo to keep it here.':photos.length?'Nothing matches those filters yet. Try another genre or clear the search.':'No approved photographs yet. Be the first to share a frame.';
  $('count').textContent=real?`${photos.length} approved frame${photos.length===1?'':'s'}`:(!isConfigured?'Preview gallery · connect Supabase to go live':'No approved frames yet');
- const featured=list.length?list:fallbackCards();buildArc(featured);
+ const featured=list.length?list:(!isConfigured?fallbackCards():[]);buildArc(featured);
  list.slice(0,shown).forEach((p,i)=>{
   const f=document.createElement('figure'),photo=document.createElement('div'),im=document.createElement('img'),cap=document.createElement('figcaption'),info=document.createElement('div'),title=document.createElement('strong'),small=document.createElement('small'),actions=document.createElement('div');
   photo.className='photo';im.decoding='async';const done=()=>{im.classList.add('ld');photo.classList.add('ready')};im.addEventListener('load',done);im.addEventListener('error',done);im.src=p.url;im.alt=p.caption||'Photograph';im.loading='lazy';im.addEventListener('click',()=>openLightbox(i));photo.appendChild(im);
@@ -806,7 +812,7 @@ $('lbx').addEventListener('click',closeLightbox);$('lb').addEventListener('click
 document.addEventListener('keydown',e=>{if(!$('lb').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')openLightbox(lightboxIndex-1);if(e.key==='ArrowRight')openLightbox(lightboxIndex+1);});
 let searchT=0;$('search').addEventListener('input',()=>{clearTimeout(searchT);searchT=setTimeout(()=>{shown=24;renderGallery();},180);});$('genreFilter').addEventListener('change',()=>{shown=24;renderGallery();});$('more').addEventListener('click',()=>{shown+=24;renderGallery();});document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filterMode=b.dataset.filter;shown=24;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderGallery();}));
 function applyTheme(){document.documentElement.dataset.theme='dark';const m=document.querySelector('meta[name="theme-color"]');if(m)m.content='#090909';}
-function applyUserSettings(save=true){applyTheme();document.body.classList.toggle('large-text',$('textChoice').value==='large');document.body.classList.toggle('compact-gallery',$('compactChoice').checked);document.documentElement.classList.toggle('reduce-motion',$('motionChoice').checked);const prefs={text:$('textChoice').value,motion:$('motionChoice').checked,compact:$('compactChoice').checked,filter:$('defaultFilterChoice').value};try{if(save)localStorage.setItem('frame-settings',JSON.stringify(prefs))}catch(e){}if(prefs.filter){filterMode=prefs.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===filterMode));if(save&&typeof renderGallery==='function')renderGallery();}}
+function applyUserSettings(save=true){applyTheme();document.body.classList.toggle('large-text',$('textChoice').value==='large');document.body.classList.toggle('compact-gallery',$('compactChoice').checked);document.documentElement.classList.toggle('reduce-motion',$('motionChoice').checked);const prefs={text:$('textChoice').value,motion:$('motionChoice').checked,compact:$('compactChoice').checked,filter:$('defaultFilterChoice').value};try{if(save)localStorage.setItem('frame-settings',JSON.stringify(prefs))}catch(e){}if(!save&&prefs.filter){filterMode=prefs.filter;document.querySelectorAll('[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===filterMode));if(typeof renderGallery==='function')renderGallery();}}
 function loadUserSettings(){try{const p=JSON.parse(localStorage.getItem('frame-settings')||'{}');$('textChoice').value=p.text==='large'?'large':'normal';$('motionChoice').checked=!!p.motion;$('compactChoice').checked=!!p.compact;$('defaultFilterChoice').value=p.filter==='recent'?'recent':'all';}catch(e){}}
 applyTheme();loadUserSettings();applyUserSettings(false);
 function closeSettings(){$('settingsPanel').classList.remove('open');}
@@ -839,7 +845,7 @@ $('uploadForm').addEventListener('submit',async e=>{
    const row={owner:session.user.id,caption:($('caption').value.trim()+($('chEntry').checked&&CHALLENGE.tag?' '+CHALLENGE.tag:'')).trim(),genre:$('uploadGenre').value,storage_path:path,approved:true,visibility:$('uploadVisibility').value,moderation_status:'clear'};const cam=$('camera').value.trim();if(cam)row.camera=cam;let ins=await supabase.from('photos').insert(row);if(ins.error&&cam&&/camera/i.test(ins.error.message||'')){delete row.camera;ins=await supabase.from('photos').insert(row);}const rowErr=ins.error;if(rowErr){await supabase.storage.from(BUCKET).remove([path]);throw rowErr;}done++;
   }
   note('uploadMsg',`${done} photo${done===1?'':'s'} submitted. Thank you! They are now published and will appear in the gallery shortly.`,'success');$('files').value='';$('previews').innerHTML='';$('caption').value='';$('camera').value='';$('chEntry').checked=false;$('uploadGenre').value='';$('uploadVisibility').value='public';refreshGallery();
- }catch(err){note('uploadMsg',err.message||'Upload failed.','error');}finally{btn.disabled=false;}
+ }catch(err){if(done>0){$('uploadForm').reset();$('previews').innerHTML='';refreshGallery();note('uploadMsg',done+' photo'+(done===1?'':'s')+' uploaded and published. The next file failed: '+(err.message||'Upload failed.')+'. Please reselect only the remaining photos.','error');}else note('uploadMsg',err.message||'Upload failed.','error');}finally{btn.disabled=false;}
 });
 // ---- FRAME v2: owner library, soft delete, restore, notifications, AI suggestions ----
 async function softDeletePhoto(p){
@@ -866,7 +872,7 @@ async function permanentlyDeletePhoto(p){
 function libraryItem(p,kind){
  const el=document.createElement('article');el.className='frame-library-item';const img=document.createElement('img');img.alt=p.caption||'Photo';img.src=p.url||'';
  const body=document.createElement('div'),title=document.createElement('p'),meta=document.createElement('small'),actions=document.createElement('div');title.textContent=p.caption||'Untitled frame';meta.className='frame-note';meta.textContent=(p.genre||'Photo')+' · '+(p.visibility||'public')+(p.deleted_at?' · deleted '+niceDate(p.deleted_at)+' · expires '+niceDate(new Date(new Date(p.deleted_at).getTime()+30*864e5).toISOString()):'');actions.className='frame-extra-actions';
- if(kind==='shared'){const open=document.createElement('button');open.type='button';open.className='btn small';open.textContent='Open photo';open.addEventListener('click',()=>{if(p.url){$('libraryPanel').classList.remove('open');current=[p];openLightbox(0);}});actions.appendChild(open);}
+ if(kind==='shared'){const open=document.createElement('button');open.type='button';open.className='btn small';open.textContent='Open photo';open.addEventListener('click',()=>{if(p.url){$('libraryPanel').classList.remove('open');savedCurrent=current;current=[p];openLightbox(0);}});actions.appendChild(open);}
  else if(kind==='deleted'){
   const restore=document.createElement('button');restore.type='button';restore.className='btn small';restore.textContent='Restore';restore.addEventListener('click',()=>restorePhoto(p));actions.appendChild(restore);
   if(session?.user?.id===ADMIN_USER_ID){const hard=document.createElement('button');hard.type='button';hard.className='btn outline small';hard.textContent='Delete forever';hard.addEventListener('click',()=>permanentlyDeletePhoto(p));actions.appendChild(hard);}
@@ -945,6 +951,7 @@ async function loadAdmin(){
  if(!pending.length){const p=document.createElement('p');p.className='muted';p.textContent='No legacy pending submissions. New uploads publish automatically.';list.appendChild(p);}
  loadAdminPublished();loadReports();loadAdminUsers();
 }
+window.frameIsAdmin=()=>!!(session?.user&&session.user.id===ADMIN_USER_ID);
 async function init(){
  if(!supabase){showAuthState();renderGallery();return;}
  const {data:{session:s}}=await supabase.auth.getSession();session=s;showAuthState();
@@ -1067,7 +1074,7 @@ function closeProfile(){$('pf').classList.remove('open');}
 function openProfile(id){const pr=profiles[id]||{};$('pfName').textContent=pr.display_name||'Photographer';$('pfBio').textContent=pr.hide_details?'':(pr.bio||'');const list=photos.filter(p=>p.owner===id),g=$('pfGrid');g.innerHTML='';
  list.forEach((p,i)=>{const im=document.createElement('img');im.src=p.url;im.alt=p.caption||'Photograph';im.addEventListener('click',()=>{savedCurrent=current;current=list;openLightbox(i);});g.appendChild(im);});
  const meta=$('pfMeta');meta.innerHTML='';const c=document.createElement('span');c.className='muted';c.textContent=list.length+' frame'+(list.length===1?'':'s');meta.append(c);
- const h=(pr.instagram||'').replace(/[^a-z0-9._]/gi,'');if(h){const a=document.createElement('a');a.href='https://instagram.com/'+h;a.target='_blank';a.rel='noopener';a.className='muted';a.textContent='@'+h;meta.append(a);}
+ const h=(pr.hide_details?'':(pr.instagram||'')).replace(/[^a-z0-9._]/gi,'');if(h){const a=document.createElement('a');a.href='https://instagram.com/'+h;a.target='_blank';a.rel='noopener';a.className='muted';a.textContent='@'+h;meta.append(a);}
  if(supabase&&id!==session?.user?.id){const fb=document.createElement('button');fb.type='button';fb.className='btn small';const paint=()=>{fb.textContent=following.has(id)?'Following':'Follow';fb.classList.toggle('outline',following.has(id));};paint();
   fb.addEventListener('click',async()=>{if(!session?.user){closeProfile();toast('Sign in to follow photographers.');$('share').scrollIntoView({behavior:'smooth'});return;}const on=following.has(id);on?following.delete(id):following.add(id);paint();const {error}=on?await supabase.from('follows').delete().eq('follower_id',session.user.id).eq('following_id',id):await supabase.from('follows').insert({follower_id:session.user.id,following_id:id});if(error){on?following.add(id):following.delete(id);paint();toast('Following is not switched on yet.');}});meta.append(fb);}
  const conn=$('pfConnections');conn.innerHTML='';
@@ -1193,21 +1200,21 @@ const fab=document.querySelector('.fab');addEventListener('scroll',()=>{fab.clas
  document.addEventListener('touchend',end,{passive:true});document.addEventListener('touchcancel',end,{passive:true});
  // actions: each maps to an existing section or function
  const go=(id,f)=>{close(false);setTimeout(()=>{const e=document.getElementById(id);if(e){e.scrollIntoView({behavior:RM?'auto':'smooth'});}if(f)setTimeout(f,350);},300);};
- const needAuth=m=>{go('share',()=>{if(typeof note==='function'&&$('authMsg'))note('authMsg',m,'error');});};
+ const needAuth=m=>{window.frameSetView?.('upload');go('share',()=>{if(typeof note==='function'&&$('authMsg'))note('authMsg',m,'error');});};
  const A={
-  home:()=>{close(false);scrollTo({top:0,behavior:RM?'auto':'smooth'});},
-  explore:()=>go('collection',()=>{const b=document.querySelector('[data-filter="all"]');if(b)b.click();}),
-  search:()=>go('collection',()=>$('search').focus()),
-  create:()=>go('share'),
+  home:()=>{close(false);window.frameSetView?.('home');scrollTo({top:0,behavior:RM?'auto':'smooth'});},
+  explore:()=>{window.frameSetView?.('explore');go('collection',()=>{const b=document.querySelector('[data-filter="all"]');if(b)b.click();});},
+  search:()=>{window.frameSetView?.('explore');go('collection',()=>$('search').focus());},
+  create:()=>{window.frameSetView?.('upload');go('share');},
   profile:()=>{if(session&&session.user){close(false);openProfile(session.user.id);}else needAuth('Sign in to view your profile.');},
   notif:()=>{close(false);$('nf').classList.add('open');loadNotifications();$('nfx').focus();},
-  genres:()=>go('genres'),
-  saved:()=>{if(!(session&&session.user))return needAuth('Sign in to see your saved creations.');go('collection',()=>{const b=document.querySelector('[data-filter="saved"]');if(b)b.click();});},
+  genres:()=>{window.frameSetView?.('explore');go('genres');},
+  saved:()=>{if(!(session&&session.user))return needAuth('Sign in to see your saved creations.');window.frameSetView?.('explore');go('collection',()=>{const b=document.querySelector('[data-filter="saved"]');if(b)b.click();});},
   library:()=>{if(!(session&&session.user))return needAuth('Sign in to manage your photos.');close(false);$('libraryPanel').classList.add('open');loadPrivateLibrary();},
-  community:()=>go(document.getElementById('challenge')?'challenge':'why'),
+  community:()=>{close(false);window.frameSetView?.('community');setTimeout(()=>document.getElementById('why')?.scrollIntoView({behavior:RM?'auto':'smooth',block:'start'}),40);},
   settings:()=>{close(false);$('openSettings').click();},
   feedback:()=>{close(false);$('feedbackPanel').classList.add('open');$('feedbackMessage').focus();},
-  privacy:()=>go(document.getElementById('pri')?'pri':'share'),
+  privacy:()=>{close(false);openLegal('privacy');},
   signout:()=>{if(session&&session.user){close(false);$('signOut').click();}else needAuth('You are not signed in.');}
  };
  dr.addEventListener('click',e=>{const b=e.target.closest('[data-dr]');if(b&&A[b.dataset.dr])A[b.dataset.dr]();});
@@ -1340,7 +1347,7 @@ Object.assign(GI,{
   }catch(e){if(my!==seq)return;note2.textContent=e.message==='missing'?'Auto-caption is not switched on yet. Add your own caption and genre.':'Could not read this photo automatically. Add a caption and genre yourself.';note2.className='notice';}
  });
 })();
-init().then(()=>{if(location.hash.indexOf('#ph-')===0)setTimeout(()=>{const e=document.getElementById(location.hash.slice(1));if(e)e.scrollIntoView({behavior:'smooth',block:'center'});},700);});
+init().then(()=>{if(location.hash.indexOf('#ph-')===0){window.frameSetView?.('explore');setTimeout(()=>{const e=document.getElementById(location.hash.slice(1));if(e)e.scrollIntoView({behavior:'smooth',block:'center'});},700);}});
 })();
 </script>
 
@@ -1358,11 +1365,11 @@ init().then(()=>{if(location.hash.indexOf('#ph-')===0)setTimeout(()=>{const e=do
  function mark(tab){buttons.forEach(b=>{if(b.dataset.frameTab===tab)b.setAttribute('aria-current','page');else b.removeAttribute('aria-current')})}
  function view(tab){
   if(tab==='library'){const b=document.querySelector('[data-dr="library"]');if(b){b.click();mark('library');return}const p=document.getElementById('libraryPanel');if(p)p.classList.add('open');mark('library');return}
-  if(tab==='menu'){const b=document.querySelector('.menubtn');if(b){b.click();return}const drawer=document.getElementById('dr');if(drawer){drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');document.getElementById('drBg')?.classList.add('open');return}document.getElementById('openSettings')?.click();return}
+  if(tab==='menu'){if(window.frameIsAdmin?.()){const ul=document.querySelector('#dr ul');if(ul&&!ul.querySelector('[data-dr="admin"]')){const li=document.createElement('li'),ab=document.createElement('button');ab.type='button';ab.dataset.dr='admin';ab.className='btn outline small';ab.textContent='Admin dashboard';li.appendChild(ab);ul.appendChild(li);}}const b=document.querySelector('.menubtn');if(b){b.click();return}const drawer=document.getElementById('dr');if(drawer){drawer.classList.add('open');drawer.setAttribute('aria-hidden','false');document.getElementById('drBg')?.classList.add('open');return}document.getElementById('openSettings')?.click();return}
   if(tab==='search'){document.body.dataset.frameView='explore';mark('explore');const input=document.getElementById('search')||document.querySelector('input[type="search"],input[placeholder*="Search" i]');if(input)setTimeout(()=>input.focus(),80);return}
   if(tab==='upload'){document.body.dataset.frameView='upload';mark('upload');window.scrollTo({top:0,behavior:'smooth'});setTimeout(()=>document.getElementById('share')?.scrollIntoView({behavior:'smooth',block:'start'}),50);return}
   if(tab==='explore'){document.body.dataset.frameView='explore';mark('explore');window.scrollTo({top:0,behavior:'smooth'});return}
-  if(tab==='admin'){let ok=false;try{ok=!!(typeof session!=='undefined'&&session?.user&&typeof ADMIN_USER_ID!=='undefined'&&session.user.id===ADMIN_USER_ID)}catch(_){}if(!ok){document.body.dataset.frameView='home';mark('home');return}document.body.dataset.frameView='admin';mark('admin');window.scrollTo({top:0,behavior:'smooth'});return}
+  if(tab==='admin'){if(!window.frameIsAdmin?.()){document.body.dataset.frameView='home';mark('home');return}document.body.dataset.frameView='admin';mark('admin');window.scrollTo({top:0,behavior:'smooth'});return}
   document.body.dataset.frameView='home';mark('home');window.scrollTo({top:0,behavior:'smooth'});
  }
  dock.addEventListener('click',e=>{const b=e.target.closest('[data-frame-tab]');if(b)view(b.dataset.frameTab)});
@@ -1370,6 +1377,7 @@ init().then(()=>{if(location.hash.indexOf('#ph-')===0)setTimeout(()=>{const e=do
  document.addEventListener('click',e=>{const a=e.target.closest('a[href="#collection"],a[href="#share"]');if(!a)return;const href=a.getAttribute('href');if(href==='#collection'){e.preventDefault();view('explore')}else if(href==='#share'){e.preventDefault();view('upload')}});
  document.addEventListener('click',e=>{if(e.target.closest('[data-dr="admin"]'))view('admin')});
  document.body.dataset.frameView='home';window.frameSetView=view;
+ if(location.hash.indexOf('#ph-')===0)view('explore');
 })();
 </script>
 
