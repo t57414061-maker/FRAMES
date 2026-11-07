@@ -51,3 +51,11 @@ main>section:not(#frame-world-app){display:none!important}
 
 #frame-world-app .fwx-stage{padding:0}
 #frame-world-app .fwx-root{width:100%;}
+
+
+/* Licensed image presentation — no image appears unless its registry record is approved. */
+.fw-country-image,.fwc-image,.fwc-hero-image{margin:0 0 14px;overflow:hidden;background:#111;border:1px solid #383126}
+.fw-country-image img,.fwc-image img,.fwc-hero-image img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.fw-image-credit,.fwc-image-credit{display:block;padding:7px 9px;color:#aaa398;font-size:10px;line-height:1.45;overflow-wrap:anywhere}
+.fwc-hero-image{max-width:100%;margin:0 0 22px;border-color:#50432e}
+.fwc-hero-image img{max-height:460px}
