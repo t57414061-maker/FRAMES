@@ -25,7 +25,10 @@ for (const item of discoveries) {
 }
 const sample = {
   europe: [['Testland', 'Example City', 'Old Town']],
-  regions: [{ name: 'Africa', countries: [['Comoros', 'Moroni', 'Mount Karthala']] }]
+  regions: [
+    { name: 'Africa', countries: [['Comoros', 'Moroni', 'Mount Karthala']] },
+    { name: 'Asia', countries: [['India', 'New Delhi']] }
+  ]
 };
 const countries = sandbox.window.FrameWorldCatalog.build(sample, {});
 const comoros = countries.find(x => x.name === 'Comoros');
@@ -41,4 +44,10 @@ const countryRecord = sandbox.window.FrameCountryExperience.fromLegacy(saoTome.l
 const rocas = countryRecord.destinations.find(x => x.id === 'rocas-sao-tome-principe');
 assert.ok(rocas && rocas.source && rocas.source.url.startsWith('https://'));
 assert.equal(rocas.researchStatus, 'Source checked');
+const india = countries.find(x => x.name === 'India');
+const indiaRecord = sandbox.window.FrameCountryExperience.fromLegacy(india.legacyRow, sandbox.window.FRAME_WORLD_RESEARCH, {id:india.id, region:india.region});
+assert.equal(indiaRecord.regions[0].name, 'West Bengal');
+assert.equal(indiaRecord.regions[0].cities[0].name, 'Kolkata');
+assert.equal(indiaRecord.regions[0].cities[0].destinations[0].id, 'museum-of-word-kolkata');
+assert.equal(indiaRecord.destinations.some(x => x.id === 'museum-of-word-kolkata'), false, 'Nested records must not be duplicated at country level');
 console.log('FRAME World verified discovery tests passed: ' + discoveries.length + ' records.');
