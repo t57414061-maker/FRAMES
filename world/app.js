@@ -19,7 +19,7 @@
   discover.hidden=true;profile.hidden=false;
   var record=w.FrameCountryExperience.fromLegacy(c.legacyRow,w.FRAME_WORLD_RESEARCH,{region:c.region,id:c.id});
   record.regions=[]; /* The source index is flat; never fabricate region/city membership. */
-  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;if(experience)experience.exit();}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
+  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
   var actions=node('div','fw-country-actions');
   actions.append(button(state.saved.indexOf(c.id)>=0?'★ Saved':'☆ Save country','fw-action',function(){toggle(state.saved,c.id);renderProfile(c);}));
   actions.append(button(state.journey.indexOf(c.id)>=0?'✓ In journey':'+ Add to journey','fw-action',function(){toggle(state.journey,c.id);renderProfile(c);}));
@@ -75,7 +75,8 @@
  input.id='fw-global-search';input.type='search';input.placeholder='Search countries, capitals and destinations…';input.setAttribute('aria-label','Search the world atlas');
  region.id='fw-region-filter';region.appendChild(new Option('All regions','All regions'));
  Array.from(new Set(catalog.map(function(c){return c.region}))).sort().forEach(function(x){region.appendChild(new Option(x,x));});
- search.append(input,region);mast.appendChild(search);mast.appendChild(button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]); }));
+ search.append(input,region);mast.appendChild(search);
+ var randomBtn=button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]);});randomBtn.id='fw-world-random';mast.appendChild(randomBtn);mast.appendChild(button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]); }));
  var count=node('p','fw-result-count','');count.id='fw-result-count';mast.appendChild(count);shell.appendChild(mast);
  var carouselSection=section('fw-carousel','Explore the world','Select a country in the cinematic carousel. Use search to jump directly to any indexed country.');
  var carouselRoot=node('div','fw-carousel-root');carouselRoot.id='fwx-carousel-root';carouselSection.appendChild(carouselRoot);shell.appendChild(carouselSection);
@@ -95,7 +96,7 @@
  input.addEventListener('input',function(){state.query=input.value;renderDiscovery();});
  region.addEventListener('change',function(){state.region=region.value;renderDiscovery();});
  renderCollections();renderDiscovery();renderPanels();
- var experience=w.FrameExperience.init({root:'#fwx-carousel-root',countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);}});
+ var experience=w.FrameExperience.init({root:'#fwx-carousel-root',countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
  if(!experience)carouselRoot.append(node('p','fw-empty','The carousel could not start. Use the country index below.'));
  d.getElementById('fw-world-random').addEventListener('click',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]);});
 })(window,document);
