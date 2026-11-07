@@ -65,3 +65,5 @@ img,video,iframe{max-width:100%}@media(max-width:700px){nav{max-width:100vw}.her
  .frame-world-link{padding:7px 10px;font-size:10px!important}
  #dr li .dr-world-link{min-height:48px}
 }
+
+nav .links a.frame-world-link:after{display:none!important}
