@@ -10,7 +10,7 @@ vm.runInContext(fs.readFileSync('world/schema.js', 'utf8'), sandbox);
 vm.runInContext(fs.readFileSync('world/country-experience.js', 'utf8'), sandbox);
 
 const discoveries = sandbox.window.FRAME_WORLD_VERIFIED_DISCOVERIES;
-assert.ok(discoveries.length >= 20, 'Expected a substantial 2026 discovery batch');
+assert.ok(discoveries.length >= 29, 'Expected all 25 UNESCO inscriptions plus museum additions');
 const ids = new Set();
 const names = new Set();
 for (const item of discoveries) {
