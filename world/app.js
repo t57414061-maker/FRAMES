@@ -13,13 +13,13 @@
  function section(id,title,sub){var s=node('section','fw-app-section');s.id=id;s.append(node('h2','fw-app-heading',title));if(sub)s.append(node('p','fw-app-sub',sub));return s;}
  function saveState(){write('frame-world-saved',state.saved);write('frame-world-journey',state.journey);write('frame-world-recent',state.recent);}
  function toggle(list,id){var i=list.indexOf(id);if(i<0)list.push(id);else list.splice(i,1);saveState();renderPanels();}
- function enterCountry(c){if(!c)return;state.recent=[c.id].concat(state.recent.filter(function(x){return x!==c.id})).slice(0,12);saveState();renderProfile(c);}
+ function enterCountry(c){if(!c)return;try{var url=new URL(w.location.href);url.searchParams.set('country',c.id);w.history.replaceState({},'',url);}catch(e){}state.recent=[c.id].concat(state.recent.filter(function(x){return x!==c.id})).slice(0,12);saveState();renderProfile(c);}
  function renderProfile(c){
   var profile=d.getElementById('fw-country-profile'),discover=d.getElementById('fw-discovery-view');
   discover.hidden=true;mast.hidden=true;carouselSection.hidden=true;collections.hidden=true;panels.hidden=true;profile.hidden=false;
   var record=w.FrameCountryExperience.fromLegacy(c.legacyRow,w.FRAME_WORLD_RESEARCH,{region:c.region,id:c.id});
   record.regions=[]; /* The source index is flat; never fabricate region/city membership. */
-  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;mast.hidden=false;carouselSection.hidden=false;collections.hidden=false;panels.hidden=false;}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
+  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;mast.hidden=false;carouselSection.hidden=false;collections.hidden=false;panels.hidden=false;try{var url=new URL(w.location.href);url.searchParams.delete('country');w.history.replaceState({},'',url);}catch(e){}}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
   var actions=node('div','fw-country-actions');
   actions.append(button(state.saved.indexOf(c.id)>=0?'★ Saved':'☆ Save country','fw-action',function(){toggle(state.saved,c.id);renderProfile(c);}));
   actions.append(button(state.journey.indexOf(c.id)>=0?'✓ In journey':'+ Add to journey','fw-action',function(){toggle(state.journey,c.id);renderProfile(c);}));
@@ -45,6 +45,8 @@
  }
  function renderPanels(){
   var saved=catalog.filter(function(c){return state.saved.indexOf(c.id)>=0;});
+  var savedDestinations=read('frame-world-saved-destinations'),sd=d.getElementById('fw-saved-destinations');
+  if(sd){sd.textContent='';if(!savedDestinations.length)sd.append(node('p','fw-empty','No saved destinations yet. Save a place from any country profile.'));savedDestinations.forEach(function(item){var card=node('article','fw-collection-card');card.append(node('h3','',item.name),node('p','',item.country));card.append(button('Remove','fw-action',function(){var next=read('frame-world-saved-destinations').filter(function(x){return x.key!==item.key;});write('frame-world-saved-destinations',next);renderPanels();}));sd.appendChild(card);});}
   var journey=catalog.filter(function(c){return state.journey.indexOf(c.id)>=0;});
   var recent=state.recent.map(function(id){return byId[id]}).filter(Boolean);
   renderCards(d.getElementById('fw-saved-grid'),saved);
@@ -86,6 +88,7 @@
  var collections=section('fw-collections','FRAME Collections','Explore the atlas by world region.');var cg=node('div','fw-collection-grid');cg.id='fw-collection-grid';collections.appendChild(cg);shell.appendChild(collections);
  var panels=section('fw-your-world','Your World','Saved countries, a personal journey board and recently explored places are stored on this device.');panels.id='fw-your-world';
  [['Saved countries','fw-saved-grid'],['Journey board','fw-journey-grid'],['Recently explored','fw-recent-grid']].forEach(function(pair){var h=node('h3','fw-panel-title',pair[0]),g=node('div','fw-country-grid');g.id=pair[1];panels.append(h,g);});
+ var savedDestHeading=node('h3','fw-panel-title','Saved destinations');var savedDestGrid=node('div','fw-collection-grid');savedDestGrid.id='fw-saved-destinations';panels.append(savedDestHeading,savedDestGrid);
  var compare=node('div','fw-compare-tools');compare.append(node('h3','fw-panel-title','Compare countries'));
  var ca=node('select','fw-compare-select'),cb=node('select','fw-compare-select');ca.append(new Option('Choose first country',''));cb.append(new Option('Choose second country',''));
  catalog.forEach(function(c){ca.append(new Option(c.name,c.id));cb.append(new Option(c.name,c.id));});
@@ -96,7 +99,10 @@
  input.addEventListener('input',function(){state.query=input.value;renderDiscovery();});
  region.addEventListener('change',function(){state.region=region.value;renderDiscovery();});
  renderCollections();renderDiscovery();renderPanels();
- var experience=w.FrameExperience.init({root:'#fwx-carousel-root',countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
+ var requestedCountry='';try{requestedCountry=new URLSearchParams(w.location.search).get('country')||'';}catch(e){}
+ var experience=w.FrameExperience.init({root:'#fwx-carousel-root',intro:!requestedCountry,introOnce:true,countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
  if(!experience)carouselRoot.append(node('p','fw-empty','The carousel could not start. Use the country index below.'));
+ if(requestedCountry&&byId[requestedCountry])openCountry(byId[requestedCountry]);
+ d.addEventListener('frameworld:saved-destinations-changed',renderPanels);
  d.getElementById('fw-world-random').addEventListener('click',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]);});
 })(window,document);
