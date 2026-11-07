@@ -79,7 +79,7 @@
  root.textContent='';
  var shell=node('div','fw-app-shell');
  var mast=node('div','fw-app-mast');
- mast.append(node('p','fw-eyebrow','THE WORLD, OPENED BY FRAME'),node('h1','fw-app-title','Every perspective. Every story.'),node('p','fw-app-lead','A growing atlas of countries, cultures and places. Explore what is documented, and see clearly where research is still underway.'));
+ mast.append(node('p','fw-eyebrow','THE WORLD, OPENED BY FRAME'),node('h1','fw-app-title','Explore the world.'),node('p','fw-app-lead','A growing atlas of countries, cultures and places. Explore what is documented, and see clearly where research is still underway.'));
  var search=node('div','fw-searchbar'),input=node('input','fw-global-search'),region=node('select','fw-region-filter');
  input.id='fw-global-search';input.type='search';input.placeholder='Search countries, capitals and destinations…';input.setAttribute('aria-label','Search the world atlas');
  region.id='fw-region-filter';region.appendChild(new Option('All regions','All regions'));
