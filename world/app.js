@@ -18,7 +18,7 @@
   var profile=d.getElementById('fw-country-profile'),discover=d.getElementById('fw-discovery-view');
   discover.hidden=true;mast.hidden=true;carouselSection.hidden=true;collections.hidden=true;panels.hidden=true;profile.hidden=false;
   var record=w.FrameCountryExperience.fromLegacy(c.legacyRow,w.FRAME_WORLD_RESEARCH,{region:c.region,id:c.id});
-  record.regions=[]; /* The source index is flat; never fabricate region/city membership. */
+  /* Only region and city relationships explicitly verified in the discovery records are rendered. */
   w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;mast.hidden=false;carouselSection.hidden=false;collections.hidden=false;panels.hidden=false;try{var url=new URL(w.location.href);url.searchParams.delete('country');w.history.replaceState({},'',url);}catch(e){}}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
   var actions=node('div','fw-country-actions');
   actions.append(button(state.saved.indexOf(c.id)>=0?'★ Saved':'☆ Save country','fw-action',function(){toggle(state.saved,c.id);renderProfile(c);}));

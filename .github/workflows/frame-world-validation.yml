@@ -25,7 +25,10 @@ jobs:
           node --check world/schema.js
           node --check world/app.js
           node --check world/images.js
+          node --check world/verified-discoveries.js
       - name: Test catalog, schema and image licensing contracts
         run: |
           node world/tests/data-contract.test.cjs
           node world/tests/image-library.test.cjs
+          node world/tests/verified-discoveries.test.cjs
+

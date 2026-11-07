@@ -37,6 +37,8 @@ const valid = sandbox.window.FrameWorldSchema.validateCountry({
   }]
 });
 assert.equal(valid.valid, true, valid.errors.join('; '));
+const validCity = sandbox.window.FrameWorldSchema.validateCountry({ id: 'city-test', name: 'City Test', cities: [{ id: 'verified-city', name: 'Verified City', destinations: [{ id: 'museum', name: 'Museum', source: { name: 'Official source', url: 'https://example.org/museum' } }] }] });
+assert.equal(validCity.valid, true, validCity.errors.join('; '));
 
 const invalid = sandbox.window.FrameWorldSchema.validateCountry({
   id: 'bad-country',
