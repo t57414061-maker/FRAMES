@@ -31,3 +31,4 @@ jobs:
           node world/tests/data-contract.test.cjs
           node world/tests/image-library.test.cjs
           node world/tests/verified-discoveries.test.cjs
+
