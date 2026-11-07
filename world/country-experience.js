@@ -63,6 +63,11 @@
     addField(fields, 'Photography notes', item.photography);
     addField(fields, 'Best time to visit', item.bestTimeToVisit);
     addField(fields, 'Visitor information', item.visitorInfo);
+    var location = [item.geography && item.geography.administrativeArea, item.geography && item.geography.district, item.geography && item.geography.city, item.geography && item.geography.locality].filter(Boolean).join(' · ');
+    addField(fields, 'Verified location', location);
+    addField(fields, 'Current status', item.researchStatus);
+    if (item.openedAt) addField(fields, 'Opened', item.openedAt);
+    if (item.plannedOpening) addField(fields, 'Planned opening', item.plannedOpening);
     if (fields.childNodes.length) card.appendChild(fields);
     var link = sourceLink(item.source);
     if (link) card.appendChild(link);
@@ -187,7 +192,10 @@
         photography: r.photo || '',
         visitorInfo: r.visit || '',
         source: r.url ? { name: r.source || 'Verified source', url: r.url } : null,
-        researchStatus: r.status || 'Research pending'
+        researchStatus: r.status || 'Research pending',
+        category: r.category || '',
+        geography: { administrativeArea: r.administrativeArea || '', district: r.district || '', city: r.city || '', locality: r.locality || '' },
+        verifiedAt: r.verifiedAt || '', heritageYear: r.heritageYear || '', openedAt: r.openedAt || '', plannedOpening: r.plannedOpening || ''
       };
     });
     return {
