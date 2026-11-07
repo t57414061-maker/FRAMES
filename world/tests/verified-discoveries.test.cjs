@@ -17,6 +17,14 @@ for (const item of unescoRecords) {
   assert.match(item.url, /^https:\/\/whc\.unesco\.org\/en\/list\/\d+$/, 'Each UNESCO inscription must link to its own official property dossier: ' + item.name);
 }
 assert.equal(new Set(unescoRecords.map(item => item.url)).size, 25, 'Each UNESCO inscription must have a distinct official dossier URL');
+const expectedCategories = { Cultural: 19, Natural: 5, Mixed: 1 };
+for (const [category, count] of Object.entries(expectedCategories)) {
+  assert.equal(unescoRecords.filter(item => item.unescoCategory === category).length, count, 'Incorrect 2026 UNESCO ' + category + ' count');
+}
+for (const item of unescoRecords) {
+  assert.equal(item.descriptionLicense, 'CC-BY-SA IGO 3.0', 'UNESCO description licence attribution missing: ' + item.name);
+}
+
 
 const ids = new Set();
 const names = new Set();
