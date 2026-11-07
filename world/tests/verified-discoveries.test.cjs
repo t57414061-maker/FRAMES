@@ -66,4 +66,25 @@ assert.ok(westBengal, 'Expected the verified West Bengal region');
 assert.equal(westBengal.cities[0].name, 'Kolkata');
 assert.equal(westBengal.cities[0].destinations[0].id, 'museum-of-word-kolkata');
 assert.equal(indiaRecord.destinations.some(x => x.id === 'museum-of-word-kolkata'), false, 'Nested records must not be duplicated at country level');
+
+const addedDiscoveries = [
+  'grasslands-national-park',
+  'greater-cape-three-points-mpa',
+  'red-sea-museum-jeddah',
+  'natural-history-museum-abu-dhabi',
+  'zayed-national-museum',
+  'powerhouse-parramatta'
+].map(id => discoveries.find(item => item.id === id));
+assert.ok(addedDiscoveries.every(Boolean), 'Expected the new global discovery batch');
+assert.equal(addedDiscoveries.length, 6);
+assert.equal(addedDiscoveries.find(item => item.id === 'grasslands-national-park').administrativeArea, 'Eastern Cape');
+assert.equal(addedDiscoveries.find(item => item.id === 'red-sea-museum-jeddah').city, 'Jeddah');
+assert.equal(addedDiscoveries.find(item => item.id === 'natural-history-museum-abu-dhabi').openedAt, '2025-11-22');
+assert.equal(addedDiscoveries.find(item => item.id === 'zayed-national-museum').openedAt, '2025-12-03');
+const futureOpening = addedDiscoveries.find(item => item.id === 'powerhouse-parramatta');
+assert.equal(futureOpening.plannedOpening, '2026-11-07');
+assert.match(futureOpening.status, /unconfirmed/i, 'Do not imply the announced opening is confirmed operationally');
+const declaredPark = addedDiscoveries.find(item => item.id === 'grasslands-national-park');
+assert.match(declaredPark.status, /visitor access details pending/i, 'A legal park declaration must not imply visitor access');
+
 console.log('FRAME World verified discovery tests passed: ' + discoveries.length + ' records.');
