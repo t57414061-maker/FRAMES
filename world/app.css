@@ -30,3 +30,6 @@
 .fw-compare-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .fw-data-note{max-width:900px;margin:34px auto 0;color:#898276;font-size:11px;line-height:1.7;border-top:1px solid #302b23;padding-top:18px}
 @media(max-width:560px){.fw-app-shell{width:calc(100% - 24px);padding-top:10px}.fw-searchbar{flex-direction:column}.fw-region-filter{width:100%}.fw-carousel-root{min-height:330px}.fw-compare-grid{grid-template-columns:1fr}}
+
+/* Replace the legacy index presentation only when the integrated app loads. */
+main>section:not(#frame-world-app){display:none!important}
