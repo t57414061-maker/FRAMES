@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>FRAME World · Experience test</title>
+<link rel="stylesheet" href="frame-experience.css">
+<style>html,body{margin:0;background:#090909}</style>
+</head>
+<body>
+<main id="fwx-test" class="fwx-root"></main>
+<script src="frame-experience.js"></script>
+<script>
+  /* Demo data for testing only. Replace with the real country data after the Phase 1 audit.
+     No images are included: each one needs a verified source and licence first. */
+  var DEMO = [
+    { code: 'FR', name: 'France', capital: 'Paris', accent: '#3d5a80' },
+    { code: 'JP', name: 'Japan', capital: 'Tokyo', accent: '#b5485a' },
+    { code: 'PE', name: 'Peru', capital: 'Lima', accent: '#a8743a' },
+    { code: 'MA', name: 'Morocco', capital: 'Rabat', accent: '#b3562f' },
+    { code: 'IS', name: 'Iceland', capital: 'Reykjavík', accent: '#4f7a8c' },
+    { code: 'KE', name: 'Kenya', capital: 'Nairobi', accent: '#7a5c34' }
+  ];
+  window.fwxTest = FrameExperience.init({
+    root: '#fwx-test',
+    countries: DEMO,
+    introOnce: false,
+    autoplay: false,
+    onEnter: function (c) { console.info('Entered', c.name); }
+  });
+</script>
+</body>
+</html>
