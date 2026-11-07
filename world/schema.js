@@ -35,6 +35,7 @@
   if(!country||!text(country.name))errors.push('country: missing name');
   if(country&&country.source&&!secureSource(country.source))errors.push('country: source must have a name and HTTPS URL');
   (country&&Array.isArray(country.regions)?country.regions:[]).forEach(function(x,i){errors=errors.concat(validateRegion(x,'regions['+i+']'));});
+  (country&&Array.isArray(country.cities)?country.cities:[]).forEach(function(x,i){errors=errors.concat(validateCity(x,'cities['+i+']'));});
   (country&&Array.isArray(country.destinations)?country.destinations:[]).forEach(function(x,i){errors=errors.concat(validateDestination(x,'destinations['+i+']'));});
   return {valid:errors.length===0,errors:errors};
  }
