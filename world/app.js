@@ -75,7 +75,7 @@
  input.id='fw-global-search';input.type='search';input.placeholder='Search countries, capitals and destinations…';input.setAttribute('aria-label','Search the world atlas');
  region.id='fw-region-filter';region.appendChild(new Option('All regions','All regions'));
  Array.from(new Set(catalog.map(function(c){return c.region}))).sort().forEach(function(x){region.appendChild(new Option(x,x));});
- search.append(input,region);mast.appendChild(search);
+ search.append(input,region);mast.appendChild(search);mast.appendChild(button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]); }));
  var count=node('p','fw-result-count','');count.id='fw-result-count';mast.appendChild(count);shell.appendChild(mast);
  var carouselSection=section('fw-carousel','Explore the world','Select a country in the cinematic carousel. Use search to jump directly to any indexed country.');
  var carouselRoot=node('div','fw-carousel-root');carouselRoot.id='fwx-carousel-root';carouselSection.appendChild(carouselRoot);shell.appendChild(carouselSection);
