@@ -1,14 +1,2442 @@
 window.FRAME_WORLD_DATA = {
-  europe: [
-    ["Albania","Tirana","Berat","Albanian Riviera"],["Andorra","Andorra la Vella","Madriu-Perafita-Claror Valley","Casa de la Vall","Andorra la Vella Historic Centre","Santa Coloma Church","Espai Columba","La Margineda Bridge","Bici Lab Andorra","Green Ring of Andorra la Vella","Enclar Valley","Canillo","Incles Valley","Roc del Quer Viewpoint","Tibetan Bridge of Canillo","Sant Joan de Caselles Church","Sant Serni de Canillo","Meritxell Basilica","Bordes de la Vall d’Incles","Prats and Sant Miquel de Prats","Encamp","National Automobile Museum","Santa Eulàlia d’Encamp Church","Cortals d’Encamp","Les Bons Historic Complex","MW Museu de l’Electricitat","Sant Romà de les Bons","Ordino","Casa d’Areny-Plandolit Museum","Sorteny Valley Nature Park","Tristaina Lakes","Tristaina Solar Viewpoint","Llorts Iron Route","Llorts Iron Mine","Sant Martí de la Cortinada","La Massana","Comapedrosa Nature Park","Pal Village","Sant Climent de Pal Church","Casa Rull Museum","Farga Rossell Forge","Arinsal","Anyós and Sant Cristòfol d’Anyós","Sant Julià de Lòria","Naturland","Auvinyà","Canòlich Sanctuary","Juberri Gardens","La Margineda archaeological site","Escaldes-Engordany","Lake Engolasters","Sant Miquel d’Engolasters Church","Madriu Valley access routes","Caldea thermal complex","Centre d’Art d’Escaldes-Engordany","Pas de la Casa","Grandvalira","Grau Roig","Pessons Lakes","Juclar Lakes","Siscaró Valley","Sorteny Nature Park trails","Estany de les Truites","Estany de la Nou","Estanys de Juclà","Estanys de Tristaina","Estanys de Pessons","Estany de l’Illa","Estanys de l’Angonella","Cabana Sorda Lake","Estany de Cabana Sorda","Estany de Font Blanca","Estany de Montmalús","Estanys de Ransol","Estany de Querol","Comapedrosa Peak","Casamanya Peak","Estanyó Peak","Serrera Peak","Font Blanca Peak","Tristaina Peak","Cataperdís Peak","Montmalús Peak","Pic de Médécourbe","Port de Cabús","Port d’Envalira","Coll d’Ordino","Collada de Beixalís","La Comella","El Serrat","Llorts","La Cortinada","Ansalonga","Sornàs","Arans","Les Salines","Ransol","Soldeu","El Tarter","Bordes d’Envalira","Incles","Aixirivall","Aixovall","Aixàs","Bixessarri","Nagol","Fontaneda","Ceret","Llumeneres","Tolse","Pui d’Olivesa","Els Plans","La Peguera","Les Pardines","Mas d’Alins","Casa Cristo Museum","Cal Pal Sociocultural Centre","Andorra Romanesque Interpretation Centre","Motorcycle Museum","Miniature Museum","Carmen Thyssen Museum Andorra","Lauredia Cultural Centre","Sala Sergi Mas","Sant Serni de Nagol Church","Sant Julià and Sant Germà Church","Sant Esteve Church, Andorra la Vella","Sant Romà de Vila Church","Sant Romà de les Bons Church","Sant Miquel de Prats Church","Sant Cristòfol d’Anyós Church","Sant Climent de Pal Church","Sant Martí de la Cortinada Church","Sant Joan de Caselles Church","Sant Pere del Tarter Church","Sant Bartomeu de Soldeu Church","Santa Creu de Canillo Church","Sant Marc and Santa Maria de la Mosquera Church","Les Bons Tower and Church","Roc de les Bruixes","La Roureda de la Margineda","Iron Route (Ruta del Ferro)","Engolasters Hydroelectric Trail","Rural Habitat Route","Tomb Lauredià Routes","Magic Sant Julià Route","Macarulla Family Trails","Dry Stone Route","Tamarro Trail","GRP Andorra Grand Route","GR-7 Pyrenean Route","GR-11 Pyrenean Route","Fontverd Refuge","L’Illa Refuge","Juclà Refuge","Sorteny Refuge","Comapedrosa Refuge","Cabana Sorda Refuge","Portella Refuge","Rialb Refuge","Siscaró Refuge","Bordes d’Envalira"],["Austria","Vienna","Historic Centre of Vienna","St Stephen’s Cathedral","Hofburg Palace","Belvedere Palace","Vienna State Opera","MuseumsQuartier","Kunsthistorisches Museum","Albertina","Prater and Giant Ferris Wheel","Hundertwasserhaus","Karlskirche","Naschmarkt","Central Cemetery","Augarten","Danube Island","Lainzer Tiergarten","Kahlenberg","Grinzing","Schönbrunn Zoo","Salzburg Old Town","Hohensalzburg Fortress","Mirabell Palace and Gardens","Salzburg Cathedral","Getreidegasse","Hellbrunn Palace and Trick Fountains","St Peter’s Abbey","Untersberg","Eisriesenwelt Ice Cave","Werfen Castle","Golling Waterfall","Zell am See","Kaprun High Mountain Reservoirs","Krimml Waterfalls","Grossglockner High Alpine Road","Hohe Tauern National Park","Bad Gastein","Gastein Valley","Saalbach-Hinterglemm","Kitzsteinhorn","St Wolfgang","Wolfgangsee","Innsbruck Old Town","Golden Roof","Ambras Castle","Nordkette","Bergisel Ski Jump","Swarovski Crystal Worlds","Achensee","Alpbach","Kufstein Fortress","Kitzbühel","Seefeld in Tirol","Ötztal Valley","Aqua Dome Längenfeld","Stubai Glacier","Hintertux Glacier","Zillertal","Sölden","Pitztal Glacier","Leutasch Gorge","Lienz","East Tyrol","Highline179","Hallstatt-Dachstein / Salzkammergut","Dachstein Krippenstein","Five Fingers Viewpoint","Gosausee","Bad Ischl","Gmunden","Traunsee","Attersee","Mondsee","Wolfgangsee","St Florian Abbey","Linz Old Town","Ars Electronica Center","Pöstlingberg","Mauthausen Memorial","Steyr Old Town","Kalkalpen National Park","Schiederweiher","Traunfall","Graz Historic Centre","Schloss Eggenberg","Graz Schlossberg and Clock Tower","Kunsthaus Graz","Riegersburg Castle","Admont Abbey Library","Gesäuse National Park","Dachstein Glacier (Styria)","Schladming","Planai","Altaussee","Grundlsee","Toplitzsee","Mariazell Basilica","Leoben","Bärenschützklamm","Südsteiermark Wine Road","Bad Radkersburg","Stübing Open-Air Museum","Klagenfurt Old Town","Minimundus","Lake Wörthersee","Pyramidenkogel Tower","Villach Old Town","Ossiacher See","Millstätter See","Weissensee","Faaker See","Lake Millstatt","Nockberge Biosphere Reserve","Grossglockner National Park (Carinthia)","Hochosterwitz Castle","Landskron Castle","Burgbau Friesach","Heiligenblut","Nassfeld","Tscheppaschlucht Gorge","Bregenz","Bregenz Festival Floating Stage","Pfänder Mountain","Dornbirn","Rappenlochschlucht Gorge","Bregenzerwald","Lech am Arlberg","Zürs","Silvretta High Alpine Road","Montafon","Brandnertal","Feldkirch Old Town","Bludenz","Biosphärenpark Großes Walsertal","Lünersee","Melk Abbey","Wachau Cultural Landscape","Dürnstein","Krems an der Donau","Göttweig Abbey","Aggstein Castle Ruins","Schallaburg Castle","Semmering Railway","Rax","Schneeberg","Hohe Wand Nature Park","Ötscher-Tormäuer Nature Park","Lunz am See","Waldviertel","Kittenberger Erlebnisgärten","St Pölten","Baden bei Wien","Carnuntum Archaeological Park","Mayerling","Rosenburg Castle","Eisenstadt","Esterházy Palace","Lake Neusiedl","Neusiedler See–Seewinkel National Park","Rust Old Town","Mörbisch am See","St Martins Therme","Forchtenstein Castle","Burg Güssing","Lockenhaus Castle","St Margarethen Roman Quarry","Andau Bridge","Podersdorf am See","Heiligenbrunn"],["Belarus","Minsk","Mir Castle","Nesvizh Castle"],["Belgium","Brussels","Grand-Place, Brussels","Bruges Historic Centre"],["Bosnia and Herzegovina","Sarajevo","Stari Most, Mostar","Baščaršija, Sarajevo"],["Bulgaria","Sofia","Rila Monastery","Old Town of Plovdiv"],["Croatia","Zagreb","Dubrovnik Old Town","Plitvice Lakes National Park"],["Cyprus","Nicosia","Paphos Archaeological Park","Cape Greco"],["Czechia","Prague","Prague Castle","Charles Bridge"],["Denmark","Copenhagen","Nyhavn","Kronborg Castle"],["Estonia","Tallinn","Tallinn Old Town","Lahemaa National Park"],["Finland","Helsinki","Suomenlinna","Santa Claus Village, Rovaniemi"],["France","Paris","Eiffel Tower","Mont-Saint-Michel"],["Germany","Berlin","Brandenburg Gate","Neuschwanstein Castle"],["Greece","Athens","Acropolis of Athens","Santorini caldera"],["Hungary","Budapest","Hungarian Parliament Building","Buda Castle"],["Iceland","Reykjavík","Jökulsárlón Glacier Lagoon","Þingvellir National Park"],["Ireland","Dublin","Cliffs of Moher","Trinity College Dublin"],["Italy","Rome","Colosseum","Venice Grand Canal"],["Kosovo","Pristina","Prizren Old Town","Gračanica Monastery"],["Latvia","Riga","Riga Old Town","Gauja National Park"],["Liechtenstein","Vaduz","Vaduz Castle","Malbun"],["Lithuania","Vilnius","Vilnius Old Town","Trakai Island Castle"],["Luxembourg","Luxembourg City","Old Quarters and Fortifications","Vianden Castle"],["Malta","Valletta","Ħal Saflieni Hypogeum","Mdina Old City"],["Moldova","Chișinău","Orheiul Vechi","Cricova Wine Cellars"],["Monaco","Monaco","Monte Carlo Casino","Prince's Palace of Monaco"],["Montenegro","Podgorica","Bay of Kotor","Durmitor National Park"],["Netherlands","Amsterdam","Canal Ring","Kinderdijk windmills"],["North Macedonia","Skopje","Lake Ohrid","Ohrid Old Town"],["Norway","Oslo","Geirangerfjord","Bryggen, Bergen"],["Poland","Warsaw","Wawel Royal Castle","Wieliczka Salt Mine"],["Portugal","Lisbon","Belém Tower","Pena Palace, Sintra"],["Romania","Bucharest","Bran Castle","Danube Delta"],["Russia","Moscow","Red Square","Saint Basil's Cathedral"],["San Marino","San Marino","Guaita Tower","Mount Titano"],["Serbia","Belgrade","Belgrade Fortress","Studenica Monastery"],["Slovakia","Bratislava","Spiš Castle","High Tatras"],["Slovenia","Ljubljana","Lake Bled","Postojna Cave"],["Spain","Madrid","Sagrada Família, Barcelona","Alhambra, Granada"],["Sweden","Stockholm","Gamla Stan","Abisko National Park"],["Switzerland","Bern","Matterhorn","Chapel Bridge, Lucerne"],["Ukraine","Kyiv","Saint Sophia's Cathedral","Lviv Old Town"],["United Kingdom","London","Tower of London","Stonehenge"],["Vatican City","Vatican City","St Peter's Basilica","Vatican Museums"]
+  "europe": [
+    [
+      "Albania",
+      "Tirana",
+      "Berat",
+      "Albanian Riviera"
+    ],
+    [
+      "Andorra",
+      "Andorra la Vella",
+      "Madriu-Perafita-Claror Valley",
+      "Casa de la Vall",
+      "Andorra la Vella Historic Centre",
+      "Santa Coloma Church",
+      "Espai Columba",
+      "La Margineda Bridge",
+      "Bici Lab Andorra",
+      "Green Ring of Andorra la Vella",
+      "Enclar Valley",
+      "Canillo",
+      "Incles Valley",
+      "Roc del Quer Viewpoint",
+      "Tibetan Bridge of Canillo",
+      "Sant Joan de Caselles Church",
+      "Sant Serni de Canillo",
+      "Meritxell Basilica",
+      "Bordes de la Vall d’Incles",
+      "Prats and Sant Miquel de Prats",
+      "Encamp",
+      "National Automobile Museum",
+      "Santa Eulàlia d’Encamp Church",
+      "Cortals d’Encamp",
+      "Les Bons Historic Complex",
+      "MW Museu de l’Electricitat",
+      "Sant Romà de les Bons",
+      "Ordino",
+      "Casa d’Areny-Plandolit Museum",
+      "Sorteny Valley Nature Park",
+      "Tristaina Lakes",
+      "Tristaina Solar Viewpoint",
+      "Llorts Iron Route",
+      "Llorts Iron Mine",
+      "Sant Martí de la Cortinada",
+      "La Massana",
+      "Comapedrosa Nature Park",
+      "Pal Village",
+      "Sant Climent de Pal Church",
+      "Casa Rull Museum",
+      "Farga Rossell Forge",
+      "Arinsal",
+      "Anyós and Sant Cristòfol d’Anyós",
+      "Sant Julià de Lòria",
+      "Naturland",
+      "Auvinyà",
+      "Canòlich Sanctuary",
+      "Juberri Gardens",
+      "La Margineda archaeological site",
+      "Escaldes-Engordany",
+      "Lake Engolasters",
+      "Sant Miquel d’Engolasters Church",
+      "Madriu Valley access routes",
+      "Caldea thermal complex",
+      "Centre d’Art d’Escaldes-Engordany",
+      "Pas de la Casa",
+      "Grandvalira",
+      "Grau Roig",
+      "Pessons Lakes",
+      "Juclar Lakes",
+      "Siscaró Valley",
+      "Sorteny Nature Park trails",
+      "Estany de les Truites",
+      "Estany de la Nou",
+      "Estanys de Juclà",
+      "Estanys de Tristaina",
+      "Estanys de Pessons",
+      "Estany de l’Illa",
+      "Estanys de l’Angonella",
+      "Cabana Sorda Lake",
+      "Estany de Cabana Sorda",
+      "Estany de Font Blanca",
+      "Estany de Montmalús",
+      "Estanys de Ransol",
+      "Estany de Querol",
+      "Comapedrosa Peak",
+      "Casamanya Peak",
+      "Estanyó Peak",
+      "Serrera Peak",
+      "Font Blanca Peak",
+      "Tristaina Peak",
+      "Cataperdís Peak",
+      "Montmalús Peak",
+      "Pic de Médécourbe",
+      "Port de Cabús",
+      "Port d’Envalira",
+      "Coll d’Ordino",
+      "Collada de Beixalís",
+      "La Comella",
+      "El Serrat",
+      "Llorts",
+      "La Cortinada",
+      "Ansalonga",
+      "Sornàs",
+      "Arans",
+      "Les Salines",
+      "Ransol",
+      "Soldeu",
+      "El Tarter",
+      "Bordes d’Envalira",
+      "Incles",
+      "Aixirivall",
+      "Aixovall",
+      "Aixàs",
+      "Bixessarri",
+      "Nagol",
+      "Fontaneda",
+      "Ceret",
+      "Llumeneres",
+      "Tolse",
+      "Pui d’Olivesa",
+      "Els Plans",
+      "La Peguera",
+      "Les Pardines",
+      "Mas d’Alins",
+      "Casa Cristo Museum",
+      "Cal Pal Sociocultural Centre",
+      "Andorra Romanesque Interpretation Centre",
+      "Motorcycle Museum",
+      "Miniature Museum",
+      "Carmen Thyssen Museum Andorra",
+      "Lauredia Cultural Centre",
+      "Sala Sergi Mas",
+      "Sant Serni de Nagol Church",
+      "Sant Julià and Sant Germà Church",
+      "Sant Esteve Church, Andorra la Vella",
+      "Sant Romà de Vila Church",
+      "Sant Romà de les Bons Church",
+      "Sant Miquel de Prats Church",
+      "Sant Cristòfol d’Anyós Church",
+      "Sant Climent de Pal Church",
+      "Sant Martí de la Cortinada Church",
+      "Sant Joan de Caselles Church",
+      "Sant Pere del Tarter Church",
+      "Sant Bartomeu de Soldeu Church",
+      "Santa Creu de Canillo Church",
+      "Sant Marc and Santa Maria de la Mosquera Church",
+      "Les Bons Tower and Church",
+      "Roc de les Bruixes",
+      "La Roureda de la Margineda",
+      "Iron Route (Ruta del Ferro)",
+      "Engolasters Hydroelectric Trail",
+      "Rural Habitat Route",
+      "Tomb Lauredià Routes",
+      "Magic Sant Julià Route",
+      "Macarulla Family Trails",
+      "Dry Stone Route",
+      "Tamarro Trail",
+      "GRP Andorra Grand Route",
+      "GR-7 Pyrenean Route",
+      "GR-11 Pyrenean Route",
+      "Fontverd Refuge",
+      "L’Illa Refuge",
+      "Juclà Refuge",
+      "Sorteny Refuge",
+      "Comapedrosa Refuge",
+      "Cabana Sorda Refuge",
+      "Portella Refuge",
+      "Rialb Refuge",
+      "Siscaró Refuge",
+      "Bordes d’Envalira",
+      "Sanctuary of Meritxell"
+    ],
+    [
+      "Austria",
+      "Vienna",
+      "Historic Centre of Vienna",
+      "St Stephen’s Cathedral",
+      "Hofburg Palace",
+      "Belvedere Palace",
+      "Vienna State Opera",
+      "MuseumsQuartier",
+      "Kunsthistorisches Museum",
+      "Albertina",
+      "Prater and Giant Ferris Wheel",
+      "Hundertwasserhaus",
+      "Karlskirche",
+      "Naschmarkt",
+      "Central Cemetery",
+      "Augarten",
+      "Danube Island",
+      "Lainzer Tiergarten",
+      "Kahlenberg",
+      "Grinzing",
+      "Schönbrunn Zoo",
+      "Salzburg Old Town",
+      "Hohensalzburg Fortress",
+      "Mirabell Palace and Gardens",
+      "Salzburg Cathedral",
+      "Getreidegasse",
+      "Hellbrunn Palace and Trick Fountains",
+      "St Peter’s Abbey",
+      "Untersberg",
+      "Eisriesenwelt Ice Cave",
+      "Werfen Castle",
+      "Golling Waterfall",
+      "Zell am See",
+      "Kaprun High Mountain Reservoirs",
+      "Krimml Waterfalls",
+      "Grossglockner High Alpine Road",
+      "Hohe Tauern National Park",
+      "Bad Gastein",
+      "Gastein Valley",
+      "Saalbach-Hinterglemm",
+      "Kitzsteinhorn",
+      "St Wolfgang",
+      "Wolfgangsee",
+      "Innsbruck Old Town",
+      "Golden Roof",
+      "Ambras Castle",
+      "Nordkette",
+      "Bergisel Ski Jump",
+      "Swarovski Crystal Worlds",
+      "Achensee",
+      "Alpbach",
+      "Kufstein Fortress",
+      "Kitzbühel",
+      "Seefeld in Tirol",
+      "Ötztal Valley",
+      "Aqua Dome Längenfeld",
+      "Stubai Glacier",
+      "Hintertux Glacier",
+      "Zillertal",
+      "Sölden",
+      "Pitztal Glacier",
+      "Leutasch Gorge",
+      "Lienz",
+      "East Tyrol",
+      "Highline179",
+      "Hallstatt-Dachstein / Salzkammergut",
+      "Dachstein Krippenstein",
+      "Five Fingers Viewpoint",
+      "Gosausee",
+      "Bad Ischl",
+      "Gmunden",
+      "Traunsee",
+      "Attersee",
+      "Mondsee",
+      "Wolfgangsee",
+      "St Florian Abbey",
+      "Linz Old Town",
+      "Ars Electronica Center",
+      "Pöstlingberg",
+      "Mauthausen Memorial",
+      "Steyr Old Town",
+      "Kalkalpen National Park",
+      "Schiederweiher",
+      "Traunfall",
+      "Graz Historic Centre",
+      "Schloss Eggenberg",
+      "Graz Schlossberg and Clock Tower",
+      "Kunsthaus Graz",
+      "Riegersburg Castle",
+      "Admont Abbey Library",
+      "Gesäuse National Park",
+      "Dachstein Glacier (Styria)",
+      "Schladming",
+      "Planai",
+      "Altaussee",
+      "Grundlsee",
+      "Toplitzsee",
+      "Mariazell Basilica",
+      "Leoben",
+      "Bärenschützklamm",
+      "Südsteiermark Wine Road",
+      "Bad Radkersburg",
+      "Stübing Open-Air Museum",
+      "Klagenfurt Old Town",
+      "Minimundus",
+      "Lake Wörthersee",
+      "Pyramidenkogel Tower",
+      "Villach Old Town",
+      "Ossiacher See",
+      "Millstätter See",
+      "Weissensee",
+      "Faaker See",
+      "Lake Millstatt",
+      "Nockberge Biosphere Reserve",
+      "Grossglockner National Park (Carinthia)",
+      "Hochosterwitz Castle",
+      "Landskron Castle",
+      "Burgbau Friesach",
+      "Heiligenblut",
+      "Nassfeld",
+      "Tscheppaschlucht Gorge",
+      "Bregenz",
+      "Bregenz Festival Floating Stage",
+      "Pfänder Mountain",
+      "Dornbirn",
+      "Rappenlochschlucht Gorge",
+      "Bregenzerwald",
+      "Lech am Arlberg",
+      "Zürs",
+      "Silvretta High Alpine Road",
+      "Montafon",
+      "Brandnertal",
+      "Feldkirch Old Town",
+      "Bludenz",
+      "Biosphärenpark Großes Walsertal",
+      "Lünersee",
+      "Melk Abbey",
+      "Wachau Cultural Landscape",
+      "Dürnstein",
+      "Krems an der Donau",
+      "Göttweig Abbey",
+      "Aggstein Castle Ruins",
+      "Schallaburg Castle",
+      "Semmering Railway",
+      "Rax",
+      "Schneeberg",
+      "Hohe Wand Nature Park",
+      "Ötscher-Tormäuer Nature Park",
+      "Lunz am See",
+      "Waldviertel",
+      "Kittenberger Erlebnisgärten",
+      "St Pölten",
+      "Baden bei Wien",
+      "Carnuntum Archaeological Park",
+      "Mayerling",
+      "Rosenburg Castle",
+      "Eisenstadt",
+      "Esterházy Palace",
+      "Lake Neusiedl",
+      "Neusiedler See–Seewinkel National Park",
+      "Rust Old Town",
+      "Mörbisch am See",
+      "St Martins Therme",
+      "Forchtenstein Castle",
+      "Burg Güssing",
+      "Lockenhaus Castle",
+      "St Margarethen Roman Quarry",
+      "Andau Bridge",
+      "Podersdorf am See",
+      "Heiligenbrunn",
+      "Schönbrunn Palace",
+      "Historic Centre of Salzburg"
+    ],
+    [
+      "Belarus",
+      "Minsk",
+      "Mir Castle",
+      "Nesvizh Castle"
+    ],
+    [
+      "Belgium",
+      "Brussels",
+      "Grand-Place, Brussels",
+      "Bruges Historic Centre"
+    ],
+    [
+      "Bosnia and Herzegovina",
+      "Sarajevo",
+      "Stari Most, Mostar",
+      "Baščaršija, Sarajevo"
+    ],
+    [
+      "Bulgaria",
+      "Sofia",
+      "Rila Monastery",
+      "Old Town of Plovdiv"
+    ],
+    [
+      "Croatia",
+      "Zagreb",
+      "Dubrovnik Old Town",
+      "Plitvice Lakes National Park"
+    ],
+    [
+      "Cyprus",
+      "Nicosia",
+      "Paphos Archaeological Park",
+      "Cape Greco"
+    ],
+    [
+      "Czechia",
+      "Prague",
+      "Prague Castle",
+      "Charles Bridge"
+    ],
+    [
+      "Denmark",
+      "Copenhagen",
+      "Nyhavn",
+      "Kronborg Castle"
+    ],
+    [
+      "Estonia",
+      "Tallinn",
+      "Tallinn Old Town",
+      "Lahemaa National Park"
+    ],
+    [
+      "Finland",
+      "Helsinki",
+      "Suomenlinna",
+      "Santa Claus Village, Rovaniemi"
+    ],
+    [
+      "France",
+      "Paris",
+      "Eiffel Tower",
+      "Mont-Saint-Michel"
+    ],
+    [
+      "Germany",
+      "Berlin",
+      "Brandenburg Gate",
+      "Neuschwanstein Castle"
+    ],
+    [
+      "Greece",
+      "Athens",
+      "Acropolis of Athens",
+      "Santorini caldera"
+    ],
+    [
+      "Hungary",
+      "Budapest",
+      "Hungarian Parliament Building",
+      "Buda Castle"
+    ],
+    [
+      "Iceland",
+      "Reykjavík",
+      "Jökulsárlón Glacier Lagoon",
+      "Þingvellir National Park"
+    ],
+    [
+      "Ireland",
+      "Dublin",
+      "Cliffs of Moher",
+      "Trinity College Dublin"
+    ],
+    [
+      "Italy",
+      "Rome",
+      "Colosseum",
+      "Venice Grand Canal"
+    ],
+    [
+      "Kosovo",
+      "Pristina",
+      "Prizren Old Town",
+      "Gračanica Monastery"
+    ],
+    [
+      "Latvia",
+      "Riga",
+      "Riga Old Town",
+      "Gauja National Park"
+    ],
+    [
+      "Liechtenstein",
+      "Vaduz",
+      "Vaduz Castle",
+      "Malbun"
+    ],
+    [
+      "Lithuania",
+      "Vilnius",
+      "Vilnius Old Town",
+      "Trakai Island Castle"
+    ],
+    [
+      "Luxembourg",
+      "Luxembourg City",
+      "Old Quarters and Fortifications",
+      "Vianden Castle"
+    ],
+    [
+      "Malta",
+      "Valletta",
+      "Ħal Saflieni Hypogeum",
+      "Mdina Old City"
+    ],
+    [
+      "Moldova",
+      "Chișinău",
+      "Orheiul Vechi",
+      "Cricova Wine Cellars"
+    ],
+    [
+      "Monaco",
+      "Monaco",
+      "Monte Carlo Casino",
+      "Prince's Palace of Monaco"
+    ],
+    [
+      "Montenegro",
+      "Podgorica",
+      "Bay of Kotor",
+      "Durmitor National Park"
+    ],
+    [
+      "Netherlands",
+      "Amsterdam",
+      "Canal Ring",
+      "Kinderdijk windmills"
+    ],
+    [
+      "North Macedonia",
+      "Skopje",
+      "Lake Ohrid",
+      "Ohrid Old Town"
+    ],
+    [
+      "Norway",
+      "Oslo",
+      "Geirangerfjord",
+      "Bryggen, Bergen"
+    ],
+    [
+      "Poland",
+      "Warsaw",
+      "Wawel Royal Castle",
+      "Wieliczka Salt Mine"
+    ],
+    [
+      "Portugal",
+      "Lisbon",
+      "Belém Tower",
+      "Pena Palace, Sintra"
+    ],
+    [
+      "Romania",
+      "Bucharest",
+      "Bran Castle",
+      "Danube Delta"
+    ],
+    [
+      "Russia",
+      "Moscow",
+      "Red Square",
+      "Saint Basil's Cathedral"
+    ],
+    [
+      "San Marino",
+      "San Marino",
+      "Guaita Tower",
+      "Mount Titano"
+    ],
+    [
+      "Serbia",
+      "Belgrade",
+      "Belgrade Fortress",
+      "Studenica Monastery"
+    ],
+    [
+      "Slovakia",
+      "Bratislava",
+      "Spiš Castle",
+      "High Tatras"
+    ],
+    [
+      "Slovenia",
+      "Ljubljana",
+      "Lake Bled",
+      "Postojna Cave"
+    ],
+    [
+      "Spain",
+      "Madrid",
+      "Sagrada Família, Barcelona",
+      "Alhambra, Granada",
+      "Sagrada Família"
+    ],
+    [
+      "Sweden",
+      "Stockholm",
+      "Gamla Stan",
+      "Abisko National Park"
+    ],
+    [
+      "Switzerland",
+      "Bern",
+      "Matterhorn",
+      "Chapel Bridge, Lucerne"
+    ],
+    [
+      "Ukraine",
+      "Kyiv",
+      "Saint Sophia's Cathedral",
+      "Lviv Old Town"
+    ],
+    [
+      "United Kingdom",
+      "London",
+      "Tower of London",
+      "Stonehenge"
+    ],
+    [
+      "Vatican City",
+      "Vatican City",
+      "St Peter's Basilica",
+      "Vatican Museums"
+    ]
   ],
-  regions: [
-    {name:"Asia",places:[["Taj Mahal","India"],["Mount Fuji","Japan"],["Petra","Jordan"],["Baku","Azerbaijan"],["Walled City of Baku (Icherisheher)","Azerbaijan"],["Maiden Tower","Azerbaijan"],["Palace of the Shirvanshahs","Azerbaijan"],["Baku Boulevard","Azerbaijan"],["Heydar Aliyev Centre","Azerbaijan"],["Baku Flame Towers","Azerbaijan"],["Bibi-Heybat Mosque","Azerbaijan"],["Ateshgah Fire Temple","Azerbaijan"],["Yanar Dag (Burning Mountain)","Azerbaijan"],["Gobustan Rock Art Cultural Landscape","Azerbaijan"],["Gobustan Mud Volcanoes","Azerbaijan"],["Qobustan National Historical-Artistic Reserve","Azerbaijan"],["Absheron National Park","Azerbaijan"],["Mardakan Castle","Azerbaijan"],["Ramana Castle","Azerbaijan"],["Nardaran Fortress","Azerbaijan"],["Gala Archaeological and Ethnographic Museum Complex","Azerbaijan"],["Baku Carpet Museum","Azerbaijan"],["National Museum of History of Azerbaijan","Azerbaijan"],["Azerbaijan National Art Museum","Azerbaijan"],["Museum of Miniature Books","Azerbaijan"],["Baku Highland Park","Azerbaijan"],["Baku Ferris Wheel","Azerbaijan"],["Besh Barmag Mountain","Azerbaijan"],["Khizi Candy Cane Mountains","Azerbaijan"],["Shamakhi","Azerbaijan"],["Juma Mosque of Shamakhi","Azerbaijan"],["Yeddi Gumbaz Mausoleum","Azerbaijan"],["Diri Baba Mausoleum","Azerbaijan"],["Lahij","Azerbaijan"],["Lahij Copper Craft Quarter","Azerbaijan"],["Basqal","Azerbaijan"],["Ismayilli","Azerbaijan"],["Ivanovka","Azerbaijan"],["Girdimanchay Valley","Azerbaijan"],["Pirqulu State Nature Reserve","Azerbaijan"],["Shahdag National Park","Azerbaijan"],["Khinalig","Azerbaijan"],["Köç Yolu Transhumance Route","Azerbaijan"],["Quba","Azerbaijan"],["Qechresh Forest","Azerbaijan"],["Tenghi Canyon","Azerbaijan"],["Afurdja Waterfall","Azerbaijan"],["Qusar","Azerbaijan"],["Laza Village (Qusar)","Azerbaijan"],["Gusar Shahdag Mountain Resort","Azerbaijan"],["Qabala (Gabala)","Azerbaijan"],["Tufandag Mountain Resort","Azerbaijan"],["Nohur Lake","Azerbaijan"],["Yeddi Gozel Waterfall","Azerbaijan"],["Chukhur Gabala","Azerbaijan"],["Gabala Archaeological Centre","Azerbaijan"],["Sheki","Azerbaijan"],["Historic Centre of Sheki","Azerbaijan"],["Sheki Khan's Palace","Azerbaijan"],["Sheki Caravanserai","Azerbaijan"],["Kish Albanian Church","Azerbaijan"],["Marxal Resort area","Azerbaijan"],["Oguz","Azerbaijan"],["Kish River Valley","Azerbaijan"],["Qakh","Azerbaijan"],["Ilisu Village","Azerbaijan"],["Ilisu National Park","Azerbaijan"],["Mamrukh Church","Azerbaijan"],["Zaqatala","Azerbaijan"],["Zaqatala State Nature Reserve","Azerbaijan"],["Balakan","Azerbaijan"],["Katekh Waterfall","Azerbaijan"],["Ganja","Azerbaijan"],["Nizami Ganjavi Mausoleum","Azerbaijan"],["Shah Abbas Mosque, Ganja","Azerbaijan"],["Bottle House, Ganja","Azerbaijan"],["Goygol National Park","Azerbaijan"],["Lake Göygöl","Azerbaijan"],["Maralgol","Azerbaijan"],["German Heritage Quarter, Goygol","Azerbaijan"],["Naftalan","Azerbaijan"],["Mingachevir Reservoir","Azerbaijan"],["Mingachevir Archaeological Complex","Azerbaijan"],["Tovuz","Azerbaijan"],["Goychay","Azerbaijan"],["Aghdash","Azerbaijan"],["Barda","Azerbaijan"],["Tartar","Azerbaijan"],["Shusha","Azerbaijan"],["Shusha Fortress","Azerbaijan"],["Jidir Duzu Plain","Azerbaijan"],["Yukhari Govhar Agha Mosque","Azerbaijan"],["Vagif Mausoleum","Azerbaijan"],["Aghdam","Azerbaijan"],["Aghdam Juma Mosque","Azerbaijan"],["Fuzuli","Azerbaijan"],["Khudafarin Bridges","Azerbaijan"],["Jabrayil","Azerbaijan"],["Zangilan","Azerbaijan"],["Hadrut","Azerbaijan"],["Lachin","Azerbaijan"],["Kalbajar","Azerbaijan"],["Istisu Thermal Springs","Azerbaijan"],["Nakhchivan City","Azerbaijan"],["Momine Khatun Mausoleum","Azerbaijan"],["Nakhchivan Khan's Palace","Azerbaijan"],["Yusif ibn Kuseyir Mausoleum","Azerbaijan"],["Alinja Castle","Azerbaijan"],["Ashabi-Kahf Cave Sanctuary","Azerbaijan"],["Gamigaya Petroglyphs","Azerbaijan"],["Batabat Lake","Azerbaijan"],["Ordubad","Azerbaijan"],["Ordubad Historic Centre","Azerbaijan"],["Goygol (town)","Azerbaijan"],["Lankaran","Azerbaijan"],["Lankaran Lighthouse","Azerbaijan"],["Lankaran Fortress remains","Azerbaijan"],["Hirkan National Park","Azerbaijan"],["Hirkan Forests","Azerbaijan"],["Khanbulan Lake","Azerbaijan"],["Lerik","Azerbaijan"],["Buzeyir Caves","Azerbaijan"],["Yardimli Waterfall","Azerbaijan"],["Masalli","Azerbaijan"],["Istisu (Masalli)","Azerbaijan"],["Astara","Azerbaijan"],["Yanar Bulag Spring","Azerbaijan"],["Qizilagaj National Park","Azerbaijan"],["Salyan","Azerbaijan"],["Shirvan National Park","Azerbaijan"],["Aghgol National Park","Azerbaijan"],["Samur-Yalama National Park","Azerbaijan"],["Altiaghaj National Park","Azerbaijan"],["Absheron Peninsula","Azerbaijan"],["Caspian Sea Coast","Azerbaijan"]]},
-    {name:"Africa",places:[["Pyramids of Giza","Egypt"],["Serengeti National Park","Tanzania"],["Victoria Falls","Zambia / Zimbabwe"]]},
-    {name:"North America",places:[["Grand Canyon","United States"],["Chichén Itzá","Mexico"],["Banff National Park","Canada"]]},
-    {name:"South America",places:[["Machu Picchu","Peru"],["Iguazú Falls","Argentina / Brazil"],["Christ the Redeemer","Brazil"]]},
-    {name:"Oceania",places:[["Sydney Opera House","Australia"],["Milford Sound / Piopiotahi","New Zealand"],["Bora Bora","French Polynesia"]]},
-    {name:"Middle East",places:[["Sheikh Zayed Grand Mosque","United Arab Emirates"],["AlUla","Saudi Arabia"],["Hagia Sophia","Türkiye"]]},
-    {name:"Antarctica",places:[["Lemaire Channel","Antarctica"],["Deception Island","Antarctica"],["South Pole","Antarctica"]]}
-  ]
+  "regions": [
+    {
+      "name": "Asia",
+      "countries": [
+        [
+          "Afghanistan",
+          "Kabul",
+          "Band-e Amir National Park",
+          "Bamiyan Valley",
+          "Herat Old City"
+        ],
+        [
+          "Armenia",
+          "Yerevan",
+          "Geghard Monastery",
+          "Garni Temple",
+          "Lake Sevan"
+        ],
+        [
+          "Bahrain",
+          "Manama",
+          "Qal'at al-Bahrain",
+          "Bahrain National Museum",
+          "Al Fateh Grand Mosque"
+        ],
+        [
+          "Bangladesh",
+          "Dhaka",
+          "Sundarbans",
+          "Bagerhat Mosque City",
+          "Cox's Bazar"
+        ],
+        [
+          "Bhutan",
+          "Thimphu",
+          "Paro Taktsang",
+          "Punakha Dzong",
+          "Phobjikha Valley"
+        ],
+        [
+          "Brunei",
+          "Bandar Seri Begawan",
+          "Kampong Ayer",
+          "Ulu Temburong National Park",
+          "Omar Ali Saifuddien Mosque"
+        ],
+        [
+          "Cambodia",
+          "Phnom Penh",
+          "Angkor Archaeological Park",
+          "Royal Palace, Phnom Penh",
+          "Koh Rong"
+        ],
+        [
+          "China",
+          "Beijing",
+          "Great Wall of China",
+          "Forbidden City",
+          "Terracotta Army"
+        ],
+        [
+          "Georgia",
+          "Tbilisi",
+          "Old Tbilisi",
+          "Gelati Monastery",
+          "Kazbegi and Gergeti Trinity Church"
+        ],
+        [
+          "India",
+          "New Delhi",
+          "Taj Mahal",
+          "Hampi",
+          "Kaziranga National Park"
+        ],
+        [
+          "Indonesia",
+          "Jakarta",
+          "Borobudur Temple",
+          "Komodo National Park",
+          "Bali Cultural Landscape"
+        ],
+        [
+          "Iran",
+          "Tehran",
+          "Persepolis",
+          "Naqsh-e Jahan Square",
+          "Yazd Historic City"
+        ],
+        [
+          "Iraq",
+          "Baghdad",
+          "Babylon",
+          "Erbil Citadel",
+          "Marshes of Mesopotamia"
+        ],
+        [
+          "Israel",
+          "Jerusalem",
+          "Old City of Jerusalem",
+          "Masada",
+          "Sea of Galilee"
+        ],
+        [
+          "Japan",
+          "Tokyo",
+          "Mount Fuji",
+          "Kyoto Historic Monuments",
+          "Hiroshima Peace Memorial"
+        ],
+        [
+          "Jordan",
+          "Amman",
+          "Petra",
+          "Wadi Rum",
+          "Jerash"
+        ],
+        [
+          "Kazakhstan",
+          "Astana",
+          "Mausoleum of Khoja Ahmed Yasawi",
+          "Charyn Canyon",
+          "Altyn-Emel National Park"
+        ],
+        [
+          "Kuwait",
+          "Kuwait City",
+          "Kuwait Towers",
+          "Failaka Island",
+          "Al Shaheed Park"
+        ],
+        [
+          "Kyrgyzstan",
+          "Bishkek",
+          "Issyk-Kul",
+          "Ala Archa National Park",
+          "Tash Rabat"
+        ],
+        [
+          "Laos",
+          "Vientiane",
+          "Luang Prabang",
+          "Plain of Jars",
+          "Kuang Si Falls"
+        ],
+        [
+          "Lebanon",
+          "Beirut",
+          "Baalbek",
+          "Byblos",
+          "Jeita Grotto"
+        ],
+        [
+          "Malaysia",
+          "Kuala Lumpur",
+          "George Town, Penang",
+          "Gunung Mulu National Park",
+          "Kinabalu Park"
+        ],
+        [
+          "Maldives",
+          "Malé",
+          "Baa Atoll Biosphere Reserve",
+          "Addu Atoll",
+          "Ari Atoll"
+        ],
+        [
+          "Mongolia",
+          "Ulaanbaatar",
+          "Gobi Desert",
+          "Orkhon Valley",
+          "Khövsgöl Lake"
+        ],
+        [
+          "Myanmar",
+          "Naypyidaw",
+          "Bagan",
+          "Inle Lake",
+          "Shwedagon Pagoda"
+        ],
+        [
+          "Nepal",
+          "Kathmandu",
+          "Kathmandu Valley",
+          "Sagarmatha National Park",
+          "Lumbini"
+        ],
+        [
+          "North Korea",
+          "Pyongyang",
+          "Kumsusan Palace area",
+          "Mount Kumgang",
+          "Kaesong Historic Monuments"
+        ],
+        [
+          "Oman",
+          "Muscat",
+          "Nizwa Fort",
+          "Wadi Shab",
+          "Jebel Akhdar"
+        ],
+        [
+          "Pakistan",
+          "Islamabad",
+          "Lahore Fort and Shalimar Gardens",
+          "Mohenjo-daro",
+          "Hunza Valley"
+        ],
+        [
+          "Palestine",
+          "Ramallah",
+          "Church of the Nativity, Bethlehem",
+          "Hisham's Palace",
+          "Old City of Hebron"
+        ],
+        [
+          "Philippines",
+          "Manila",
+          "Banaue Rice Terraces",
+          "Puerto-Princesa Subterranean River",
+          "Chocolate Hills"
+        ],
+        [
+          "Qatar",
+          "Doha",
+          "Museum of Islamic Art",
+          "Souq Waqif",
+          "Al Zubarah"
+        ],
+        [
+          "Saudi Arabia",
+          "Riyadh",
+          "Hegra (AlUla)",
+          "At-Turaif District",
+          "Farasan Islands"
+        ],
+        [
+          "Singapore",
+          "Singapore",
+          "Gardens by the Bay",
+          "Singapore Botanic Gardens",
+          "Kampong Glam"
+        ],
+        [
+          "South Korea",
+          "Seoul",
+          "Changdeokgung Palace",
+          "Jeju Volcanic Island",
+          "Gyeongju Historic Areas"
+        ],
+        [
+          "Sri Lanka",
+          "Sri Jayawardenepura Kotte",
+          "Sigiriya",
+          "Temple of the Sacred Tooth Relic",
+          "Yala National Park"
+        ],
+        [
+          "Syria",
+          "Damascus",
+          "Old City of Damascus",
+          "Palmyra",
+          "Krak des Chevaliers"
+        ],
+        [
+          "Tajikistan",
+          "Dushanbe",
+          "Pamir Highway",
+          "Iskanderkul",
+          "Sarazm"
+        ],
+        [
+          "Thailand",
+          "Bangkok",
+          "Ayutthaya Historic City",
+          "Sukhothai Historical Park",
+          "Khao Sok National Park"
+        ],
+        [
+          "Timor-Leste",
+          "Dili",
+          "Atauro Island",
+          "Jaco Island",
+          "Cristo Rei of Dili"
+        ],
+        [
+          "Türkiye",
+          "Ankara",
+          "Cappadocia",
+          "Ephesus",
+          "Göbekli Tepe"
+        ],
+        [
+          "Turkmenistan",
+          "Ashgabat",
+          "Merv",
+          "Kunya-Urgench",
+          "Darvaza Gas Crater"
+        ],
+        [
+          "United Arab Emirates",
+          "Abu Dhabi",
+          "Sheikh Zayed Grand Mosque",
+          "Al Ain Oasis",
+          "Dubai Historic District"
+        ],
+        [
+          "Uzbekistan",
+          "Tashkent",
+          "Samarkand",
+          "Bukhara Historic Centre",
+          "Khiva Itchan Kala"
+        ],
+        [
+          "Vietnam",
+          "Hanoi",
+          "Ha Long Bay",
+          "Hoi An Ancient Town",
+          "Phong Nha-Ke Bang National Park"
+        ],
+        [
+          "Yemen",
+          "Sana'a",
+          "Old City of Sana'a",
+          "Shibam",
+          "Socotra Archipelago"
+        ],
+        [
+          "Azerbaijan",
+          "Baku",
+          "Baku",
+          "Walled City of Baku (Icherisheher)",
+          "Maiden Tower",
+          "Palace of the Shirvanshahs",
+          "Baku Boulevard",
+          "Heydar Aliyev Centre",
+          "Baku Flame Towers",
+          "Bibi-Heybat Mosque",
+          "Ateshgah Fire Temple",
+          "Yanar Dag (Burning Mountain)",
+          "Gobustan Rock Art Cultural Landscape",
+          "Gobustan Mud Volcanoes",
+          "Qobustan National Historical-Artistic Reserve",
+          "Absheron National Park",
+          "Mardakan Castle",
+          "Ramana Castle",
+          "Nardaran Fortress",
+          "Gala Archaeological and Ethnographic Museum Complex",
+          "Baku Carpet Museum",
+          "National Museum of History of Azerbaijan",
+          "Azerbaijan National Art Museum",
+          "Museum of Miniature Books",
+          "Baku Highland Park",
+          "Baku Ferris Wheel",
+          "Besh Barmag Mountain",
+          "Khizi Candy Cane Mountains",
+          "Shamakhi",
+          "Juma Mosque of Shamakhi",
+          "Yeddi Gumbaz Mausoleum",
+          "Diri Baba Mausoleum",
+          "Lahij",
+          "Lahij Copper Craft Quarter",
+          "Basqal",
+          "Ismayilli",
+          "Ivanovka",
+          "Girdimanchay Valley",
+          "Pirqulu State Nature Reserve",
+          "Shahdag National Park",
+          "Khinalig",
+          "Köç Yolu Transhumance Route",
+          "Quba",
+          "Qechresh Forest",
+          "Tenghi Canyon",
+          "Afurdja Waterfall",
+          "Qusar",
+          "Laza Village (Qusar)",
+          "Gusar Shahdag Mountain Resort",
+          "Qabala (Gabala)",
+          "Tufandag Mountain Resort",
+          "Nohur Lake",
+          "Yeddi Gozel Waterfall",
+          "Chukhur Gabala",
+          "Gabala Archaeological Centre",
+          "Sheki",
+          "Historic Centre of Sheki",
+          "Sheki Khan's Palace",
+          "Sheki Caravanserai",
+          "Kish Albanian Church",
+          "Marxal Resort area",
+          "Oguz",
+          "Kish River Valley",
+          "Qakh",
+          "Ilisu Village",
+          "Ilisu National Park",
+          "Mamrukh Church",
+          "Zaqatala",
+          "Zaqatala State Nature Reserve",
+          "Balakan",
+          "Katekh Waterfall",
+          "Ganja",
+          "Nizami Ganjavi Mausoleum",
+          "Shah Abbas Mosque, Ganja",
+          "Bottle House, Ganja",
+          "Goygol National Park",
+          "Lake Göygöl",
+          "Maralgol",
+          "German Heritage Quarter, Goygol",
+          "Naftalan",
+          "Mingachevir Reservoir",
+          "Mingachevir Archaeological Complex",
+          "Tovuz",
+          "Goychay",
+          "Aghdash",
+          "Barda",
+          "Tartar",
+          "Shusha",
+          "Shusha Fortress",
+          "Jidir Duzu Plain",
+          "Yukhari Govhar Agha Mosque",
+          "Vagif Mausoleum",
+          "Aghdam",
+          "Aghdam Juma Mosque",
+          "Fuzuli",
+          "Khudafarin Bridges",
+          "Jabrayil",
+          "Zangilan",
+          "Hadrut",
+          "Lachin",
+          "Kalbajar",
+          "Istisu Thermal Springs",
+          "Nakhchivan City",
+          "Momine Khatun Mausoleum",
+          "Nakhchivan Khan's Palace",
+          "Yusif ibn Kuseyir Mausoleum",
+          "Alinja Castle",
+          "Ashabi-Kahf Cave Sanctuary",
+          "Gamigaya Petroglyphs",
+          "Batabat Lake",
+          "Ordubad",
+          "Ordubad Historic Centre",
+          "Goygol (town)",
+          "Lankaran",
+          "Lankaran Lighthouse",
+          "Lankaran Fortress remains",
+          "Hirkan National Park",
+          "Hirkan Forests",
+          "Khanbulan Lake",
+          "Lerik",
+          "Buzeyir Caves",
+          "Yardimli Waterfall",
+          "Masalli",
+          "Istisu (Masalli)",
+          "Astara",
+          "Yanar Bulag Spring",
+          "Qizilagaj National Park",
+          "Salyan",
+          "Shirvan National Park",
+          "Aghgol National Park",
+          "Samur-Yalama National Park",
+          "Altiaghaj National Park",
+          "Absheron Peninsula",
+          "Caspian Sea Coast"
+        ]
+      ],
+      "places": [
+        [
+          "Taj Mahal",
+          "India"
+        ],
+        [
+          "Mount Fuji",
+          "Japan"
+        ],
+        [
+          "Petra",
+          "Jordan"
+        ],
+        [
+          "Baku",
+          "Azerbaijan"
+        ],
+        [
+          "Walled City of Baku (Icherisheher)",
+          "Azerbaijan"
+        ],
+        [
+          "Maiden Tower",
+          "Azerbaijan"
+        ],
+        [
+          "Palace of the Shirvanshahs",
+          "Azerbaijan"
+        ],
+        [
+          "Baku Boulevard",
+          "Azerbaijan"
+        ],
+        [
+          "Heydar Aliyev Centre",
+          "Azerbaijan"
+        ],
+        [
+          "Baku Flame Towers",
+          "Azerbaijan"
+        ],
+        [
+          "Bibi-Heybat Mosque",
+          "Azerbaijan"
+        ],
+        [
+          "Ateshgah Fire Temple",
+          "Azerbaijan"
+        ],
+        [
+          "Yanar Dag (Burning Mountain)",
+          "Azerbaijan"
+        ],
+        [
+          "Gobustan Rock Art Cultural Landscape",
+          "Azerbaijan"
+        ],
+        [
+          "Gobustan Mud Volcanoes",
+          "Azerbaijan"
+        ],
+        [
+          "Qobustan National Historical-Artistic Reserve",
+          "Azerbaijan"
+        ],
+        [
+          "Absheron National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Mardakan Castle",
+          "Azerbaijan"
+        ],
+        [
+          "Ramana Castle",
+          "Azerbaijan"
+        ],
+        [
+          "Nardaran Fortress",
+          "Azerbaijan"
+        ],
+        [
+          "Gala Archaeological and Ethnographic Museum Complex",
+          "Azerbaijan"
+        ],
+        [
+          "Baku Carpet Museum",
+          "Azerbaijan"
+        ],
+        [
+          "National Museum of History of Azerbaijan",
+          "Azerbaijan"
+        ],
+        [
+          "Azerbaijan National Art Museum",
+          "Azerbaijan"
+        ],
+        [
+          "Museum of Miniature Books",
+          "Azerbaijan"
+        ],
+        [
+          "Baku Highland Park",
+          "Azerbaijan"
+        ],
+        [
+          "Baku Ferris Wheel",
+          "Azerbaijan"
+        ],
+        [
+          "Besh Barmag Mountain",
+          "Azerbaijan"
+        ],
+        [
+          "Khizi Candy Cane Mountains",
+          "Azerbaijan"
+        ],
+        [
+          "Shamakhi",
+          "Azerbaijan"
+        ],
+        [
+          "Juma Mosque of Shamakhi",
+          "Azerbaijan"
+        ],
+        [
+          "Yeddi Gumbaz Mausoleum",
+          "Azerbaijan"
+        ],
+        [
+          "Diri Baba Mausoleum",
+          "Azerbaijan"
+        ],
+        [
+          "Lahij",
+          "Azerbaijan"
+        ],
+        [
+          "Lahij Copper Craft Quarter",
+          "Azerbaijan"
+        ],
+        [
+          "Basqal",
+          "Azerbaijan"
+        ],
+        [
+          "Ismayilli",
+          "Azerbaijan"
+        ],
+        [
+          "Ivanovka",
+          "Azerbaijan"
+        ],
+        [
+          "Girdimanchay Valley",
+          "Azerbaijan"
+        ],
+        [
+          "Pirqulu State Nature Reserve",
+          "Azerbaijan"
+        ],
+        [
+          "Shahdag National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Khinalig",
+          "Azerbaijan"
+        ],
+        [
+          "Köç Yolu Transhumance Route",
+          "Azerbaijan"
+        ],
+        [
+          "Quba",
+          "Azerbaijan"
+        ],
+        [
+          "Qechresh Forest",
+          "Azerbaijan"
+        ],
+        [
+          "Tenghi Canyon",
+          "Azerbaijan"
+        ],
+        [
+          "Afurdja Waterfall",
+          "Azerbaijan"
+        ],
+        [
+          "Qusar",
+          "Azerbaijan"
+        ],
+        [
+          "Laza Village (Qusar)",
+          "Azerbaijan"
+        ],
+        [
+          "Gusar Shahdag Mountain Resort",
+          "Azerbaijan"
+        ],
+        [
+          "Qabala (Gabala)",
+          "Azerbaijan"
+        ],
+        [
+          "Tufandag Mountain Resort",
+          "Azerbaijan"
+        ],
+        [
+          "Nohur Lake",
+          "Azerbaijan"
+        ],
+        [
+          "Yeddi Gozel Waterfall",
+          "Azerbaijan"
+        ],
+        [
+          "Chukhur Gabala",
+          "Azerbaijan"
+        ],
+        [
+          "Gabala Archaeological Centre",
+          "Azerbaijan"
+        ],
+        [
+          "Sheki",
+          "Azerbaijan"
+        ],
+        [
+          "Historic Centre of Sheki",
+          "Azerbaijan"
+        ],
+        [
+          "Sheki Khan's Palace",
+          "Azerbaijan"
+        ],
+        [
+          "Sheki Caravanserai",
+          "Azerbaijan"
+        ],
+        [
+          "Kish Albanian Church",
+          "Azerbaijan"
+        ],
+        [
+          "Marxal Resort area",
+          "Azerbaijan"
+        ],
+        [
+          "Oguz",
+          "Azerbaijan"
+        ],
+        [
+          "Kish River Valley",
+          "Azerbaijan"
+        ],
+        [
+          "Qakh",
+          "Azerbaijan"
+        ],
+        [
+          "Ilisu Village",
+          "Azerbaijan"
+        ],
+        [
+          "Ilisu National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Mamrukh Church",
+          "Azerbaijan"
+        ],
+        [
+          "Zaqatala",
+          "Azerbaijan"
+        ],
+        [
+          "Zaqatala State Nature Reserve",
+          "Azerbaijan"
+        ],
+        [
+          "Balakan",
+          "Azerbaijan"
+        ],
+        [
+          "Katekh Waterfall",
+          "Azerbaijan"
+        ],
+        [
+          "Ganja",
+          "Azerbaijan"
+        ],
+        [
+          "Nizami Ganjavi Mausoleum",
+          "Azerbaijan"
+        ],
+        [
+          "Shah Abbas Mosque, Ganja",
+          "Azerbaijan"
+        ],
+        [
+          "Bottle House, Ganja",
+          "Azerbaijan"
+        ],
+        [
+          "Goygol National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Lake Göygöl",
+          "Azerbaijan"
+        ],
+        [
+          "Maralgol",
+          "Azerbaijan"
+        ],
+        [
+          "German Heritage Quarter, Goygol",
+          "Azerbaijan"
+        ],
+        [
+          "Naftalan",
+          "Azerbaijan"
+        ],
+        [
+          "Mingachevir Reservoir",
+          "Azerbaijan"
+        ],
+        [
+          "Mingachevir Archaeological Complex",
+          "Azerbaijan"
+        ],
+        [
+          "Tovuz",
+          "Azerbaijan"
+        ],
+        [
+          "Goychay",
+          "Azerbaijan"
+        ],
+        [
+          "Aghdash",
+          "Azerbaijan"
+        ],
+        [
+          "Barda",
+          "Azerbaijan"
+        ],
+        [
+          "Tartar",
+          "Azerbaijan"
+        ],
+        [
+          "Shusha",
+          "Azerbaijan"
+        ],
+        [
+          "Shusha Fortress",
+          "Azerbaijan"
+        ],
+        [
+          "Jidir Duzu Plain",
+          "Azerbaijan"
+        ],
+        [
+          "Yukhari Govhar Agha Mosque",
+          "Azerbaijan"
+        ],
+        [
+          "Vagif Mausoleum",
+          "Azerbaijan"
+        ],
+        [
+          "Aghdam",
+          "Azerbaijan"
+        ],
+        [
+          "Aghdam Juma Mosque",
+          "Azerbaijan"
+        ],
+        [
+          "Fuzuli",
+          "Azerbaijan"
+        ],
+        [
+          "Khudafarin Bridges",
+          "Azerbaijan"
+        ],
+        [
+          "Jabrayil",
+          "Azerbaijan"
+        ],
+        [
+          "Zangilan",
+          "Azerbaijan"
+        ],
+        [
+          "Hadrut",
+          "Azerbaijan"
+        ],
+        [
+          "Lachin",
+          "Azerbaijan"
+        ],
+        [
+          "Kalbajar",
+          "Azerbaijan"
+        ],
+        [
+          "Istisu Thermal Springs",
+          "Azerbaijan"
+        ],
+        [
+          "Nakhchivan City",
+          "Azerbaijan"
+        ],
+        [
+          "Momine Khatun Mausoleum",
+          "Azerbaijan"
+        ],
+        [
+          "Nakhchivan Khan's Palace",
+          "Azerbaijan"
+        ],
+        [
+          "Yusif ibn Kuseyir Mausoleum",
+          "Azerbaijan"
+        ],
+        [
+          "Alinja Castle",
+          "Azerbaijan"
+        ],
+        [
+          "Ashabi-Kahf Cave Sanctuary",
+          "Azerbaijan"
+        ],
+        [
+          "Gamigaya Petroglyphs",
+          "Azerbaijan"
+        ],
+        [
+          "Batabat Lake",
+          "Azerbaijan"
+        ],
+        [
+          "Ordubad",
+          "Azerbaijan"
+        ],
+        [
+          "Ordubad Historic Centre",
+          "Azerbaijan"
+        ],
+        [
+          "Goygol (town)",
+          "Azerbaijan"
+        ],
+        [
+          "Lankaran",
+          "Azerbaijan"
+        ],
+        [
+          "Lankaran Lighthouse",
+          "Azerbaijan"
+        ],
+        [
+          "Lankaran Fortress remains",
+          "Azerbaijan"
+        ],
+        [
+          "Hirkan National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Hirkan Forests",
+          "Azerbaijan"
+        ],
+        [
+          "Khanbulan Lake",
+          "Azerbaijan"
+        ],
+        [
+          "Lerik",
+          "Azerbaijan"
+        ],
+        [
+          "Buzeyir Caves",
+          "Azerbaijan"
+        ],
+        [
+          "Yardimli Waterfall",
+          "Azerbaijan"
+        ],
+        [
+          "Masalli",
+          "Azerbaijan"
+        ],
+        [
+          "Istisu (Masalli)",
+          "Azerbaijan"
+        ],
+        [
+          "Astara",
+          "Azerbaijan"
+        ],
+        [
+          "Yanar Bulag Spring",
+          "Azerbaijan"
+        ],
+        [
+          "Qizilagaj National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Salyan",
+          "Azerbaijan"
+        ],
+        [
+          "Shirvan National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Aghgol National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Samur-Yalama National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Altiaghaj National Park",
+          "Azerbaijan"
+        ],
+        [
+          "Absheron Peninsula",
+          "Azerbaijan"
+        ],
+        [
+          "Caspian Sea Coast",
+          "Azerbaijan"
+        ]
+      ]
+    },
+    {
+      "name": "Africa",
+      "countries": [
+        [
+          "Algeria",
+          "Algiers",
+          "Casbah of Algiers",
+          "Tassili n'Ajjer",
+          "M'Zab Valley"
+        ],
+        [
+          "Angola",
+          "Luanda",
+          "Kalandula Falls",
+          "Kissama National Park",
+          "Mbanza Kongo"
+        ],
+        [
+          "Benin",
+          "Porto-Novo",
+          "Royal Palaces of Abomey",
+          "Pendjari National Park",
+          "Ganvie"
+        ],
+        [
+          "Botswana",
+          "Gaborone",
+          "Okavango Delta",
+          "Chobe National Park",
+          "Tsodilo Hills"
+        ],
+        [
+          "Burkina Faso",
+          "Ouagadougou",
+          "Ruins of Loropéni",
+          "Sindou Peaks",
+          "Nazinga Game Ranch"
+        ],
+        [
+          "Burundi",
+          "Gitega",
+          "Lake Tanganyika",
+          "Kibira National Park",
+          "Gishora Drum Sanctuary"
+        ],
+        [
+          "Cabo Verde",
+          "Praia",
+          "Cidade Velha",
+          "Fogo Volcano",
+          "Santo Antão"
+        ],
+        [
+          "Cameroon",
+          "Yaoundé",
+          "Dja Faunal Reserve",
+          "Mount Cameroon",
+          "Waza National Park"
+        ],
+        [
+          "Central African Republic",
+          "Bangui",
+          "Dzanga-Sangha Protected Areas",
+          "Manovo-Gounda St Floris National Park",
+          "Boali Falls"
+        ],
+        [
+          "Chad",
+          "N'Djamena",
+          "Ennedi Massif",
+          "Zakouma National Park",
+          "Lakes of Ounianga"
+        ],
+        [
+          "Comoros",
+          "Moroni",
+          "Mount Karthala",
+          "Mohéli Marine Park",
+          "Chomoni Beach"
+        ],
+        [
+          "Republic of the Congo",
+          "Brazzaville",
+          "Odzala-Kokoua National Park",
+          "Nouabalé-Ndoki National Park",
+          "Diosso Gorge"
+        ],
+        [
+          "Democratic Republic of the Congo",
+          "Kinshasa",
+          "Virunga National Park",
+          "Okapi Wildlife Reserve",
+          "Salonga National Park"
+        ],
+        [
+          "Côte d'Ivoire",
+          "Yamoussoukro",
+          "Taï National Park",
+          "Grand-Bassam",
+          "Basilica of Our Lady of Peace"
+        ],
+        [
+          "Djibouti",
+          "Djibouti",
+          "Lake Assal",
+          "Lac Abbé",
+          "Day Forest National Park"
+        ],
+        [
+          "Egypt",
+          "Cairo",
+          "Pyramids of Giza",
+          "Karnak Temple",
+          "Abu Simbel"
+        ],
+        [
+          "Equatorial Guinea",
+          "Malabo",
+          "Monte Alén National Park",
+          "Malabo Cathedral",
+          "Bioko Highlands"
+        ],
+        [
+          "Eritrea",
+          "Asmara",
+          "Asmara Modernist City",
+          "Dahlak Archipelago",
+          "Qohaito"
+        ],
+        [
+          "Eswatini",
+          "Mbabane",
+          "Mlilwane Wildlife Sanctuary",
+          "Hlane Royal National Park",
+          "Mantenga Cultural Village"
+        ],
+        [
+          "Ethiopia",
+          "Addis Ababa",
+          "Lalibela",
+          "Simien Mountains National Park",
+          "Fasil Ghebbi"
+        ],
+        [
+          "Gabon",
+          "Libreville",
+          "Loango National Park",
+          "Lopé National Park",
+          "Pongara National Park"
+        ],
+        [
+          "Gambia",
+          "Banjul",
+          "Kunta Kinteh Island",
+          "Abuko Nature Reserve",
+          "Bijilo Forest Park"
+        ],
+        [
+          "Ghana",
+          "Accra",
+          "Cape Coast Castle",
+          "Kakum National Park",
+          "Mole National Park"
+        ],
+        [
+          "Guinea",
+          "Conakry",
+          "Mount Nimba Strict Nature Reserve",
+          "Fouta Djallon",
+          "Îles de Los"
+        ],
+        [
+          "Guinea-Bissau",
+          "Bissau",
+          "Bijagós Archipelago",
+          "Orango National Park",
+          "Cacheu Historic Centre"
+        ],
+        [
+          "Kenya",
+          "Nairobi",
+          "Maasai Mara",
+          "Amboseli National Park",
+          "Lamu Old Town"
+        ],
+        [
+          "Lesotho",
+          "Maseru",
+          "Maletsunyane Falls",
+          "Sehlabathebe National Park",
+          "Thaba-Bosiu"
+        ],
+        [
+          "Liberia",
+          "Monrovia",
+          "Sapo National Park",
+          "Providence Island",
+          "Robertsport"
+        ],
+        [
+          "Libya",
+          "Tripoli",
+          "Leptis Magna",
+          "Sabratha",
+          "Ghadames Old Town"
+        ],
+        [
+          "Madagascar",
+          "Antananarivo",
+          "Avenue of the Baobabs",
+          "Tsingy de Bemaraha",
+          "Andasibe-Mantadia National Park"
+        ],
+        [
+          "Malawi",
+          "Lilongwe",
+          "Lake Malawi National Park",
+          "Liwonde National Park",
+          "Mount Mulanje"
+        ],
+        [
+          "Mali",
+          "Bamako",
+          "Timbuktu",
+          "Great Mosque of Djenné",
+          "Bandiagara Escarpment"
+        ],
+        [
+          "Mauritania",
+          "Nouakchott",
+          "Banc d'Arguin National Park",
+          "Chinguetti",
+          "Richat Structure"
+        ],
+        [
+          "Mauritius",
+          "Port Louis",
+          "Le Morne Cultural Landscape",
+          "Black River Gorges National Park",
+          "Île aux Aigrettes"
+        ],
+        [
+          "Morocco",
+          "Rabat",
+          "Marrakesh Medina",
+          "Fes Medina",
+          "Aït Benhaddou"
+        ],
+        [
+          "Mozambique",
+          "Maputo",
+          "Bazaruto Archipelago",
+          "Gorongosa National Park",
+          "Island of Mozambique"
+        ],
+        [
+          "Namibia",
+          "Windhoek",
+          "Etosha National Park",
+          "Sossusvlei",
+          "Skeleton Coast"
+        ],
+        [
+          "Niger",
+          "Niamey",
+          "Air and Ténéré Natural Reserves",
+          "W National Park",
+          "Agadez Historic Centre"
+        ],
+        [
+          "Nigeria",
+          "Abuja",
+          "Osun-Osogbo Sacred Grove",
+          "Sukur Cultural Landscape",
+          "Yankari Game Reserve"
+        ],
+        [
+          "Rwanda",
+          "Kigali",
+          "Volcanoes National Park",
+          "Nyungwe National Park",
+          "King's Palace Museum"
+        ],
+        [
+          "São Tomé and Príncipe",
+          "São Tomé",
+          "Obo National Park",
+          "Pico Cão Grande",
+          "Ilhéu das Rolas"
+        ],
+        [
+          "Senegal",
+          "Dakar",
+          "Gorée Island",
+          "Djoudj National Bird Sanctuary",
+          "Saloum Delta"
+        ],
+        [
+          "Seychelles",
+          "Victoria",
+          "Vallée de Mai",
+          "Aldabra Atoll",
+          "Morne Seychellois National Park"
+        ],
+        [
+          "Sierra Leone",
+          "Freetown",
+          "Tiwai Island",
+          "Tacugama Chimpanzee Sanctuary",
+          "Bunce Island"
+        ],
+        [
+          "Somalia",
+          "Mogadishu",
+          "Laas Geel",
+          "Hargeisa War Memorial area",
+          "Berbera Coast"
+        ],
+        [
+          "South Africa",
+          "Pretoria",
+          "Table Mountain National Park",
+          "Robben Island",
+          "iSimangaliso Wetland Park"
+        ],
+        [
+          "South Sudan",
+          "Juba",
+          "Boma National Park",
+          "Sudd Wetland",
+          "Bandingilo National Park"
+        ],
+        [
+          "Sudan",
+          "Khartoum",
+          "Meroë Pyramids",
+          "Jebel Barkal",
+          "Sanganeb Marine National Park"
+        ],
+        [
+          "Tanzania",
+          "Dodoma",
+          "Serengeti National Park",
+          "Ngorongoro Conservation Area",
+          "Mount Kilimanjaro"
+        ],
+        [
+          "Togo",
+          "Lomé",
+          "Koutammakou",
+          "Fazao-Malfakassa National Park",
+          "Togoville"
+        ],
+        [
+          "Tunisia",
+          "Tunis",
+          "Medina of Tunis",
+          "El Jem Amphitheatre",
+          "Ichkeul National Park"
+        ],
+        [
+          "Uganda",
+          "Kampala",
+          "Bwindi Impenetrable National Park",
+          "Murchison Falls",
+          "Queen Elizabeth National Park"
+        ],
+        [
+          "Zambia",
+          "Lusaka",
+          "Victoria Falls",
+          "South Luangwa National Park",
+          "Lower Zambezi National Park"
+        ],
+        [
+          "Zimbabwe",
+          "Harare",
+          "Great Zimbabwe",
+          "Hwange National Park",
+          "Matobo Hills"
+        ]
+      ],
+      "places": [
+        [
+          "Pyramids of Giza",
+          "Egypt"
+        ],
+        [
+          "Serengeti National Park",
+          "Tanzania"
+        ],
+        [
+          "Victoria Falls",
+          "Zambia / Zimbabwe"
+        ]
+      ]
+    },
+    {
+      "name": "North America",
+      "countries": [
+        [
+          "Antigua and Barbuda",
+          "Saint John's",
+          "Nelson's Dockyard",
+          "Half Moon Bay",
+          "Barbuda Frigate Bird Sanctuary"
+        ],
+        [
+          "Bahamas",
+          "Nassau",
+          "Exuma Cays",
+          "Lucayan National Park",
+          "Harbour Island"
+        ],
+        [
+          "Barbados",
+          "Bridgetown",
+          "Historic Bridgetown",
+          "Bathsheba",
+          "Harrison's Cave"
+        ],
+        [
+          "Belize",
+          "Belmopan",
+          "Great Blue Hole",
+          "Caracol",
+          "Cockscomb Basin Wildlife Sanctuary"
+        ],
+        [
+          "Canada",
+          "Ottawa",
+          "Banff National Park",
+          "Québec City Historic District",
+          "Gros Morne National Park"
+        ],
+        [
+          "Costa Rica",
+          "San José",
+          "Arenal Volcano",
+          "Monteverde Cloud Forest",
+          "Corcovado National Park"
+        ],
+        [
+          "Cuba",
+          "Havana",
+          "Old Havana",
+          "Viñales Valley",
+          "Trinidad"
+        ],
+        [
+          "Dominica",
+          "Roseau",
+          "Morne Trois Pitons National Park",
+          "Boiling Lake",
+          "Cabrits National Park"
+        ],
+        [
+          "Dominican Republic",
+          "Santo Domingo",
+          "Colonial City of Santo Domingo",
+          "Pico Duarte",
+          "Los Haitises National Park"
+        ],
+        [
+          "El Salvador",
+          "San Salvador",
+          "Joya de Cerén",
+          "Ruta de las Flores",
+          "Santa Ana Volcano"
+        ],
+        [
+          "Grenada",
+          "Saint George's",
+          "Grand Anse Beach",
+          "Grand Etang National Park",
+          "Belmont Estate"
+        ],
+        [
+          "Guatemala",
+          "Guatemala City",
+          "Tikal",
+          "Antigua Guatemala",
+          "Lake Atitlán"
+        ],
+        [
+          "Haiti",
+          "Port-au-Prince",
+          "Citadelle Laferrière",
+          "Sans-Souci Palace",
+          "Jacmel Historic Centre"
+        ],
+        [
+          "Honduras",
+          "Tegucigalpa",
+          "Copán",
+          "Pico Bonito National Park",
+          "Roatán"
+        ],
+        [
+          "Jamaica",
+          "Kingston",
+          "Blue and John Crow Mountains",
+          "Dunn's River Falls",
+          "Port Royal"
+        ],
+        [
+          "Mexico",
+          "Mexico City",
+          "Chichén Itzá",
+          "Teotihuacan",
+          "Oaxaca Historic Centre"
+        ],
+        [
+          "Nicaragua",
+          "Managua",
+          "León Cathedral",
+          "Ometepe Island",
+          "Granada Historic Centre"
+        ],
+        [
+          "Panama",
+          "Panama City",
+          "Panama Canal",
+          "Casco Viejo",
+          "Coiba National Park"
+        ],
+        [
+          "Saint Kitts and Nevis",
+          "Basseterre",
+          "Brimstone Hill Fortress",
+          "Nevis Peak",
+          "Romney Manor"
+        ],
+        [
+          "Saint Lucia",
+          "Castries",
+          "Pitons Management Area",
+          "Sulphur Springs",
+          "Pigeon Island"
+        ],
+        [
+          "Saint Vincent and the Grenadines",
+          "Kingstown",
+          "Tobago Cays",
+          "La Soufrière Volcano",
+          "Bequia"
+        ],
+        [
+          "Trinidad and Tobago",
+          "Port of Spain",
+          "Caroni Bird Sanctuary",
+          "Pitch Lake",
+          "Tobago Main Ridge Forest Reserve"
+        ],
+        [
+          "United States",
+          "Washington, D.C.",
+          "Grand Canyon",
+          "Yellowstone National Park",
+          "New York City"
+        ]
+      ],
+      "places": [
+        [
+          "Grand Canyon",
+          "United States"
+        ],
+        [
+          "Chichén Itzá",
+          "Mexico"
+        ],
+        [
+          "Banff National Park",
+          "Canada"
+        ]
+      ]
+    },
+    {
+      "name": "South America",
+      "countries": [
+        [
+          "Argentina",
+          "Buenos Aires",
+          "Iguazú National Park",
+          "Los Glaciares National Park",
+          "Quebrada de Humahuaca"
+        ],
+        [
+          "Bolivia",
+          "Sucre",
+          "Salar de Uyuni",
+          "Tiwanaku",
+          "Madidi National Park"
+        ],
+        [
+          "Brazil",
+          "Brasília",
+          "Iguaçu National Park",
+          "Rio de Janeiro Historic Landscapes",
+          "Lençóis Maranhenses"
+        ],
+        [
+          "Chile",
+          "Santiago",
+          "Rapa Nui National Park",
+          "Torres del Paine",
+          "Atacama Desert"
+        ],
+        [
+          "Colombia",
+          "Bogotá",
+          "Cartagena Historic Centre",
+          "Tayrona National Natural Park",
+          "Coffee Cultural Landscape"
+        ],
+        [
+          "Ecuador",
+          "Quito",
+          "Galápagos Islands",
+          "Quito Historic Centre",
+          "Cotopaxi National Park"
+        ],
+        [
+          "Guyana",
+          "Georgetown",
+          "Kaieteur National Park",
+          "Iwokrama Forest",
+          "Shell Beach"
+        ],
+        [
+          "Paraguay",
+          "Asunción",
+          "Jesuit Missions of La Santísima Trinidad de Paraná",
+          "Ybycuí National Park",
+          "Itaipú Dam"
+        ],
+        [
+          "Peru",
+          "Lima",
+          "Machu Picchu",
+          "Nazca Lines",
+          "Colca Canyon"
+        ],
+        [
+          "Suriname",
+          "Paramaribo",
+          "Central Suriname Nature Reserve",
+          "Historic Inner City of Paramaribo",
+          "Brownsberg Nature Park"
+        ],
+        [
+          "Uruguay",
+          "Montevideo",
+          "Colonia del Sacramento",
+          "Punta del Este",
+          "Cabo Polonio"
+        ],
+        [
+          "Venezuela",
+          "Caracas",
+          "Canaima National Park",
+          "Angel Falls",
+          "Los Roques Archipelago"
+        ]
+      ],
+      "places": [
+        [
+          "Machu Picchu",
+          "Peru"
+        ],
+        [
+          "Iguazú Falls",
+          "Argentina / Brazil"
+        ],
+        [
+          "Christ the Redeemer",
+          "Brazil"
+        ]
+      ]
+    },
+    {
+      "name": "Oceania",
+      "countries": [
+        [
+          "Australia",
+          "Canberra",
+          "Sydney Opera House",
+          "Great Barrier Reef",
+          "Uluru-Kata Tjuta National Park"
+        ],
+        [
+          "Fiji",
+          "Suva",
+          "Mamanuca Islands",
+          "Bouma National Heritage Park",
+          "Sigatoka Sand Dunes"
+        ],
+        [
+          "Kiribati",
+          "South Tarawa",
+          "Phoenix Islands Protected Area",
+          "Kiritimati",
+          "Abaiang Atoll"
+        ],
+        [
+          "Marshall Islands",
+          "Majuro",
+          "Bikini Atoll",
+          "Laura Beach",
+          "Arno Atoll"
+        ],
+        [
+          "Micronesia",
+          "Palikir",
+          "Nan Madol",
+          "Pohnpei Island",
+          "Chuuk Lagoon"
+        ],
+        [
+          "Nauru",
+          "Yaren",
+          "Anibare Bay",
+          "Buada Lagoon",
+          "Command Ridge"
+        ],
+        [
+          "New Zealand",
+          "Wellington",
+          "Milford Sound / Piopiotahi",
+          "Tongariro National Park",
+          "Rotorua"
+        ],
+        [
+          "Palau",
+          "Ngerulmud",
+          "Rock Islands Southern Lagoon",
+          "Jellyfish Lake",
+          "Babeldaob"
+        ],
+        [
+          "Papua New Guinea",
+          "Port Moresby",
+          "Kokoda Track",
+          "Tufi Fjords",
+          "Mount Wilhelm"
+        ],
+        [
+          "Samoa",
+          "Apia",
+          "To Sua Ocean Trench",
+          "Robert Louis Stevenson Museum",
+          "Lalomanu Beach"
+        ],
+        [
+          "Solomon Islands",
+          "Honiara",
+          "Marovo Lagoon",
+          "East Rennell",
+          "Bonegi Beach"
+        ],
+        [
+          "Tonga",
+          "Nuku'alofa",
+          "Ha'amonga 'a Maui",
+          "Vava'u Islands",
+          "Mapu'a 'a Vaea Blowholes"
+        ],
+        [
+          "Tuvalu",
+          "Funafuti",
+          "Funafuti Conservation Area",
+          "Nanumea",
+          "Fongafale"
+        ],
+        [
+          "Vanuatu",
+          "Port Vila",
+          "Mount Yasur",
+          "Champagne Beach",
+          "Chief Roi Mata's Domain"
+        ]
+      ],
+      "places": [
+        [
+          "Sydney Opera House",
+          "Australia"
+        ],
+        [
+          "Milford Sound / Piopiotahi",
+          "New Zealand"
+        ],
+        [
+          "Bora Bora",
+          "French Polynesia"
+        ]
+      ]
+    },
+    {
+      "name": "Antarctica",
+      "places": [
+        [
+          "Lemaire Channel",
+          "Antarctica"
+        ],
+        [
+          "Deception Island",
+          "Antarctica"
+        ],
+        [
+          "South Pole",
+          "Antarctica"
+        ]
+      ],
+      "countries": [
+        [
+          "Antarctic Treaty Area",
+          "No permanent capital",
+          "Lemaire Channel",
+          "Deception Island",
+          "South Pole",
+          "Antarctic Peninsula",
+          "Ross Sea",
+          "Dry Valleys"
+        ]
+      ]
+    }
+  ],
+  "unMemberStates": 193,
+  "totalCountryEntries": 196
 };
