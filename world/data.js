@@ -167,7 +167,8 @@ window.FRAME_WORLD_DATA = {
       "Portella Refuge",
       "Rialb Refuge",
       "Siscaró Refuge",
-      "Bordes d’Envalira"
+      "Bordes d’Envalira",
+      "Sanctuary of Meritxell"
     ],
     [
       "Austria",
@@ -339,7 +340,9 @@ window.FRAME_WORLD_DATA = {
       "St Margarethen Roman Quarry",
       "Andau Bridge",
       "Podersdorf am See",
-      "Heiligenbrunn"
+      "Heiligenbrunn",
+      "Schönbrunn Palace",
+      "Historic Centre of Salzburg"
     ],
     [
       "Belarus",
@@ -567,7 +570,8 @@ window.FRAME_WORLD_DATA = {
       "Spain",
       "Madrid",
       "Sagrada Família, Barcelona",
-      "Alhambra, Granada"
+      "Alhambra, Granada",
+      "Sagrada Família"
     ],
     [
       "Sweden",
