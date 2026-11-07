@@ -185,7 +185,7 @@
     var destinations = row.slice(2).map(function (name) {
       var r = researchIndex[name] || {};
       return {
-        id: name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+        id: r.id || name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
         name: name,
         summary: r.summary || '',
         explore: r.explore || '',
