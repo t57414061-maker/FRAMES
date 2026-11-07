@@ -33,3 +33,18 @@
 
 /* Replace the legacy index presentation only when the integrated app loads. */
 main>section:not(#frame-world-app){display:none!important}
+
+/* Reset legacy page-wide element styles inside the isolated experiences. */
+#frame-world-app{padding:0}
+#frame-world-app>section{padding:0}
+#frame-world-app .fw-app-section{padding:34px 0}
+#frame-world-app .fwx-root{height:min(100vh,820px);height:min(100dvh,820px);min-height:440px}
+#frame-world-app .fwx-root header,#frame-world-app .fwc-root header{
+ min-height:0;display:flex;align-items:center;justify-content:flex-start;gap:18px;
+ position:static;top:auto;padding:0;border:0;background:transparent;backdrop-filter:none;
+}
+#frame-world-app .fwx-root header{justify-content:space-between;padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 12px max(16px,env(safe-area-inset-left))}
+#frame-world-app .fwc-root header{padding:22px 0 10px}
+#frame-world-app .fwc-root section{padding:34px 0}
+#frame-world-app .fwc-root .fwc-hero{padding:clamp(36px,8vw,90px) clamp(20px,5vw,64px)}
+#frame-world-app .fwx-root button,#frame-world-app .fwc-root button{font-family:inherit}
