@@ -107,7 +107,15 @@
     root.appendChild(header);
 
     var hero = el('section', 'fwc-hero');
-    if (country.heroImage) hero.style.backgroundImage = 'linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.35)),url("' + String(country.heroImage).replace(/["\\]/g, '') + '")';
+    var imageLibrary = w.FRAME_WORLD_IMAGES;
+    var heroImage = imageLibrary && typeof imageLibrary.firstApproved === 'function' ? (imageLibrary.firstApproved('country', country.id, 'hero') || imageLibrary.firstApproved('country', country.id, 'card')) : null;
+    if (heroImage) {
+      var heroFigure = el('figure', 'fwc-hero-image');
+      var heroImg = el('img', ''); heroImg.src = heroImage.assetUrl; heroImg.alt = heroImage.alt; heroImg.loading = 'eager'; heroImg.decoding = 'async';
+      heroFigure.appendChild(heroImg);
+      if (heroImage.attribution) heroFigure.appendChild(el('figcaption', 'fwc-image-credit', heroImage.attribution));
+      hero.appendChild(heroFigure);
+    }
     hero.append(el('p', 'fwc-eyebrow', country.officialName || 'COUNTRY PROFILE'));
     hero.append(el('h1', 'fwc-title', country.name));
     if (country.capital) hero.append(el('p', 'fwc-capital', 'Capital · ' + country.capital));
