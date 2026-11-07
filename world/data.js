@@ -390,7 +390,8 @@ window.FRAME_WORLD_DATA = {
       "Denmark",
       "Copenhagen",
       "Nyhavn",
-      "Kronborg Castle"
+      "Kronborg Castle",
+      "Bony Fish Fossils of the Western Limfjord"
     ],
     [
       "Estonia",
@@ -402,13 +403,16 @@ window.FRAME_WORLD_DATA = {
       "Finland",
       "Helsinki",
       "Suomenlinna",
-      "Santa Claus Village, Rovaniemi"
+      "Santa Claus Village, Rovaniemi",
+      "Aalto Works"
     ],
     [
       "France",
       "Paris",
       "Eiffel Tower",
-      "Mont-Saint-Michel"
+      "Mont-Saint-Michel",
+      "Beaches of the D-Day Landings, Normandy, 1944",
+      "Royal Capetian Fortresses of Languedoc"
     ],
     [
       "Germany",
@@ -420,7 +424,8 @@ window.FRAME_WORLD_DATA = {
       "Greece",
       "Athens",
       "Acropolis of Athens",
-      "Santorini caldera"
+      "Santorini caldera",
+      "Wider Area of Mount Olympus"
     ],
     [
       "Hungary",
@@ -444,7 +449,8 @@ window.FRAME_WORLD_DATA = {
       "Italy",
       "Rome",
       "Colosseum",
-      "Venice Grand Canal"
+      "Venice Grand Canal",
+      "Italian-style Condominio Theatres of Central Italy"
     ],
     [
       "Kosovo",
@@ -522,7 +528,8 @@ window.FRAME_WORLD_DATA = {
       "Poland",
       "Warsaw",
       "Wawel Royal Castle",
-      "Wieliczka Salt Mine"
+      "Wieliczka Salt Mine",
+      "Gdynia Modernist City Centre"
     ],
     [
       "Portugal",
@@ -662,7 +669,8 @@ window.FRAME_WORLD_DATA = {
           "Beijing",
           "Great Wall of China",
           "Forbidden City",
-          "Terracotta Army"
+          "Terracotta Army",
+          "Jingdezhen Handicraft Porcelain Industry Sites"
         ],
         [
           "Georgia",
@@ -874,7 +882,8 @@ window.FRAME_WORLD_DATA = {
           "Tehran",
           "Persepolis",
           "Naqsh-e Jahan Square",
-          "Yazd Historic City"
+          "Yazd Historic City",
+          "Alamūt Castle and Related Fortifications"
         ],
         [
           "Iraq",
@@ -895,21 +904,24 @@ window.FRAME_WORLD_DATA = {
           "Tokyo",
           "Mount Fuji",
           "Kyoto Historic Monuments",
-          "Hiroshima Peace Memorial"
+          "Hiroshima Peace Memorial",
+          "Ancient Capitals of Asuka and Fujiwara"
         ],
         [
           "Jordan",
           "Amman",
           "Petra",
           "Wadi Rum",
-          "Jerash"
+          "Jerash",
+          "Aqaba Marine Reserve"
         ],
         [
           "Kazakhstan",
           "Astana",
           "Mausoleum of Khoja Ahmed Yasawi",
           "Charyn Canyon",
-          "Altyn-Emel National Park"
+          "Altyn-Emel National Park",
+          "Rock Mosques and Associated Sacred Sites of Mangystau"
         ],
         [
           "Kuwait",
@@ -937,7 +949,8 @@ window.FRAME_WORLD_DATA = {
           "Beirut",
           "Baalbek",
           "Byblos",
-          "Jeita Grotto"
+          "Jeita Grotto",
+          "Mount Amel Castles"
         ],
         [
           "Malaysia",
@@ -958,7 +971,8 @@ window.FRAME_WORLD_DATA = {
           "Ulaanbaatar",
           "Gobi Desert",
           "Orkhon Valley",
-          "Khövsgöl Lake"
+          "Khövsgöl Lake",
+          "The Cemetery Complexes of the Xiongnu Nobility"
         ],
         [
           "Myanmar",
@@ -1000,7 +1014,8 @@ window.FRAME_WORLD_DATA = {
           "Ramallah",
           "Church of the Nativity, Bethlehem",
           "Hisham's Palace",
-          "Old City of Hebron"
+          "Old City of Hebron",
+          "Sebastia"
         ],
         [
           "Philippines",
@@ -1063,7 +1078,8 @@ window.FRAME_WORLD_DATA = {
           "Bangkok",
           "Ayutthaya Historic City",
           "Sukhothai Historical Park",
-          "Khao Sok National Park"
+          "Khao Sok National Park",
+          "Wat Phra Mahathat Woramahawihan, Nakhon Si Thammarat"
         ],
         [
           "Timor-Leste",
@@ -1091,14 +1107,16 @@ window.FRAME_WORLD_DATA = {
           "Abu Dhabi",
           "Sheikh Zayed Grand Mosque",
           "Al Ain Oasis",
-          "Dubai Historic District"
+          "Dubai Historic District",
+          "Wadi Wurayah"
         ],
         [
           "Uzbekistan",
           "Tashkent",
           "Samarkand",
           "Bukhara Historic Centre",
-          "Khiva Itchan Kala"
+          "Khiva Itchan Kala",
+          "Tashkent Modernist Architecture"
         ],
         [
           "Vietnam",
@@ -1872,7 +1890,8 @@ window.FRAME_WORLD_DATA = {
           "Moroni",
           "Mount Karthala",
           "Mohéli Marine Park",
-          "Chomoni Beach"
+          "Chomoni Beach",
+          "The Medinas of the Historic Sultanates of the Comoros"
         ],
         [
           "Republic of the Congo",
@@ -2082,7 +2101,8 @@ window.FRAME_WORLD_DATA = {
           "São Tomé",
           "Obo National Park",
           "Pico Cão Grande",
-          "Ilhéu das Rolas"
+          "Ilhéu das Rolas",
+          "The Roças of São Tomé and Príncipe"
         ],
         [
           "Senegal",
@@ -2124,7 +2144,8 @@ window.FRAME_WORLD_DATA = {
           "Juba",
           "Boma National Park",
           "Sudd Wetland",
-          "Bandingilo National Park"
+          "Bandingilo National Park",
+          "Boma–Badingilo Migratory Landscape"
         ],
         [
           "Sudan",
@@ -2152,7 +2173,8 @@ window.FRAME_WORLD_DATA = {
           "Tunis",
           "Medina of Tunis",
           "El Jem Amphitheatre",
-          "Ichkeul National Park"
+          "Ichkeul National Park",
+          "Village of Sidi Bou Saïd"
         ],
         [
           "Uganda",
@@ -2353,7 +2375,8 @@ window.FRAME_WORLD_DATA = {
           "Washington, D.C.",
           "Grand Canyon",
           "Yellowstone National Park",
-          "New York City"
+          "New York City",
+          "Okefenokee National Wildlife Refuge"
         ]
       ],
       "places": [
@@ -2393,7 +2416,8 @@ window.FRAME_WORLD_DATA = {
           "Brasília",
           "Iguaçu National Park",
           "Rio de Janeiro Historic Landscapes",
-          "Lençóis Maranhenses"
+          "Lençóis Maranhenses",
+          "Amazonia Theaters"
         ],
         [
           "Chile",
