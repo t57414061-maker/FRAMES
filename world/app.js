@@ -26,11 +26,18 @@
   profile.insertBefore(actions,profile.children[1]||null);
  }
  function openCountry(c){if(!c)return;if(experience){experience.go(c.name);experience.enter();}else enterCountry(c);}
+ function appendLicensedImage(parent,entityType,entityId,role,cls){
+  var lib=w.FRAME_WORLD_IMAGES;if(!lib||typeof lib.firstApproved!=='function')return;
+  var item=lib.firstApproved(entityType,entityId,role)||lib.firstApproved(entityType,entityId,'card');if(!item)return;
+  var figure=node('figure',cls||'fw-licensed-image');var img=node('img','',null);img.src=item.assetUrl;img.alt=item.alt;img.loading='lazy';img.decoding='async';figure.appendChild(img);
+  if(item.attribution){var credit=node('figcaption','fw-image-credit',item.attribution);figure.appendChild(credit);}parent.appendChild(figure);
+ }
  function renderCards(target,items){
   target.textContent='';
   if(!items.length){target.append(node('p','fw-empty','No matching places yet. Try another search or region.'));return;}
   items.forEach(function(c){
    var card=node('article','fw-country-card');
+   appendLicensedImage(card,'country',c.id,'card','fw-country-image');
    card.append(node('p','fw-eyebrow',c.region+' · COUNTRY'),node('h3','',c.name),node('p','fw-card-capital',c.capital?'Capital · '+c.capital:'Capital information pending'),node('p','fw-card-count',c.destinations.length+' indexed destinations'));
    card.append(button('Explore country →','fw-open-country',function(){openCountry(c);}));
    card.append(button(state.saved.indexOf(c.id)>=0?'★':'☆','fw-save-country',function(){toggle(state.saved,c.id);renderDiscovery();}));
