@@ -33,7 +33,7 @@
     box.append(el('h4', '', label), el('p', '', value));
     parent.appendChild(box);
   }
-  function destinationCard(item) {
+  function destinationCard(item, countryName) {
     var card = el('article', 'fwc-destination');
     card.appendChild(el('p', 'fwc-eyebrow', item.category || 'DESTINATION'));
     card.appendChild(el('h4', 'fwc-destination__title', item.name));
@@ -48,6 +48,24 @@
     if (fields.childNodes.length) card.appendChild(fields);
     var link = sourceLink(item.source);
     if (link) card.appendChild(link);
+    var saved = [];
+    try { saved = JSON.parse(w.localStorage.getItem('frame-world-saved-destinations') || '[]'); } catch (e) {}
+    var key = String(countryName || '') + '::' + String(item.name || '');
+    var isSaved = saved.some(function (x) { return x.key === key; });
+    var save = el('button', 'fwc-save-destination', isSaved ? '★ Saved' : '☆ Save destination');
+    save.type = 'button';
+    save.setAttribute('aria-pressed', String(isSaved));
+    save.addEventListener('click', function () {
+      var list = [];
+      try { list = JSON.parse(w.localStorage.getItem('frame-world-saved-destinations') || '[]'); } catch (e) {}
+      var at = list.findIndex(function (x) { return x.key === key; });
+      if (at >= 0) list.splice(at, 1); else list.push({ key: key, country: countryName || '', name: item.name || '', id: item.id || '' });
+      try { w.localStorage.setItem('frame-world-saved-destinations', JSON.stringify(list)); } catch (e) {}
+      save.textContent = at >= 0 ? '☆ Save destination' : '★ Saved';
+      save.setAttribute('aria-pressed', String(at < 0));
+      d.dispatchEvent(new CustomEvent('frameworld:saved-destinations-changed'));
+    });
+    card.appendChild(save);
     return card;
   }
   function section(title, description) {
@@ -56,21 +74,21 @@
     if (description) s.append(el('p', 'fwc-section__intro', description));
     return s;
   }
-  function renderDestinations(parent, destinations) {
+  function renderDestinations(parent, destinations, countryName) {
     if (!destinations || !destinations.length) return;
     var grid = el('div', 'fwc-destinations');
-    destinations.forEach(function (item) { grid.appendChild(destinationCard(item)); });
+    destinations.forEach(function (item) { grid.appendChild(destinationCard(item, countryName)); });
     parent.appendChild(grid);
   }
-  function renderRegion(parent, region) {
+  function renderRegion(parent, region, countryName) {
     var block = section(region.name || 'Region');
     (region.cities || []).forEach(function (city) {
       var cityBlock = el('div', 'fwc-city');
       cityBlock.appendChild(el('h4', 'fwc-city__title', city.name || 'City'));
-      renderDestinations(cityBlock, city.destinations || []);
+      renderDestinations(cityBlock, city.destinations || [], countryName);
       block.appendChild(cityBlock);
     });
-    renderDestinations(block, region.destinations || []);
+    renderDestinations(block, region.destinations || [], countryName);
     parent.appendChild(block);
   }
   function render(root, country, options) {
@@ -108,10 +126,10 @@
       context.append(el('p', 'fwc-context', country.history || country.significance));
       root.appendChild(context);
     }
-    (country.regions || []).forEach(function (region) { renderRegion(root, region); });
+    (country.regions || []).forEach(function (region) { renderRegion(root, region, country.name); });
     if (country.destinations && country.destinations.length) {
       var destinationSection = section('Explore destinations', 'A growing index of places to discover. Profiles appear as reliable sources are verified.');
-      renderDestinations(destinationSection, country.destinations);
+      renderDestinations(destinationSection, country.destinations, country.name);
       root.appendChild(destinationSection);
     }
     if (!country.regions?.length && !country.destinations?.length) {
