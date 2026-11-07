@@ -16,3 +16,52 @@ nav.scrolled,header[role="banner"]{background:rgba(8,8,8,.9)!important;border-co
 .fwx-skip,.fwx-pill,.fwx-enter__back,.fwx-arrow{border-color:rgba(255,255,255,.28)!important;color:#fff!important}.fwx-card__media,.fwx-enter__img{filter:saturate(.72)}.fwx-card__btn{border:1px solid rgba(255,255,255,.12)}.fwx-enter{--fg:#f5f5f2!important;--line:rgba(255,255,255,.2)!important}
 img,video,iframe{max-width:100%}@media(max-width:700px){nav{max-width:100vw}.hero{padding-left:16px;padding-right:16px}.section-head,.filters,.upload-wrap{min-width:0}.photo-actions{max-width:100%}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* FRAME V3 — dual-experience navigation and strict monochrome finish. */
+.frame-world-link{
+ display:inline-flex!important;align-items:center;gap:8px;padding:8px 13px;
+ border:1px solid rgba(255,255,255,.32);border-radius:999px;
+ color:var(--frame-text)!important;font-size:11px!important;font-weight:700;
+ letter-spacing:.09em;text-transform:uppercase;white-space:nowrap;
+ transition:background .2s,border-color .2s,transform .2s;
+}
+.frame-world-link:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.7);transform:translateY(-1px)}
+.frame-world-link span{font-size:13px;opacity:.7}
+#dr li .dr-world-link{
+ display:flex;align-items:center;justify-content:space-between;gap:14px;
+ width:100%;padding:14px 12px;border:1px solid rgba(255,255,255,.2);
+ border-radius:8px;background:rgba(255,255,255,.055);color:var(--frame-text);
+ font:700 14px Manrope,sans-serif;text-decoration:none;letter-spacing:.04em;
+}
+#dr li .dr-world-link:hover,#dr li .dr-world-link:focus-visible{
+ background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.55);
+ outline:2px solid #ededeb;outline-offset:2px;
+}
+#dr li .dr-world-link span{color:var(--frame-muted)}
+/* World uses the same ink-and-paper identity; its country research remains separate. */
+#frame-world-app .fw-app-mast .fw-eyebrow,
+#frame-world-app .fw-app-section .fw-eyebrow{color:var(--frame-muted)!important}
+#frame-world-app .fw-app-shell{color:var(--frame-text)}
+#frame-world-app .fw-country-card,
+#frame-world-app .fw-collection-card,
+#frame-world-app .fw-compare-card{background:#111!important;border-color:var(--frame-line)!important}
+#frame-world-app .fw-country-card h3,
+#frame-world-app .fw-collection-card h3,
+#frame-world-app .fw-compare-card h3{color:var(--frame-text)}
+#frame-world-app .fw-open-country,
+#frame-world-app .fw-action,
+#frame-world-app .fw-save-country{border-color:rgba(255,255,255,.32);color:var(--frame-text)}
+#frame-world-app .fw-open-country:hover,
+#frame-world-app .fw-action:hover,
+#frame-world-app .fw-save-country:hover{background:rgba(255,255,255,.09);border-color:rgba(255,255,255,.65)}
+#frame-world-app .fw-country-image,
+#frame-world-app .fw-image-credit{border-color:var(--frame-line)}
+#frame-world-app .fw-data-note{border-color:var(--frame-line);color:var(--frame-muted)}
+#frame-world-app .fw-global-search,
+#frame-world-app .fw-region-filter,
+#frame-world-app .fw-compare-select{background:#101010;color:var(--frame-text);border-color:var(--frame-line)}
+@media(max-width:700px){
+ .frame-world-link{padding:7px 10px;font-size:10px!important}
+ #dr li .dr-world-link{min-height:48px}
+}
