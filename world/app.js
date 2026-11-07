@@ -16,10 +16,10 @@
  function enterCountry(c){if(!c)return;state.recent=[c.id].concat(state.recent.filter(function(x){return x!==c.id})).slice(0,12);saveState();renderProfile(c);}
  function renderProfile(c){
   var profile=d.getElementById('fw-country-profile'),discover=d.getElementById('fw-discovery-view');
-  discover.hidden=true;profile.hidden=false;
+  discover.hidden=true;mast.hidden=true;carouselSection.hidden=true;collections.hidden=true;panels.hidden=true;profile.hidden=false;
   var record=w.FrameCountryExperience.fromLegacy(c.legacyRow,w.FRAME_WORLD_RESEARCH,{region:c.region,id:c.id});
   record.regions=[]; /* The source index is flat; never fabricate region/city membership. */
-  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
+  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;mast.hidden=false;carouselSection.hidden=false;collections.hidden=false;panels.hidden=false;}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
   var actions=node('div','fw-country-actions');
   actions.append(button(state.saved.indexOf(c.id)>=0?'★ Saved':'☆ Save country','fw-action',function(){toggle(state.saved,c.id);renderProfile(c);}));
   actions.append(button(state.journey.indexOf(c.id)>=0?'✓ In journey':'+ Add to journey','fw-action',function(){toggle(state.journey,c.id);renderProfile(c);}));
