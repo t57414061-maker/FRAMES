@@ -66,6 +66,8 @@
     var location = [item.geography && item.geography.administrativeArea, item.geography && item.geography.district, item.geography && item.geography.city, item.geography && item.geography.locality].filter(Boolean).join(' · ');
     addField(fields, 'Verified location', location);
     addField(fields, 'Current status', item.researchStatus);
+    if (item.unescoCategory) addField(fields, 'UNESCO category', item.unescoCategory + ' · Inscribed 2026');
+    if (item.descriptionLicense) addField(fields, 'Description attribution', 'UNESCO World Heritage Centre · ' + item.descriptionLicense);
     if (item.openedAt) addField(fields, 'Opened', item.openedAt);
     if (item.plannedOpening) addField(fields, 'Planned opening', item.plannedOpening);
     if (fields.childNodes.length) card.appendChild(fields);
@@ -206,7 +208,7 @@
         researchStatus: r.status || 'Research pending',
         category: r.category || '',
         geography: { administrativeArea: r.administrativeArea || '', district: r.district || '', city: r.city || '', locality: r.locality || '' },
-        verifiedAt: r.verifiedAt || '', heritageYear: r.heritageYear || '', openedAt: r.openedAt || '', plannedOpening: r.plannedOpening || ''
+        verifiedAt: r.verifiedAt || '', heritageYear: r.heritageYear || '', unescoCategory: r.unescoCategory || '', descriptionLicense: r.descriptionLicense || '', openedAt: r.openedAt || '', plannedOpening: r.plannedOpening || ''
       };
       var area = item.geography.administrativeArea, cityName = item.geography.city;
       if (area) {
