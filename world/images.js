@@ -12,7 +12,7 @@
 
   const REQUIRED = [
     "id", "entityType", "entityId", "role", "assetUrl", "sourcePageUrl",
-    "sourceName", "creator", "licenseName", "licenseUrl", "alt",
+    "sourceName", "title", "creator", "licenseName", "licenseUrl", "attribution", "alt",
     "verifiedAt", "status"
   ];
 
