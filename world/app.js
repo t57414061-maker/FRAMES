@@ -78,7 +78,7 @@
  region.id='fw-region-filter';region.appendChild(new Option('All regions','All regions'));
  Array.from(new Set(catalog.map(function(c){return c.region}))).sort().forEach(function(x){region.appendChild(new Option(x,x));});
  search.append(input,region);mast.appendChild(search);
- var randomBtn=button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]);});randomBtn.id='fw-world-random';mast.appendChild(randomBtn);mast.appendChild(button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]); }));
+ var randomBtn=button('Surprise me ↗','fw-open-country',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]);});randomBtn.id='fw-world-random';mast.appendChild(randomBtn);
  var count=node('p','fw-result-count','');count.id='fw-result-count';mast.appendChild(count);shell.appendChild(mast);
  var carouselSection=section('fw-carousel','Explore the world','Select a country in the cinematic carousel. Use search to jump directly to any indexed country.');
  var carouselRoot=node('div','fw-carousel-root');carouselRoot.id='fwx-carousel-root';carouselSection.appendChild(carouselRoot);shell.appendChild(carouselSection);
@@ -100,7 +100,7 @@
  region.addEventListener('change',function(){state.region=region.value;renderDiscovery();});
  renderCollections();renderDiscovery();renderPanels();
  var requestedCountry='';try{requestedCountry=new URLSearchParams(w.location.search).get('country')||'';}catch(e){}
- var experience=w.FrameExperience.init({root:'#fwx-carousel-root',intro:!requestedCountry,introOnce:true,countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
+ var experience=w.FrameExperience.init({root:'#fwx-carousel-root',intro:!requestedCountry,countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
  if(!experience)carouselRoot.append(node('p','fw-empty','The carousel could not start. Use the country index below.'));
  if(requestedCountry&&byId[requestedCountry])openCountry(byId[requestedCountry]);
  d.addEventListener('frameworld:saved-destinations-changed',renderPanels);
