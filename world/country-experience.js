@@ -160,6 +160,16 @@
       root.appendChild(context);
     }
     (country.regions || []).forEach(function (region) { renderRegion(root, region, country.name); });
+    if (country.cities && country.cities.length) {
+      var citySection = section('Verified city locations', 'City-level records are shown only where the source confirms the location.');
+      country.cities.forEach(function (city) {
+        var cityBlock = el('div', 'fwc-city');
+        cityBlock.appendChild(el('h4', 'fwc-city__title', city.name));
+        renderDestinations(cityBlock, city.destinations || [], country.name);
+        citySection.appendChild(cityBlock);
+      });
+      root.appendChild(citySection);
+    }
     if (country.destinations && country.destinations.length) {
       var destinationSection = section('Explore destinations', 'A growing index of places to discover. Profiles appear as reliable sources are verified.');
       renderDestinations(destinationSection, country.destinations, country.name);
@@ -182,9 +192,10 @@
     if (!Array.isArray(row) || !row[0]) return null;
     researchIndex = researchIndex || {};
     meta = meta || {};
-    var destinations = row.slice(2).map(function (name) {
+    var destinations = [], regions = Object.create(null), cities = Object.create(null);
+    row.slice(2).forEach(function (name) {
       var r = researchIndex[name] || {};
-      return {
+      var item = {
         id: r.id || name.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
         name: name,
         summary: r.summary || '',
@@ -197,6 +208,18 @@
         geography: { administrativeArea: r.administrativeArea || '', district: r.district || '', city: r.city || '', locality: r.locality || '' },
         verifiedAt: r.verifiedAt || '', heritageYear: r.heritageYear || '', openedAt: r.openedAt || '', plannedOpening: r.plannedOpening || ''
       };
+      var area = item.geography.administrativeArea, cityName = item.geography.city;
+      if (area) {
+        if (!regions[area]) regions[area] = { id: area.toLowerCase().replace(/[^a-z0-9]+/g,'-'), name: area, cities: [], destinations: [] };
+        if (cityName) {
+          var cityKey = area + '::' + cityName, city = regions[area].cities.find(function(x){return x.name===cityName;});
+          if (!city) { city = { id: cityKey.toLowerCase().replace(/[^a-z0-9]+/g,'-'), name: cityName, destinations: [] }; regions[area].cities.push(city); }
+          city.destinations.push(item);
+        } else regions[area].destinations.push(item);
+      } else if (cityName) {
+        if (!cities[cityName]) cities[cityName] = { id: cityName.toLowerCase().replace(/[^a-z0-9]+/g,'-'), name: cityName, destinations: [] };
+        cities[cityName].destinations.push(item);
+      } else destinations.push(item);
     });
     return {
       id: meta.id || row[0].toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
@@ -205,6 +228,8 @@
       capital: row[1] || '',
       region: meta.region || '',
       summary: meta.summary || '',
+      regions: Object.keys(regions).map(function(key){return regions[key];}),
+      cities: Object.keys(cities).map(function(key){return cities[key];}),
       destinations: destinations
     };
   }
