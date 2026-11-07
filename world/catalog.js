@@ -25,7 +25,7 @@
     records.push(country);seen[key]=true;
    }
    if(country.destinationNames.indexOf(item.name)<0){country.destinationNames.push(item.name);country.legacyRow.push(item.name);}
-   research[item.name]={id:item.id||slug(item.name),status:item.status||'Source checked',summary:item.summary||'',explore:item.explore||'',photo:item.photo||'',visit:item.visit||'',source:item.source||'Official source',url:item.url||'',category:item.category||'',administrativeArea:item.administrativeArea||'',district:item.district||'',city:item.city||'',locality:item.locality||'',verifiedAt:item.verifiedAt||'',heritageYear:item.heritageYear||'',openedAt:item.openedAt||'',plannedOpening:item.plannedOpening||''};
+   research[item.name]={id:item.id||slug(item.name),status:item.status||'Source checked',summary:item.summary||'',explore:item.explore||'',photo:item.photo||'',visit:item.visit||'',source:item.source||'Official source',url:item.url||'',category:item.category||'',administrativeArea:item.administrativeArea||'',district:item.district||'',city:item.city||'',locality:item.locality||'',verifiedAt:item.verifiedAt||'',heritageYear:item.heritageYear||'',openedAt:item.openedAt||'',plannedOpening:item.plannedOpening||'',unescoCategory:item.unescoCategory||'',descriptionLicense:item.descriptionLicense||''};
   });
   w.FRAME_WORLD_RESEARCH=research;
   records.forEach(function(country){
