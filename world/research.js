@@ -1565,4 +1565,257 @@ window.FRAME_WORLD_RESEARCH = {
     "source": "Albanian National Tourism Agency — Amantia Archaeological Park",
     "url": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
   }
+,
+  "Minsk Old Town and Upper Town": {
+    "status": "Source checked",
+    "summary": "Minsk's historic Upper Town preserves the city's civic and religious centre around Liberty Square, with the City Hall and cathedral landmarks set among restored streets and public spaces.",
+    "explore": "Walk the historic lanes around Liberty Square and connect the square with nearby cultural venues and the Svislach riverfront.",
+    "photo": "Use the square to frame the City Hall and surrounding façades; return at different times for changing street atmosphere.",
+    "visit": "The district is an active city centre. Check museum schedules and event-related access changes before visiting.",
+    "source": "Visit Belarus — Minsk city attractions",
+    "url": "https://www.visit-belarus.com/en/visit-minsk/"
+  },
+  "Trinity Suburb": {
+    "status": "Source checked",
+    "summary": "Trinity Suburb is a historic riverside quarter of Minsk, known for its restored low-rise streetscape and relationship to the Svislach River. It forms part of the city's historic old-town setting.",
+    "explore": "Explore the lanes, courtyards, small museums and riverside paths; treat it as a lived-in neighbourhood as well as a heritage area.",
+    "photo": "Look for street-level architectural details and views across the river, especially where the historic roofline meets the water.",
+    "visit": "Some buildings are private or commercial premises. Respect residents and check individual museum access.",
+    "source": "Visit Belarus — Minsk city attractions",
+    "url": "https://www.visit-belarus.com/en/visit-minsk/"
+  },
+  "National Art Museum of the Republic of Belarus": {
+    "status": "Source checked",
+    "summary": "The National Art Museum in Minsk holds major collections of Belarusian and international art, including painting, sculpture and decorative arts.",
+    "explore": "Use the museum's official collection and exhibition information to plan a visit around Belarusian art and its wider cultural connections.",
+    "photo": "Follow the museum's photography rules; focus on the building, public spaces and permitted displays.",
+    "visit": "Exhibitions, hours and photography rules can change. Confirm details on the museum's official website.",
+    "source": "National Art Museum of the Republic of Belarus",
+    "url": "https://artmuseum.by/en/"
+  },
+  "Belarusian State Museum of the History of the Great Patriotic War": {
+    "status": "Source checked",
+    "summary": "The Minsk museum documents the history of the Second World War in Belarus through collections, archival material and exhibitions. Its institutional history began in 1944.",
+    "explore": "Allow time for the permanent exhibitions and consult the museum's current programme for temporary displays and interpretation.",
+    "photo": "Observe restrictions around sensitive memorial displays and follow the museum's photography policy.",
+    "visit": "This is a memorial and historical institution. Check current opening arrangements, ticketing and exhibition access directly.",
+    "source": "Belarusian State Museum of the History of the Great Patriotic War",
+    "url": "https://warmuseum.by/"
+  },
+  "National Library of Belarus": {
+    "status": "Source checked",
+    "summary": "The National Library is a major Minsk landmark and national information institution. Its distinctive geometric building has become a prominent feature of the city's modern skyline.",
+    "explore": "Explore the public library spaces and check whether the observation platform and exhibitions are open during your visit.",
+    "photo": "Photograph the building's faceted exterior from public viewpoints and include its scale within the surrounding cityscape.",
+    "visit": "Public access to reading rooms, exhibitions and observation areas may differ. Confirm visitor rules with the library.",
+    "source": "National Library of Belarus",
+    "url": "https://www.nlb.by/en/"
+  },
+  "Loshitsa Park": {
+    "status": "Source checked",
+    "summary": "Loshitsa Park is a historic landscape park in Minsk associated with the former Loshitsa estate. Its paths, mature trees and surviving manor-related features offer a quieter green setting within the capital.",
+    "explore": "Follow the public park paths and look for the historic estate landscape and surviving architectural elements.",
+    "photo": "Use tree-lined paths, seasonal foliage and the contrast between parkland and historic structures.",
+    "visit": "Park facilities and access to individual buildings may vary. Check local notices and respect protected landscape features.",
+    "source": "Visit Belarus — Minsk city attractions",
+    "url": "https://www.visit-belarus.com/en/visit-minsk/"
+  },
+  "Central Botanical Garden of the National Academy of Sciences": {
+    "status": "Source checked",
+    "summary": "Minsk's Central Botanical Garden is a major scientific and public green space with extensive plant collections and seasonal displays.",
+    "explore": "Plan around the garden's current seasonal routes and collection areas; check the institution's official visitor information.",
+    "photo": "Look for botanical detail, greenhouse structure and seasonal colour while staying on designated paths.",
+    "visit": "Opening times and access to individual collections can vary by season. Confirm current details before visiting.",
+    "source": "Visit Belarus — Minsk city attractions",
+    "url": "https://www.visit-belarus.com/en/visit-minsk/"
+  },
+  "Dudutki Museum Complex": {
+    "status": "Source checked",
+    "summary": "Dudutki is an open-air museum and cultural complex presenting traditional Belarusian crafts, rural material culture and demonstrations of historic skills.",
+    "explore": "Use the complex's workshop and exhibition programme to understand craft traditions and rural life; verify which demonstrations are operating.",
+    "photo": "Capture workshop processes and traditional buildings respectfully, asking before photographing demonstrators or visitors.",
+    "visit": "Activities and demonstrations may be seasonal or require separate arrangements. Check the site's current visitor information.",
+    "source": "Belarus tourism attractions directory",
+    "url": "https://eng.ullabel.by/tourist-attractions"
+  },
+  "Brest Hero-Fortress Memorial Complex": {
+    "status": "Source checked",
+    "summary": "The Brest Fortress memorial complex preserves a major 19th-century fortification and commemorates its 1941 defence during the German invasion of the Soviet Union. Its museums interpret the fortress across several historical periods.",
+    "explore": "Explore the memorial grounds and the museum exhibitions, including the Defence Museum and Fort No. 5 where available.",
+    "photo": "Treat memorial spaces with respect; use the official visitor guidance for access to museum buildings and exhibitions.",
+    "visit": "The complex includes multiple exhibitions with different schedules. Confirm opening, closures and access on the official site.",
+    "source": "Brest Hero-Fortress Memorial Complex",
+    "url": "https://brest-fortress.by/"
+  },
+  "Belovezhskaya Pushcha National Park": {
+    "status": "Source checked",
+    "summary": "Belovezhskaya Pushcha is a transboundary forest landscape shared by Belarus and Poland and one of Europe's last large remnants of primeval lowland mixed forest. It is recognised as part of the UNESCO World Heritage property Białowieża Forest and as a biosphere reserve.",
+    "explore": "Use designated visitor routes and the nature museum to learn about the forest's ecology and European bison; respect conservation zones.",
+    "photo": "Work with forest textures, old-growth trees and wildlife from permitted viewing areas; never approach or feed wild animals.",
+    "visit": "Access rules differ across protected zones and the international border. Check current park notices and remain on authorised routes.",
+    "source": "UNESCO — Białowieża Forest / Belovezhskaya Pushcha",
+    "url": "https://whc.unesco.org/en/list/33/"
+  },
+  "Mir Castle Complex": {
+    "status": "Source checked",
+    "summary": "Mir Castle began in the late 15th century and developed through Gothic, Renaissance and Baroque phases. Its fortified towers, courtyard and landscaped setting make it an important record of the region's layered architectural history.",
+    "explore": "Explore the castle complex and its surrounding landscape; use the UNESCO description to understand its successive architectural phases.",
+    "photo": "Frame the towers across the pond and then study brickwork, façades and courtyard geometry from public visitor areas.",
+    "visit": "Interior access and events are subject to current museum arrangements. Confirm tickets, opening and photography rules before visiting.",
+    "source": "UNESCO World Heritage Centre — Mir Castle Complex",
+    "url": "https://whc.unesco.org/en/list/625/"
+  },
+  "Nesvizh Palace and Park Complex": {
+    "status": "Source checked",
+    "summary": "The Radziwill family complex at Nesvizh includes the residential castle, Corpus Christi Church and their historic setting. The ensemble influenced architecture, arts and culture across Central and Eastern Europe.",
+    "explore": "Explore the castle and the Corpus Christi Church as connected parts of the UNESCO-listed property, then consider the historic town setting.",
+    "photo": "Use the water and parkland to frame the palace, then capture the courtyard and church architecture where photography is permitted.",
+    "visit": "The castle, church and grounds may have different access arrangements. Check current information from the museum-reserve.",
+    "source": "UNESCO World Heritage Centre — Nesvizh",
+    "url": "https://whc.unesco.org/en/list/1196/"
+  },
+  "Grodno Old Castle": {
+    "status": "Source checked",
+    "summary": "Grodno's Old Castle occupies the historic Castle Hill above the Neman River. The site has medieval origins and has been altered through successive periods of rule and reconstruction.",
+    "explore": "Explore the castle hill and its museum interpretation alongside the nearby historic centre and river landscape.",
+    "photo": "Use the riverbank for views up to the castle hill and look for layers of masonry and defensive architecture.",
+    "visit": "Restoration and museum access can affect which spaces are open. Check current information before visiting.",
+    "source": "Visit Belarus — Grodno attractions",
+    "url": "https://www.visit-belarus.com/en/grodno-2/"
+  },
+  "Grodno New Castle": {
+    "status": "Source checked",
+    "summary": "Grodno's New Castle is an 18th-century royal residence built opposite the Old Castle. The palace is associated with the political history of the Polish-Lithuanian Commonwealth and later museum use.",
+    "explore": "View the palace in relation to the Old Castle and explore its museum interpretation where open.",
+    "photo": "Compare the formal palace frontage with the older defensive setting across the castle hill.",
+    "visit": "Museum exhibitions and access arrangements may change. Verify current visitor details locally.",
+    "source": "Visit Belarus — Grodno attractions",
+    "url": "https://www.visit-belarus.com/en/grodno-2/"
+  },
+  "Kalozha Church of Sts. Boris and Gleb": {
+    "status": "Source checked · UNESCO Tentative List",
+    "summary": "Kalozha Church in Grodno is a rare 12th-century church associated with the architectural tradition of the medieval Black Ruthenian region. UNESCO lists it on Belarus's Tentative List, not the World Heritage List.",
+    "explore": "Study the church's distinctive masonry and riverside setting; remember that it remains an active religious site.",
+    "photo": "Use the Neman riverbank for a contextual view and avoid disrupting worship or entering restricted areas.",
+    "visit": "Respect services and local religious guidance. Its Tentative List status is not the same as UNESCO World Heritage inscription.",
+    "source": "UNESCO — Belarus Tentative List",
+    "url": "https://whc.unesco.org/en/tentativelists/"
+  },
+  "St. Francis Xavier Cathedral, Grodno": {
+    "status": "Source checked",
+    "summary": "The cathedral of St Francis Xavier is a prominent Baroque church in central Grodno, closely associated with the former Jesuit complex and the city's historic civic centre.",
+    "explore": "View the church within the surrounding historic square and consult local information about services and permitted interior access.",
+    "photo": "Focus on the exterior composition and architectural details; follow rules inside an active place of worship.",
+    "visit": "Religious services and events may limit sightseeing. Check access locally and dress respectfully.",
+    "source": "Visit Belarus — Grodno attractions",
+    "url": "https://www.visit-belarus.com/en/grodno-2/"
+  },
+  "Lida Castle": {
+    "status": "Source checked",
+    "summary": "Lida Castle is a medieval brick fortress founded in the 14th century under the Grand Duchy of Lithuania. Its compact fortified plan is an important example of regional defensive architecture.",
+    "explore": "Explore the castle walls and courtyard and check for current museum interpretation or cultural events.",
+    "photo": "Use wide views to show the fortress plan, then isolate brickwork, towers and defensive openings.",
+    "visit": "Restoration, events and visitor access may vary. Confirm current arrangements before travelling.",
+    "source": "Visit Belarus — Belarusian castles and palaces",
+    "url": "https://www.visit-belarus.com/en/castles-belarus/"
+  },
+  "St. Sophia Cathedral, Polotsk": {
+    "status": "Source checked · UNESCO Tentative List context",
+    "summary": "Polotsk's St Sophia Cathedral stands on the Western Dvina and traces its origins to the 11th century. The present building reflects later Baroque reconstruction and functions as a museum and concert venue.",
+    "explore": "Explore the cathedral museum and its architectural history, then walk through Polotsk's historic centre.",
+    "photo": "Frame the cathedral from the river setting and look for the contrast between its historic foundations and later Baroque form.",
+    "visit": "Museum and concert schedules are separate from religious use and may change. Check the local museum's current information.",
+    "source": "Visit Polotsk — St Sophia Cathedral museum",
+    "url": "https://polotsk-turizm.by/en/about_city/museum"
+  },
+  "St. Euphrosyne Monastery, Polotsk": {
+    "status": "Source checked",
+    "summary": "The convent of St Euphrosyne in Polotsk was founded in the 12th century and preserves important examples of medieval religious architecture, including the Church of the Transfiguration.",
+    "explore": "Explore the monastery grounds respectfully and learn about Euphrosyne of Polotsk and the site's place in Belarusian religious and cultural history.",
+    "photo": "Photograph the historic church and architectural details only where permitted; maintain a respectful distance during worship.",
+    "visit": "This is an active religious complex. Follow local dress, conduct and photography rules.",
+    "source": "Visit Polotsk — History and heritage",
+    "url": "https://polotsk-turizm.by/en/about_city/history"
+  },
+  "Marc Chagall House-Museum, Vitebsk": {
+    "status": "Source checked",
+    "summary": "The house museum in Vitebsk occupies the family home where Marc Chagall spent part of his youth. It interprets the artist's early life and his connection to the city.",
+    "explore": "Use the house museum alongside the Marc Chagall Art Centre to understand the artist's early environment and later legacy.",
+    "photo": "Focus on the historic house and exhibition details; follow museum rules for photographing artworks.",
+    "visit": "Exhibitions and access may change. Confirm current opening information with the museum before visiting.",
+    "source": "Marc Chagall House-Museum — Vitebsk",
+    "url": "https://chagall.vitebsk.museum.by/"
+  },
+  "Braslav Lakes National Park": {
+    "status": "Source checked",
+    "summary": "Braslav Lakes National Park protects a distinctive lake district in northern Belarus, with interconnected lakes, wooded shores and glacially shaped landscapes.",
+    "explore": "Plan around marked nature routes and authorised lake access; the park is suited to landscape study and low-impact outdoor exploration.",
+    "photo": "Use elevated viewpoints and shoreline paths to show the relationship between lakes, islands and forest.",
+    "visit": "Water access and outdoor facilities are seasonal. Check park rules and current conditions before setting out.",
+    "source": "Official Braslav Lakes National Park website",
+    "url": "https://braslavpark.by/"
+  },
+  "Narochansky National Park": {
+    "status": "Source checked",
+    "summary": "Narochansky National Park protects a lake-rich landscape in northwestern Belarus. Lake Naroch is the country's largest lake, and the park includes forests, wetlands and a wider group of lakes.",
+    "explore": "Explore marked routes around the lakes and the Blue Lakes natural complex, checking which trails and facilities are open.",
+    "photo": "Look for broad lake horizons, forest reflections and wetland detail while staying on designated paths.",
+    "visit": "Trail conditions, water activities and facilities vary by season. Check the park's official notices before visiting.",
+    "source": "Official Narochansky National Park website",
+    "url": "https://narochpark.by/"
+  },
+  "Berezinsky Biosphere Reserve": {
+    "status": "Source checked",
+    "summary": "Berezinsky Biosphere Reserve protects extensive forest and wetland ecosystems in northern Belarus and is part of UNESCO's Man and the Biosphere network.",
+    "explore": "Use authorised educational routes and the reserve's nature interpretation facilities; some protected areas have restricted access.",
+    "photo": "Observe wildlife from designated viewing points and use long lenses without disturbing animals.",
+    "visit": "A biosphere reserve is not open for unrestricted access. Arrange visits through the reserve and follow conservation rules.",
+    "source": "Council of Europe — Berezinsky State Reserve",
+    "url": "https://www.coe.int/en/web/bern-convention/belarus"
+  },
+  "Pripyatsky National Park": {
+    "status": "Source checked",
+    "summary": "Pripyatsky National Park protects the floodplain and wetland landscapes of the Pripyat River in the Polesie region, an area known for extensive marshes, river channels and biodiversity.",
+    "explore": "Look for official nature trails, river-based interpretation and the park's nature museum; check seasonal flood conditions.",
+    "photo": "Use observation points for wetland and bird photography and avoid disturbing nesting or feeding wildlife.",
+    "visit": "Flooding and seasonal conditions can affect routes and transport. Check the park's official information before travel.",
+    "source": "Official Pripyatsky National Park website",
+    "url": "https://www.npp.by/"
+  },
+  "Gomel Palace and Park Ensemble": {
+    "status": "Source checked",
+    "summary": "The palace-and-park ensemble in Gomel is a major historic complex associated with the Rumyantsev and Paskevich families. Its palace, chapel and landscaped park form a distinctive cultural setting in the city.",
+    "explore": "Explore the palace museum and public park areas, and check which historic buildings are open during your visit.",
+    "photo": "Use the park's long views to frame the palace and capture the relationship between architecture and landscape.",
+    "visit": "Museum access and opening arrangements may differ between buildings. Confirm current information before visiting.",
+    "source": "Belarus tourism attractions directory",
+    "url": "https://eng.ullabel.by/tourist-attractions"
+  },
+  "Kossovo Palace": {
+    "status": "Source checked",
+    "summary": "The Pusłowski Palace at Kossovo is a 19th-century historicist residence known for its dramatic towers and picturesque silhouette. The nearby Tadeusz Kosciuszko memorial museum adds context to the site's cultural landscape.",
+    "explore": "Explore the palace exterior and connect it with the nearby Kosciuszko house-museum and the wider Kossovo setting.",
+    "photo": "Use the palace's asymmetrical towers and landscaped approach for architectural compositions.",
+    "visit": "Restoration and museum operations can affect access. Confirm which interiors and grounds are open before visiting.",
+    "source": "Visit Belarus — Belarusian castles and palaces",
+    "url": "https://www.visit-belarus.com/en/castles-belarus/"
+  },
+  "Augustow Canal": {
+    "status": "Source checked · UNESCO Tentative List",
+    "summary": "The Augustow Canal is a 19th-century cross-border waterway linking river systems in present-day Belarus and Poland. It is included on Belarus's UNESCO Tentative List and is valued as an engineering and landscape heritage site.",
+    "explore": "Explore only the sections and facilities currently open to visitors, and use official local route information for waterway activities.",
+    "photo": "Look for locks, bridges, canal-side engineering and the relationship between the waterway and surrounding woodland.",
+    "visit": "This is a transboundary waterway; access and border conditions vary. Confirm local permissions and current operating arrangements.",
+    "source": "UNESCO — Belarus Tentative List",
+    "url": "https://whc.unesco.org/en/tentativelists/"
+  },
+  "Struve Geodetic Arc": {
+    "status": "Source checked · UNESCO World Heritage property",
+    "summary": "The Struve Geodetic Arc is a transnational chain of survey points used in the 19th century to measure the Earth's shape. Five of its inscribed station points are located in Belarus.",
+    "explore": "Treat the Belarusian stations as part of a much larger scientific heritage route crossing ten countries; identify the exact station locations before planning a visit.",
+    "photo": "Document the survey markers and their landscape context without disturbing monuments or private land.",
+    "visit": "Some station points are small and may be difficult to locate. Use UNESCO's official maps and verify local access before travelling.",
+    "source": "UNESCO World Heritage Centre — Struve Geodetic Arc",
+    "url": "https://whc.unesco.org/en/list/1187/"
+  }
 };
