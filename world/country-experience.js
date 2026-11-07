@@ -33,8 +33,26 @@
     box.append(el('h4', '', label), el('p', '', value));
     parent.appendChild(box);
   }
+  function destinationImage(parent, destination) {
+    var library = w.FRAME_WORLD_IMAGES;
+    if (!library || typeof library.firstApproved !== 'function' || !destination || !destination.id) return;
+    var image = library.firstApproved('destination', destination.id, 'card') ||
+      library.firstApproved('destination', destination.id, 'thumbnail');
+    if (!image) return;
+    var figure = el('figure', 'fwc-image');
+    var img = el('img', '');
+    img.src = image.assetUrl;
+    img.alt = image.alt;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    figure.appendChild(img);
+    if (image.attribution) figure.appendChild(el('figcaption', 'fwc-image-credit', image.attribution));
+    parent.appendChild(figure);
+  }
+
   function destinationCard(item, countryName) {
     var card = el('article', 'fwc-destination');
+    destinationImage(card, item);
     card.appendChild(el('p', 'fwc-eyebrow', item.category || 'DESTINATION'));
     card.appendChild(el('h4', 'fwc-destination__title', item.name));
     if (item.summary) card.appendChild(el('p', 'fwc-destination__summary', item.summary));
