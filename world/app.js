@@ -19,7 +19,7 @@
   discover.hidden=true;profile.hidden=false;
   var record=w.FrameCountryExperience.fromLegacy(c.legacyRow,w.FRAME_WORLD_RESEARCH,{region:c.region,id:c.id});
   record.regions=[]; /* The source index is flat; never fabricate region/city membership. */
-  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;if(experience)experience.exit();}});
+  w.FrameCountryExperience.render(profile,record,{onBack:function(){profile.hidden=true;discover.hidden=false;if(experience)experience.exit();}});profile.scrollIntoView({behavior:'smooth',block:'start'});if(experience)experience.exit();
   var actions=node('div','fw-country-actions');
   actions.append(button(state.saved.indexOf(c.id)>=0?'★ Saved':'☆ Save country','fw-action',function(){toggle(state.saved,c.id);renderProfile(c);}));
   actions.append(button(state.journey.indexOf(c.id)>=0?'✓ In journey':'+ Add to journey','fw-action',function(){toggle(state.journey,c.id);renderProfile(c);}));
