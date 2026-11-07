@@ -450,7 +450,7 @@ window.FRAME_WORLD_DATA = {
       "Rome",
       "Colosseum",
       "Venice Grand Canal",
-      "Italian-style Condominio Theatres of Central Italy"
+      "The System of Italian-style Condominio Theatres"
     ],
     [
       "Kosovo",
