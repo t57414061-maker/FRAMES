@@ -1,5 +1,4 @@
 window.FRAME_WORLD_DATA = {
-  "totalCountries": 193,
   "europe": [
     [
       "Albania",
@@ -2433,5 +2432,7 @@ window.FRAME_WORLD_DATA = {
         ]
       ]
     }
-  ]
+  ],
+  "unMemberStates": 193,
+  "totalCountryEntries": 196
 };
