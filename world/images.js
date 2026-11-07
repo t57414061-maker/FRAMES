@@ -25,6 +25,14 @@
     }
   }
 
+  function isHttpsUrl(value) {
+    try {
+      return new URL(value).protocol === "https:";
+    } catch (_) {
+      return false;
+    }
+  }
+
   function validateRecord(record) {
     const errors = [];
     if (!record || typeof record !== "object" || Array.isArray(record)) {
@@ -49,11 +57,11 @@
     if (record.assetUrl && !/^\//.test(record.assetUrl) && !isHttpUrl(record.assetUrl)) {
       errors.push("assetUrl must be a site-relative path or HTTP(S) URL.");
     }
-    if (record.sourcePageUrl && !isHttpUrl(record.sourcePageUrl)) {
-      errors.push("sourcePageUrl must be an HTTP(S) URL.");
+    if (record.sourcePageUrl && !isHttpsUrl(record.sourcePageUrl)) {
+      errors.push("sourcePageUrl must be an HTTPS URL.");
     }
-    if (record.licenseUrl && !isHttpUrl(record.licenseUrl)) {
-      errors.push("licenseUrl must be an HTTP(S) URL.");
+    if (record.licenseUrl && !isHttpsUrl(record.licenseUrl)) {
+      errors.push("licenseUrl must be an HTTPS URL.");
     }
     if (record.verifiedAt && !/^\d{4}-\d{2}-\d{2}$/.test(record.verifiedAt)) {
       errors.push("verifiedAt must use YYYY-MM-DD.");

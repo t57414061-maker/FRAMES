@@ -68,15 +68,17 @@
     if (link) card.appendChild(link);
     var saved = [];
     try { saved = JSON.parse(w.localStorage.getItem('frame-world-saved-destinations') || '[]'); } catch (e) {}
+    if (!Array.isArray(saved)) saved = [];
     var key = String(countryName || '') + '::' + String(item.name || '');
-    var isSaved = saved.some(function (x) { return x.key === key; });
+    var isSaved = saved.some(function (x) { return x && x.key === key; });
     var save = el('button', 'fwc-save-destination', isSaved ? '★ Saved' : '☆ Save destination');
     save.type = 'button';
     save.setAttribute('aria-pressed', String(isSaved));
     save.addEventListener('click', function () {
       var list = [];
       try { list = JSON.parse(w.localStorage.getItem('frame-world-saved-destinations') || '[]'); } catch (e) {}
-      var at = list.findIndex(function (x) { return x.key === key; });
+      if (!Array.isArray(list)) list = [];
+      var at = list.findIndex(function (x) { return x && x.key === key; });
       if (at >= 0) list.splice(at, 1); else list.push({ key: key, country: countryName || '', name: item.name || '', id: item.id || '' });
       try { w.localStorage.setItem('frame-world-saved-destinations', JSON.stringify(list)); } catch (e) {}
       save.textContent = at >= 0 ? '☆ Save destination' : '★ Saved';

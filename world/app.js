@@ -6,7 +6,7 @@
  var catalog=w.FrameWorldCatalog.build(), byId=Object.create(null), byName=Object.create(null);
  catalog.forEach(function(c){byId[c.id]=c;byName[c.name.toLowerCase()]=c;});
  var state={query:'',region:'All regions',saved:read('frame-world-saved'),journey:read('frame-world-journey'),recent:read('frame-world-recent'),compareA:'',compareB:''};
- function read(k){try{return JSON.parse(w.localStorage.getItem(k)||'[]')}catch(e){return[]}}
+ function read(k){try{var value=JSON.parse(w.localStorage.getItem(k)||'[]');return Array.isArray(value)?value:[]}catch(e){return[]}}
  function write(k,v){try{w.localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
  function node(tag,cls,txt){var n=d.createElement(tag);if(cls)n.className=cls;if(txt!=null)n.textContent=String(txt);return n;}
  function button(label,cls,fn){var b=node('button',cls,label);b.type='button';b.addEventListener('click',fn);return b;}
@@ -107,9 +107,12 @@
  region.addEventListener('change',function(){state.region=region.value;renderDiscovery();});
  renderCollections();renderDiscovery();renderPanels();
  var requestedCountry='';try{requestedCountry=new URLSearchParams(w.location.search).get('country')||'';}catch(e){}
- var experience=w.FrameExperience.init({root:'#fwx-carousel-root',intro:!requestedCountry,countries:catalog.map(function(c){return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e'};}),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
+ var experience=w.FrameExperience.init({root:'#fwx-carousel-root',intro:!requestedCountry,countries:catalog.map(function(c){
+  var lib=w.FRAME_WORLD_IMAGES;
+  var image=lib&&typeof lib.firstApproved==='function'?(lib.firstApproved('country',c.id,'hero')||lib.firstApproved('country',c.id,'card')):null;
+  return {id:c.id,name:c.name,capital:c.capital,accent:'#c9a96e',image:image?image.assetUrl:'',credit:image?image.attribution:''};
+ }),introOnce:true,onEnter:function(c){enterCountry(byId[c.id]||byName[c.name.toLowerCase()]);experience.exit();}});
  if(!experience)carouselRoot.append(node('p','fw-empty','The carousel could not start. Use the country index below.'));
  if(requestedCountry&&byId[requestedCountry])openCountry(byId[requestedCountry]);
  d.addEventListener('frameworld:saved-destinations-changed',renderPanels);
- d.getElementById('fw-world-random').addEventListener('click',function(){openCountry(catalog[Math.floor(Math.random()*catalog.length)]);});
 })(window,document);

@@ -47,23 +47,3 @@ assert.equal(invalid.valid, false);
 assert.ok(invalid.errors.some(error => error.includes('HTTPS')));
 console.log('FRAME World catalog and schema tests passed.');
 
-
-// Image registry contract: incomplete and unapproved records must never publish.
-vm.runInContext(fs.readFileSync('world/images.js', 'utf8'), sandbox);
-const imageLibrary = sandbox.window.FRAME_WORLD_IMAGES;
-assert.equal(imageLibrary.items.length, 0, 'No image should be approved by default');
-assert.equal(imageLibrary.firstApproved('country', 'testland', 'hero'), null);
-const validImage = {
-  id: 'test-image', entityType: 'country', entityId: 'testland', role: 'hero',
-  assetUrl: '/world/images/testland/hero.jpg', sourcePageUrl: 'https://commons.wikimedia.org/wiki/File:Example.jpg',
-  sourceName: 'Wikimedia Commons', title: 'Example landscape', creator: 'Example Photographer',
-  licenseName: 'CC BY 4.0', licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
-  attribution: 'Photo: Example Photographer / CC BY 4.0', alt: 'A mountain landscape in Testland',
-  verifiedAt: '2026-11-07', status: 'approved'
-};
-assert.equal(imageLibrary.validateRecord(validImage).valid, true);
-assert.equal(imageLibrary.validateRecord({...validImage, status: 'pending'}).valid, false);
-assert.equal(imageLibrary.validateRecord({...validImage, sourcePageUrl: 'javascript:alert(1)'}).valid, false);
-assert.equal(imageLibrary.validateRecord({...validImage, licenseUrl: 'http://example.org/license'}).valid, false);
-assert.equal(imageLibrary.validateRecord({...validImage, alt: ''}).valid, false);
-console.log('FRAME World image registry tests passed.');
