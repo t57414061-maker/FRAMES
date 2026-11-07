@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 
-const sandbox = { window: {}, URL };
+const sandbox = { window: {}, document: {}, URL };
 vm.createContext(sandbox);
 vm.runInContext(fs.readFileSync('world/verified-discoveries.js', 'utf8'), sandbox);
 vm.runInContext(fs.readFileSync('world/catalog.js', 'utf8'), sandbox);
