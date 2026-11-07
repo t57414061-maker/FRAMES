@@ -25,13 +25,13 @@
     records.push(country);seen[key]=true;
    }
    if(country.destinationNames.indexOf(item.name)<0){country.destinationNames.push(item.name);country.legacyRow.push(item.name);}
-   research[item.name]={status:item.status||'Source checked',summary:item.summary||'',explore:item.explore||'',photo:item.photo||'',visit:item.visit||'',source:item.source||'Official source',url:item.url||'',category:item.category||'',administrativeArea:item.administrativeArea||'',district:item.district||'',city:item.city||'',locality:item.locality||'',verifiedAt:item.verifiedAt||'',heritageYear:item.heritageYear||'',openedAt:item.openedAt||'',plannedOpening:item.plannedOpening||''};
+   research[item.name]={id:item.id||slug(item.name),status:item.status||'Source checked',summary:item.summary||'',explore:item.explore||'',photo:item.photo||'',visit:item.visit||'',source:item.source||'Official source',url:item.url||'',category:item.category||'',administrativeArea:item.administrativeArea||'',district:item.district||'',city:item.city||'',locality:item.locality||'',verifiedAt:item.verifiedAt||'',heritageYear:item.heritageYear||'',openedAt:item.openedAt||'',plannedOpening:item.plannedOpening||''};
   });
   w.FRAME_WORLD_RESEARCH=research;
   records.forEach(function(country){
    country.destinations=country.destinationNames.map(function(name){
     var r=research[name]||{},verified=discoveries.find(function(x){return x&&x.name===name;});
-    return {id:slug(name),name:name,summary:r.summary||'',explore:r.explore||'',
+    return {id:r.id||slug(name),name:name,summary:r.summary||'',explore:r.explore||'',
      photography:r.photo||'',visitorInfo:r.visit||'',status:r.status||'Research pending',
      source:r.url?{name:r.source||'Verified reference',url:r.url}:null,
      geography:verified?{administrativeArea:verified.administrativeArea||'',district:verified.district||'',city:verified.city||'',locality:verified.locality||''}:null,
