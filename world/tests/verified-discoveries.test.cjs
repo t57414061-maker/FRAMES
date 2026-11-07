@@ -11,6 +11,13 @@ vm.runInContext(fs.readFileSync('world/country-experience.js', 'utf8'), sandbox)
 
 const discoveries = sandbox.window.FRAME_WORLD_VERIFIED_DISCOVERIES;
 assert.ok(discoveries.length >= 29, 'Expected all 25 UNESCO inscriptions plus museum additions');
+const unescoRecords = discoveries.filter(item => item.heritageYear === 2026);
+assert.equal(unescoRecords.length, 25, 'The 2026 UNESCO batch must contain exactly 25 new inscriptions');
+for (const item of unescoRecords) {
+  assert.match(item.url, /^https:\/\/whc\.unesco\.org\/en\/list\/\d+$/, 'Each UNESCO inscription must link to its own official property dossier: ' + item.name);
+}
+assert.equal(new Set(unescoRecords.map(item => item.url)).size, 25, 'Each UNESCO inscription must have a distinct official dossier URL');
+
 const ids = new Set();
 const names = new Set();
 for (const item of discoveries) {
