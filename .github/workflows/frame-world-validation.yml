@@ -24,5 +24,6 @@ jobs:
           node --check world/catalog.js
           node --check world/schema.js
           node --check world/app.js
+          node --check world/images.js
       - name: Test catalog adapter and schema
         run: node world/tests/data-contract.test.cjs
