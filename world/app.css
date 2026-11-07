@@ -48,3 +48,6 @@ main>section:not(#frame-world-app){display:none!important}
 #frame-world-app .fwc-root section{padding:34px 0}
 #frame-world-app .fwc-root .fwc-hero{padding:clamp(36px,8vw,90px) clamp(20px,5vw,64px)}
 #frame-world-app .fwx-root button,#frame-world-app .fwc-root button{font-family:inherit}
+
+#frame-world-app .fwx-stage{padding:0}
+#frame-world-app .fwx-root{width:100%;}
