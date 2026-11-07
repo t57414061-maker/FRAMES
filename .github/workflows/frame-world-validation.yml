@@ -1,0 +1,28 @@
+name: FRAME World validation
+on:
+  pull_request:
+    paths:
+      - 'world/**'
+      - '.github/workflows/frame-world-validation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'world/**'
+      - '.github/workflows/frame-world-validation.yml'
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check JavaScript syntax
+        run: |
+          node --check world/experience/frame-experience.js
+          node --check world/country-experience.js
+          node --check world/catalog.js
+          node --check world/schema.js
+          node --check world/app.js
+      - name: Test catalog adapter and schema
+        run: node world/tests/data-contract.test.cjs
