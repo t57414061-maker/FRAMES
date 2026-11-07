@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#090909">
+<meta name="description" content="Explore the world's regions, countries and remarkable places with FRAME World.">
+<meta property="og:title" content="FRAME World — Explore the world">
+<meta property="og:description" content="Discover countries, culture and remarkable places through photography.">
+<title>FRAME World — Explore the world</title>
+<style>
+:root{color-scheme:dark;--bg:#090909;--panel:#121211;--line:#393329;--fg:#f4f0e7;--mut:#aaa398;--gold:#c9a96e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Manrope,system-ui,sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+header{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding:14px max(20px,calc((100vw - 1160px)/2));position:sticky;top:0;background:#090909eF;backdrop-filter:blur(14px);z-index:5}
+.brand{font-weight:800;letter-spacing:.28em;color:var(--gold)}.brand small{display:block;color:var(--mut);font-size:9px;letter-spacing:.34em;font-weight:600}.navlinks{display:flex;gap:18px;align-items:center;font-size:13px;color:var(--mut)}.navlinks a:hover{color:var(--gold)}
+.hero{min-height:58vh;display:grid;align-items:center;text-align:center;padding:90px 20px;background:radial-gradient(ellipse at 50% 0,rgba(201,169,110,.17),transparent 60%),linear-gradient(180deg,#11110f,#090909)}.eyebrow{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:11px}.hero h1{font:600 clamp(54px,10vw,112px)/.95 Georgia,serif;letter-spacing:-.04em;margin:20px 0}.hero h1 span{color:var(--gold);font-style:italic}.hero p{max-width:610px;margin:0 auto;color:#c1baad;font-size:clamp(15px,2vw,18px)}.hero-actions{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{display:inline-flex;padding:12px 18px;border:1px solid var(--gold);border-radius:5px;color:#17130c;background:linear-gradient(135deg,#dfc58e,#b28b4d);font-size:13px;font-weight:800}.btn.secondary{background:transparent;color:var(--fg)}
+section{padding:68px 0}.head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px}.head h2{font:500 clamp(32px,5vw,48px)/1 Georgia,serif;margin:0}.head p{color:var(--mut);margin:8px 0 0}.regions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.region{min-height:190px;border:1px solid var(--line);background:linear-gradient(145deg,#191814,#10100f);padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:border-color .2s,transform .2s}.region:hover{border-color:var(--gold);transform:translateY(-3px)}.region .num{font-size:11px;letter-spacing:.2em;color:var(--gold)}.region h3{font:500 28px Georgia,serif;margin:20px 0 4px}.region p{font-size:12px;color:var(--mut);margin:0}.region .arrow{align-self:flex-end;color:var(--gold);font-size:22px}
+.note{border:1px solid var(--line);padding:22px;color:var(--mut);font-size:13px;background:var(--panel)}footer{border-top:1px solid var(--line);padding:28px 20px;text-align:center;color:var(--mut);font-size:12px}footer b{color:var(--gold);letter-spacing:.3em}
+@media(max-width:800px){.regions{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:52vh}.navlinks{gap:10px}}
+@media(max-width:420px){.wrap{width:calc(100% - 28px)}header{padding:12px 14px}.navlinks{font-size:11px}.regions{gap:9px}.region{padding:15px;min-height:160px}.region h3{font-size:23px}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><a class="brand" href="../" aria-label="FRAME Gallery">FRAME<small>WORLD</small></a><nav class="navlinks" aria-label="FRAME sections"><a href="../">FRAME Gallery</a><a href="#regions">Explore regions</a></nav></header>
+<main>
+<section class="hero"><div><div class="eyebrow">A world of perspectives</div><h1>Discover the <span>World.</span></h1><p>Explore countries, remarkable places, local stories and the photographs that bring them to life. A separate destination experience from FRAME Gallery.</p><div class="hero-actions"><a class="btn" href="#regions">Explore regions&nbsp; ↘</a><a class="btn secondary" href="../">Enter FRAME Gallery</a></div></div></section>
+<section id="regions"><div class="wrap"><div class="head"><div><h2>Choose a region</h2><p>Start with a region, then discover its countries and famous places.</p></div></div>
+<div class="regions">
+<a class="region" href="#europe"><span class="num">01 / REGION</span><div><h3>Europe</h3><p>46 countries · 2 featured places each</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#asia"><span class="num">02 / REGION</span><div><h3>Asia</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#africa"><span class="num">03 / REGION</span><div><h3>Africa</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#north-america"><span class="num">04 / REGION</span><div><h3>North America</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#south-america"><span class="num">05 / REGION</span><div><h3>South America</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#oceania"><span class="num">06 / REGION</span><div><h3>Oceania</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#middle-east"><span class="num">07 / REGION</span><div><h3>Middle East</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+<a class="region" href="#antarctica"><span class="num">08 / REGION</span><div><h3>Antarctica</h3><p>Country and place collection coming next</p></div><span class="arrow">↗</span></a>
+</div></div></section>
+<section id="europe"><div class="wrap"><div class="head"><div><h2>Europe</h2><p>The first regional collection: 46 countries and two famous places per country.</p></div></div><div class="note">The Europe country directory and its place pages will be connected here as the next content milestone. Photographs are placeholders until source, author and licence metadata have been verified.</div></div></section>
+</main>
+<footer><b>FRAME WORLD</b><p>Explore with curiosity. Credit every creator.</p><a href="../">← Back to FRAME Gallery</a></footer>
+</body></html>
