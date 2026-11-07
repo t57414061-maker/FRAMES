@@ -29,3 +29,6 @@
 .fwc-footer{padding:30px 0 48px;border-top:1px solid var(--fwc-line)}
 @media(max-width:520px){.fwc-header,.fwc-hero,.fwc-section,.fwc-facts,.fwc-footer{width:calc(100% - 26px)}.fwc-hero{min-height:260px}.fwc-destination{padding:14px}}
 @media(prefers-reduced-motion:reduce){.fwc-root *{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.fwc-save-destination{display:inline-block;margin-top:12px;padding:8px 11px;border:1px solid var(--fwc-line);background:transparent;color:var(--fwc-gold);font:inherit;font-size:11px;cursor:pointer}
+.fwc-save-destination:hover,.fwc-save-destination:focus-visible{border-color:var(--fwc-gold);outline-offset:3px}
