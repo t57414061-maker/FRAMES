@@ -254,6 +254,10 @@
         if (back) back.focus({ preventScroll: true });
         if (onEnter) onEnter(c, cv.btn);
         d.dispatchEvent(new CustomEvent('frameworld:enter', { detail: c }));
+      }).catch(function () {
+        if (S.layer) exit();
+        else S.busy = false;
+        live.textContent = 'Could not open ' + c.name + '. Please try again.';
       });
     }
 
