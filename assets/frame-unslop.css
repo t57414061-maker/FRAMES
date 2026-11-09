@@ -181,3 +181,106 @@ body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}
   .hero .btn{padding:9px 11px;font-size:12px}
   #grid{columns:2 125px}
 }
+
+
+/* FRAME monochrome lock — no gold or coloured accent system. */
+:root{
+  --u-bg:#080808;
+  --u-surface:#111111;
+  --u-raised:#191919;
+  --u-text:#f4f4f4;
+  --u-muted:#a6a6a6;
+  --u-line:rgba(255,255,255,.16);
+  --u-accent:#f0f0f0;
+  --gold:#f0f0f0;
+  --gold-accent:#f0f0f0;
+  --accent-gold:#f0f0f0;
+  --color-gold:#f0f0f0;
+  --accent:#f0f0f0;
+  --accent-color:#f0f0f0;
+  color-scheme:dark;
+}
+html,body{background:#080808!important;color:#f4f4f4}
+button,.btn,.filter,.act,.iconbtn{accent-color:#f0f0f0}
+button:not(.danger):not([aria-label*="delete" i]):not([title*="delete" i]){text-shadow:none}
+a:not(.danger),.eyebrow,.section-kicker,.genre-tag,.badge,.status-pill{
+  text-decoration-color:rgba(255,255,255,.35);
+}
+.btn:not(.outline):not(.ghost),.filter.active,.filter[aria-pressed="true"]{
+  background:#f0f0f0!important;color:#080808!important;border-color:#f0f0f0!important;
+}
+.btn.outline,.btn.ghost,.filter,.iconbtn,.act{
+  color:#f4f4f4!important;border-color:rgba(255,255,255,.3)!important;
+}
+.frame-dock button[aria-current="page"]{
+  background:rgba(255,255,255,.14)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)!important;
+}
+
+
+/* Smooth navigation and scroll, with reduced-motion accessibility above. */
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{-webkit-overflow-scrolling:touch;overscroll-behavior-y:contain}
+section,[id]{scroll-margin-top:76px}
+a,button,.btn,.filter,.act{touch-action:manipulation}
+
+/* Mobile overflow guard: let children shrink instead of pushing the page wider. */
+main,header,footer,section,nav,article,aside,
+.container,.wrap,.content,.panel,.section-head,.upload-wrap,.admin-panel,
+.hero-content,.hero-inner,.gallery,.gallery-wrap,.filters,.photo-actions{
+  min-width:0;max-width:100%;
+}
+body,main,#app,#root,.app,.page,.site,.shell{max-width:100%;min-width:0}
+img,video,iframe,canvas,svg{max-width:100%}
+pre,code{white-space:pre-wrap;overflow-wrap:anywhere}
+table{max-width:100%;display:block;overflow-x:auto}
+input,select,textarea{max-width:100%;min-width:0}
+button,.btn,a{overflow-wrap:anywhere}
+.flex,.row,.toolbar,.actions,.nav-actions,.links{min-width:0}
+.flex>* ,.row>* ,.toolbar>* ,.actions>*{min-width:0;max-width:100%}
+
+/* Navigation may scroll within its own row on narrow phones; page itself never does. */
+body>nav:not(.frame-dock){min-width:0;max-width:100vw}
+body>nav:not(.frame-dock) .links{
+  min-width:0;max-width:100%;overflow-x:auto;overflow-y:hidden;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+body>nav:not(.frame-dock) .links::-webkit-scrollbar{display:none}
+body>nav:not(.frame-dock) .nav-actions{flex-shrink:0}
+
+/* Keep filters and action rows usable without clipping their last item. */
+.filters,.photo-actions,.toolbar,.tabs,.filter-row{
+  overflow-x:auto;overflow-y:hidden;max-width:100%;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;
+}
+.filters::-webkit-scrollbar,.photo-actions::-webkit-scrollbar,
+.toolbar::-webkit-scrollbar,.tabs::-webkit-scrollbar,.filter-row::-webkit-scrollbar{display:none}
+.filters>* ,.tabs>* ,.filter-row>*{flex-shrink:0}
+
+@media(max-width:700px){
+  html{scroll-padding-top:64px}
+  section,[id]{scroll-margin-top:64px}
+  body>nav:not(.frame-dock){
+    width:100%;padding-left:12px;padding-right:12px;
+    flex-wrap:nowrap;gap:10px;
+  }
+  body>nav:not(.frame-dock) .brand{flex-shrink:0}
+  body>nav:not(.frame-dock) .links{flex:1 1 auto}
+  body>nav:not(.frame-dock) .links a{padding:8px 2px}
+  .section-head{gap:12px;flex-wrap:wrap}
+  .section-head>*{min-width:0;max-width:100%}
+  .upload-card>*{min-width:0;max-width:100%}
+  .hero-content,.hero-content>*{max-width:100%;min-width:0}
+  .frame-dock{left:50%;right:auto;transform:translateX(-50%)}
+  .frame-dock button{overflow:hidden}
+  .frame-dock button .fd-label{max-width:100%;overflow:hidden;text-overflow:ellipsis}
+}
+@media(max-width:380px){
+  body>nav:not(.frame-dock) .brand{font-size:14px;letter-spacing:.12em}
+  body>nav:not(.frame-dock) .nav-actions{gap:4px}
+  .iconbtn{width:36px;height:36px}
+  .section-head h2{font-size:clamp(22px,7vw,32px)}
+}
+@media(prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
