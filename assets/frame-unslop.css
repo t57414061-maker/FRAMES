@@ -181,3 +181,38 @@ body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}
   .hero .btn{padding:9px 11px;font-size:12px}
   #grid{columns:2 125px}
 }
+
+
+/* FRAME monochrome lock — no gold or coloured accent system. */
+:root{
+  --u-bg:#080808;
+  --u-surface:#111111;
+  --u-raised:#191919;
+  --u-text:#f4f4f4;
+  --u-muted:#a6a6a6;
+  --u-line:rgba(255,255,255,.16);
+  --u-accent:#f0f0f0;
+  --gold:#f0f0f0;
+  --gold-accent:#f0f0f0;
+  --accent-gold:#f0f0f0;
+  --color-gold:#f0f0f0;
+  --accent:#f0f0f0;
+  --accent-color:#f0f0f0;
+  color-scheme:dark;
+}
+html,body{background:#080808!important;color:#f4f4f4}
+button,.btn,.filter,.act,.iconbtn{accent-color:#f0f0f0}
+button:not(.danger):not([aria-label*="delete" i]):not([title*="delete" i]){text-shadow:none}
+a:not(.danger),.eyebrow,.section-kicker,.genre-tag,.badge,.status-pill{
+  text-decoration-color:rgba(255,255,255,.35);
+}
+.btn:not(.outline):not(.ghost),.filter.active,.filter[aria-pressed="true"]{
+  background:#f0f0f0!important;color:#080808!important;border-color:#f0f0f0!important;
+}
+.btn.outline,.btn.ghost,.filter,.iconbtn,.act{
+  color:#f4f4f4!important;border-color:rgba(255,255,255,.3)!important;
+}
+.frame-dock button[aria-current="page"]{
+  background:rgba(255,255,255,.14)!important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.2)!important;
+}
