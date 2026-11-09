@@ -1,0 +1,72 @@
+/* FRAME — site-wide mobile fit
+   Presentation-only overrides. Keeps all content accessible; no backend/auth changes. */
+:root{color-scheme:dark}
+html{width:100%;max-width:100%;overflow-x:clip;scroll-behavior:smooth}
+body{width:100%;max-width:100%;min-width:0;margin-inline:0;overflow-x:clip}
+*,*::before,*::after{box-sizing:border-box}
+body *{min-width:0}
+img,video,iframe,canvas,svg{max-width:100%}
+main,header,footer,section,article,aside,nav,form,fieldset,
+.container,.wrap,.content,.panel,.shell,.page,.app,.upload-wrap,.upload-card,
+.admin-panel,.section-head,.filters,#grid,#featured,#genres,#genres-grid,
+#collection,#share,#why,#challenge,#statement{max-width:100%;min-width:0}
+h1,h2,h3,h4,p,a,button,label,small,strong,span{overflow-wrap:anywhere}
+input,select,textarea{width:100%;max-width:100%;min-width:0}
+button,.btn,.filter,.act{max-width:100%;white-space:normal}
+table{display:block;max-width:100%;overflow-x:auto}
+pre,code{max-width:100%;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:700px){
+  html,body{width:100%;max-width:100%;overflow-x:clip}
+  body{padding-inline:0}
+  body>nav:not(.frame-dock){
+    position:sticky!important;left:auto!important;right:auto!important;
+    width:100%!important;max-width:100%!important;
+    display:flex!important;flex-wrap:wrap!important;
+    justify-content:space-between!important;
+    padding-inline:12px!important;gap:8px!important;
+  }
+  body>nav:not(.frame-dock) .brand{flex:0 0 auto;max-width:100%}
+  body>nav:not(.frame-dock) .links{
+    position:static!important;left:auto!important;transform:none!important;
+    flex:1 1 100%!important;width:100%!important;max-width:100%!important;
+    display:flex;gap:12px;overflow-x:auto;overflow-y:hidden;
+    white-space:nowrap;scrollbar-width:none;
+  }
+  body>nav:not(.frame-dock) .links a{flex:0 0 auto;white-space:nowrap}
+  body>nav:not(.frame-dock) .nav-actions{margin-left:auto;flex:0 0 auto}
+  header.hero{width:100%;max-width:100%;padding-inline:16px}
+  .hero-content,.hero-content>*{width:auto;max-width:100%;min-width:0}
+  section{width:100%;max-width:100%;padding-inline:0}
+  .section-head,#featured .arc-head,.filters{width:100%;max-width:100%;padding-inline:12px}
+  #grid{width:100%;max-width:100%;padding-inline:12px;columns:2 130px;column-gap:10px}
+  #grid figure,#grid .photo,#grid figcaption{min-width:0;max-width:100%}
+  .upload-wrap,.admin-panel{width:100%;max-width:100%;padding-inline:12px}
+  .upload-card{width:100%;max-width:100%;grid-template-columns:minmax(0,1fr)}
+  .filters,.genres,.photo-actions,.toolbar,.tabs,.filter-row{
+    max-width:100%;overscroll-behavior-inline:contain;
+  }
+  .frame-dock{
+    left:50%!important;right:auto!important;
+    width:calc(100% - 16px)!important;max-width:520px!important;
+    transform:translateX(-50%)!important;
+  }
+  .frame-dock button{flex:1 1 0;min-width:0;max-width:20%;padding-inline:1px}
+  #settingsPanel,.cm,.cm-box,#dr,#libraryPanel,#lb{
+    max-width:100vw;box-sizing:border-box;
+  }
+  #settingsPanel{padding:10px}
+  .settings-card,.cm-box{width:100%;max-width:560px}
+  #gx.full{width:100%!important;max-width:100%!important;left:0!important}
+  .fab{right:12px;max-width:calc(100% - 24px)}
+}
+@media(max-width:380px){
+  body>nav:not(.frame-dock){gap:6px!important;padding-inline:10px!important}
+  .section-head h2{font-size:clamp(21px,7vw,30px)}
+  #grid{columns:2 120px;column-gap:8px;padding-inline:10px}
+  .frame-dock button .fd-label{font-size:8px}
+}
+/* Respect users who request less motion. */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+}
