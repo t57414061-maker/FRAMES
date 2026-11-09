@@ -1,0 +1,183 @@
+/* FRAME Unslop — presentation-only refinement layer
+   Keeps existing markup, application JavaScript, Supabase calls and auth untouched.
+   Load after frame-identity.css. */
+:root{
+  --u-bg:#080808;
+  --u-surface:#111111;
+  --u-raised:#171717;
+  --u-text:#f3f3ef;
+  --u-muted:#a4a49e;
+  --u-line:rgba(255,255,255,.14);
+  --u-accent:#e8e8e3;
+  --u-content:1200px;
+  --u-gutter:clamp(16px,3.2vw,32px);
+  --u-radius:5px;
+  --u-ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
+}
+html,body{max-width:100%;min-width:0;background:var(--u-bg);color:var(--u-text)}
+body{font-family:Manrope,"Helvetica Neue",Arial,sans-serif;line-height:1.6;letter-spacing:0;overflow-x:clip}
+*,*::before,*::after{box-sizing:border-box}
+img,video,canvas,svg{max-width:100%}
+button,input,select,textarea{font:inherit}
+:focus-visible{outline:2px solid var(--u-accent);outline-offset:3px}
+::selection{background:#e8e8e3;color:#080808}
+
+/* A single restrained type and spacing system. */
+h1,h2,h3,h4,p{overflow-wrap:anywhere}
+h1,h2,h3,.serif{letter-spacing:-.035em}
+.section-head,.filters,.upload-wrap,.admin-panel{
+  width:min(100%,var(--u-content));margin-left:auto;margin-right:auto;
+}
+.section-head{padding-left:var(--u-gutter);padding-right:var(--u-gutter);margin-bottom:24px;align-items:flex-end}
+.section-head h2,.upload-copy h2{font-weight:500;line-height:1.08}
+.section-head p,.muted,.hero-note{color:var(--u-muted)}
+section{padding-top:clamp(64px,8vw,104px)}
+#featured{padding-top:clamp(74px,10vw,120px);padding-bottom:clamp(36px,5vw,64px)}
+#featured .arc-head{width:min(100%,var(--u-content));padding-left:var(--u-gutter);padding-right:var(--u-gutter);margin-left:auto;margin-right:auto}
+#featured .arc-head h2{font-weight:500;letter-spacing:-.045em;line-height:1.02}
+#featured .arc-head p{max-width:48ch;line-height:1.7}
+#why>.cap{padding-left:var(--u-gutter);padding-right:var(--u-gutter)}
+
+/* Navigation: stable, readable and deliberately quiet. */
+body>nav:not(.frame-dock){
+  min-height:64px;padding:calc(10px + env(safe-area-inset-top,0px)) var(--u-gutter) 10px;
+  gap:18px;background:rgba(8,8,8,.9);border-bottom:1px solid var(--u-line);
+  box-shadow:none;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+}
+body>nav:not(.frame-dock) .brand{font-size:17px;letter-spacing:.2em}
+body>nav:not(.frame-dock) .links{gap:clamp(12px,2vw,24px)}
+body>nav:not(.frame-dock) .links a{font-size:12px;white-space:nowrap}
+body>nav:not(.frame-dock) .nav-actions{gap:8px}
+.iconbtn{width:40px;height:40px;border-radius:4px;border:1px solid var(--u-line);background:transparent;color:var(--u-text)}
+.iconbtn:hover{background:rgba(255,255,255,.07)}
+
+/* Hero: keep the real video, remove decorative glow and excess motion. */
+header.hero{
+  min-height:min(880px,94svh);padding:clamp(118px,16vh,170px) var(--u-gutter) 76px;
+  background:#080808;color:#fff;isolation:isolate;
+}
+.hero-bg,.hero-video{max-width:none}
+.hero-video{opacity:.58}
+.hero-shade{
+  background:linear-gradient(180deg,rgba(0,0,0,.52),rgba(0,0,0,.24) 42%,rgba(0,0,0,.84))!important;
+}
+.hero-content{width:min(100%,1080px);max-width:1080px;margin:0 auto}
+.hero-content>*{animation:none!important}
+.hero .eyebrow,.hero .hv-rel{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.hero h1,.hero .hv-title{font-weight:500;letter-spacing:-.055em;line-height:.92}
+.hero .hv-sub{max-width:52ch;line-height:1.75;color:rgba(255,255,255,.78)}
+.hero-ctas,.hero .hv-bottom{gap:10px;flex-wrap:wrap}
+.hero .btn,.btn{
+  min-height:42px;padding:10px 16px;border-radius:4px;
+  box-shadow:none!important;font-weight:650;letter-spacing:.01em;
+}
+.btn:not(.outline):not(.ghost){background:var(--u-accent)!important;color:#090909!important;border:1px solid var(--u-accent)!important}
+.btn.outline,.btn.ghost{background:transparent!important;color:var(--u-text)!important;border:1px solid rgba(255,255,255,.36)!important}
+.btn:hover{transform:translateY(-1px);filter:none}
+
+/* Gallery: consistent edges, calmer hover, clear metadata hierarchy. */
+#grid{
+  width:min(100%,var(--u-content));margin:0 auto;padding:0 var(--u-gutter);
+  columns:3 250px;column-gap:18px;
+}
+#grid figure{margin:0 0 22px;break-inside:avoid}
+#grid .photo{overflow:hidden;border:1px solid var(--u-line);border-radius:var(--u-radius);background:var(--u-surface);box-shadow:none}
+#grid .photo img{display:block;width:100%;height:auto;transition:transform .35s var(--u-ease)}
+#grid .photo:hover{transform:none;box-shadow:none;border-color:rgba(255,255,255,.4)}
+#grid .photo:hover img{transform:scale(1.015);filter:none}
+#grid figcaption{padding:11px 2px 14px;background:transparent;gap:5px}
+#grid figcaption strong{font-size:13px;font-weight:650;line-height:1.45}
+#grid figcaption small{font-size:11px;color:var(--u-muted)}
+.photo-actions{gap:4px;flex-wrap:wrap}
+.act{min-height:38px;height:38px;border-radius:4px;padding:0 9px;color:var(--u-text)}
+.act:hover{background:rgba(255,255,255,.08);color:#fff}
+.filter{min-height:38px;padding:8px 13px;border:1px solid var(--u-line);border-radius:4px;background:transparent;color:var(--u-text)}
+.filter.active,.filter[aria-pressed="true"]{background:var(--u-accent)!important;color:#090909!important;border-color:var(--u-accent)!important}
+.filters{padding-left:var(--u-gutter);padding-right:var(--u-gutter);gap:8px}
+.search,.field,input,select,textarea{
+  min-height:42px;border:1px solid var(--u-line)!important;border-radius:4px!important;
+  background:#101010!important;color:var(--u-text)!important;box-shadow:none!important;
+}
+.search::placeholder,.field::placeholder,input::placeholder,textarea::placeholder{color:#858580!important}
+
+/* Upload and admin surfaces share one component language. */
+.upload-card,.accountbar,.admin-item,.settings-card{
+  border:1px solid var(--u-line)!important;border-radius:5px!important;
+  background:var(--u-surface)!important;box-shadow:none!important;
+}
+.upload-card{padding:clamp(20px,4vw,36px);gap:clamp(18px,3vw,30px)}
+.dropzone{border:1px dashed rgba(255,255,255,.34);border-radius:4px;background:rgba(255,255,255,.025)}
+.upload-copy p,.notice{line-height:1.65}
+.admin-panel{padding-left:var(--u-gutter);padding-right:var(--u-gutter)}
+.admin-item{padding:12px}
+.admin-item img{border-radius:3px}
+.genre-tag{border-radius:3px}
+
+/* Dialogs and drawers: readable panels, no excessive glass layers. */
+#dr,.cm-box,.settings-card,#libraryPanel,.admin-item,.upload-card{
+  -webkit-backdrop-filter:none!important;backdrop-filter:none!important;
+}
+#dr{background:#101010!important;border:1px solid var(--u-line)!important;box-shadow:0 18px 60px rgba(0,0,0,.5)}
+#dr li button{border-radius:4px}
+.cm-box{background:#111!important;border:1px solid var(--u-line)!important;border-radius:8px 8px 0 0}
+#toast{border-radius:4px;box-shadow:none}
+#lb{background:rgba(0,0,0,.96)}
+
+/* Floating dock: fixed width, equal targets, safe-area clearance. */
+.frame-dock{
+  width:min(520px,calc(100vw - 20px));max-width:calc(100vw - 20px);
+  left:50%;right:auto;bottom:max(10px,env(safe-area-inset-bottom));
+  display:flex;justify-content:space-between;gap:3px;padding:5px;
+  border:1px solid rgba(255,255,255,.2);border-radius:8px;
+  background:rgba(12,12,12,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 8px 28px rgba(0,0,0,.38);transform:translateX(-50%);
+}
+.frame-dock button{
+  flex:1;min-width:0;width:20%;min-height:48px;padding:5px 2px;
+  border-radius:4px;gap:3px;color:var(--u-text);
+}
+.frame-dock button[aria-current="page"]{background:rgba(255,255,255,.12);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.frame-dock button .fd-icon{font-size:18px}
+.frame-dock button .fd-label{font-size:10px;white-space:nowrap;letter-spacing:0}
+body{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}
+#toast{bottom:calc(94px + env(safe-area-inset-bottom,0px))}
+.fab{bottom:calc(94px + env(safe-area-inset-bottom,0px))}
+
+/* Remove ornamental effects, not content or functional transitions. */
+.hero:before,.hero:after{display:none!important}
+.featured-strip{mask-image:none;-webkit-mask-image:none}
+.track{animation:none!important}
+.photo,.genre,.admin-item,.upload-card,.accountbar{transition:border-color .2s ease,background-color .2s ease}
+.photo:hover,.genre:hover{transform:none}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
+
+/* Responsive layout: prevent right-edge clipping and preserve tap targets. */
+@media(max-width:900px){
+  #grid{columns:2 190px;column-gap:14px}
+  body>nav:not(.frame-dock) .links{gap:10px}
+}
+@media(max-width:700px){
+  header.hero{min-height:82svh;padding:116px 16px 72px}
+  .hero h1,.hero .hv-title{font-size:clamp(3.3rem,15vw,6rem)!important;letter-spacing:-.05em}
+  .hero .hv-bottom{align-items:flex-start}
+  .section-head,.filters,#featured .arc-head{padding-left:16px;padding-right:16px}
+  #grid{width:100%;padding:0 12px;columns:2 135px;column-gap:10px}
+  #grid figure{margin-bottom:16px}
+  #grid figcaption{padding:8px 1px 12px}
+  .photo-actions{width:100%;max-width:100%;gap:2px}
+  .act{min-width:34px;padding:0 6px}
+  .upload-wrap,.admin-panel{padding-left:12px;padding-right:12px}
+  .upload-card{padding:20px;grid-template-columns:1fr}
+  .frame-dock{width:calc(100vw - 16px);max-width:calc(100vw - 16px);gap:1px;padding:4px}
+  .frame-dock button{min-width:0;padding:5px 1px;min-height:46px}
+  .frame-dock button .fd-label{font-size:9px}
+}
+@media(max-width:360px){
+  .frame-dock button .fd-label{font-size:8px}
+  .frame-dock button .fd-icon{font-size:16px}
+  .hero .btn{padding:9px 11px;font-size:12px}
+  #grid{columns:2 125px}
+}
