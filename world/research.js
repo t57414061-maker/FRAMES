@@ -1603,7 +1603,7 @@ window.FRAME_WORLD_RESEARCH = {
   },
   "Kandy": {
     "status": "Source checked",
-    "summary": "Kandy, known in Sinhala as Maha Nuvara, sits in a hill-ringed valley in central Sri Lanka. It was the centre of the island’s last kingdom and remains a major religious and cultural city, surrounded by the Central Province’s tropical highlands and tea-growing country.",
+    "summary": "Kandy, known in Sinhala as Maha Nuvara, sits in a hill-ringed valley in central Sri Lanka. It is the capital of the Central Province and an important administrative and religious city, surrounded by tropical plantations and tea country.",
     "explore": "Pair the Temple of the Sacred Tooth Relic with the historic city centre and restored Kandyan-era buildings such as Ehelepola Walawwa, now home to a wax museum and cultural displays.",
     "photo": "Look for layered views across the hill-ringed city, Kandyan architectural details and the courtyards of historic buildings. Be mindful of worshippers and local rules at religious sites.",
     "visit": "Kandy is an established visitor destination. Check opening and access arrangements at individual heritage sites, and observe local dress and photography guidance at religious places.",
