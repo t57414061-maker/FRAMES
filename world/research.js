@@ -1564,5 +1564,86 @@ window.FRAME_WORLD_RESEARCH = {
     "visit": "The site is in a rural area and may have limited facilities. Confirm route conditions and visitor arrangements before travelling.",
     "source": "Albanian National Tourism Agency — Amantia Archaeological Park",
     "url": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+  },
+  "Tulagi": {
+    "status": "Source checked",
+    "summary": "Tulagi is an island town in the Central Islands Province, set above the waters of Iron Bottom Sound. It served as the first administrative capital of the British Solomon Islands Protectorate and remains an important place for Kula history and the Pacific campaign of the Second World War.",
+    "explore": "Begin with Nambawan Haus Museum, whose exhibitions trace more than 2,500 years of Kula history, Tulagi’s colonial-era capital role and the Second World War in the Pacific. The museum also presents traditional craft knowledge through its Ngella war-canoe display.",
+    "photo": "Look for the museum’s hilltop setting above Iron Bottom Sound, then frame harbour views and the island’s historic streets. Ask before photographing people or cultural objects.",
+    "visit": "Nambawan Haus Museum officially opened on 28 July 2026. The Ministry says the grounds, collections and visitor experience are still being developed; confirm current access and local arrangements with the Solomon Islands Ministry of Culture and Tourism before travelling.",
+    "source": "Solomon Islands Ministry of Culture and Tourism",
+    "url": "https://solomons.gov.sb/nambawan-haus-museum-in-tulagi-officially-opens-marking-significant-milestone-to-preserve-cultural-and-colonial-heritage-of-cip-and-solomon-islands/"
+  },
+  "Nambawan Haus Museum": {
+    "status": "Source checked",
+    "summary": "Housed in the former official residence of colonial administrator Charles Woodford, Nambawan Haus Museum looks across Iron Bottom Sound and interprets the history of Tulagi and the Central Islands. It officially opened in July 2026 as the Solomon Islands’ second national museum.",
+    "explore": "Explore exhibitions spanning more than 2,500 years of Kula history, Tulagi’s role as the first administrative capital during the British Protectorate, and the Second World War in the Pacific. The museum’s cultural displays include a traditional Ngella war canoe in the Vale Kiala (Kastom Canoe House).",
+    "photo": "Frame the restored residence against its hilltop outlook over Iron Bottom Sound. Follow staff guidance before photographing collections or culturally significant objects.",
+    "visit": "The museum was officially inaugurated on 28 July 2026. The Ministry notes that landscaping, collections and visitor interpretation are continuing; contact the Ministry or Tourism Division to confirm current visiting arrangements. No hours or fees are stated here.",
+    "source": "Solomon Islands Ministry of Culture and Tourism",
+    "url": "https://solomons.gov.sb/nambawan-haus-museum-in-tulagi-officially-opens-marking-significant-milestone-to-preserve-cultural-and-colonial-heritage-of-cip-and-solomon-islands/"
+  },
+  "Golden Gate Highlands National Park": {
+    "status": "Source checked",
+    "summary": "In South Africa’s northeastern Free State, Golden Gate Highlands National Park protects sandstone cliffs and high grasslands in the foothills of the Maluti Mountains. Its glowing rock faces, mountain trails and Basotho heritage give the park a distinctive highland character.",
+    "explore": "Follow SANParks trails such as Brandwag Buttress, Mushroom Rock and the longer Ribbok route; take the park’s scenic self-drive loops, watch for vultures and explore the Basotho Cultural Village. The Kgodumodumo Dinosaur Interpretation Centre adds a new science and heritage experience.",
+    "photo": "Use low-angle light on the sandstone cliffs and Brandwag Buttress, then contrast the rock forms with open grassland and wildlife details.",
+    "visit": "SANParks lists hiking, self-drive routes and accommodation within the park. Check current trail notices, park conservation fees and booking requirements before arrival; some guided routes require advance booking.",
+    "source": "South African National Parks (SANParks) — Golden Gate Highlands National Park",
+    "url": "https://www.sanparks.org/parks/golden-gate-highlands"
+  },
+  "Kgodumodumo Dinosaur Interpretation Centre": {
+    "status": "Source checked",
+    "summary": "Opened in June 2025 inside Golden Gate Highlands National Park, this interactive centre presents the Free State’s fossil heritage alongside Basotho cultural knowledge and folklore. Its displays bring together palaeontology, archaeology, geology and local storytelling.",
+    "explore": "Follow the centre’s three themes: palaeoscience, local dinosaurs and Indigenous knowledge. Exhibits include dinosaur fossils and models, egg nests and interpretation of the Basotho Kgodumodumo story; the surrounding park adds sandstone scenery and hiking routes.",
+    "photo": "Set the centre’s architecture against the Maluti foothills, then look for exhibit details that connect fossils, landscape and Basotho stories. Check the centre’s photography rules indoors.",
+    "visit": "SANParks currently lists the centre as open daily from 08:00 to 16:00 and offers guided tours by booking. Centre admission is separate from park conservation fees; check the official page for current rates and conditions.",
+    "source": "South African National Parks (SANParks) — Kgodumodumo Dinosaur Interpretation Centre",
+    "url": "https://www.sanparks.org/parks/golden-gate-highlands/what-to-do/activities/kgodumodumo-dinosaur-interpretation-centre"
+  },
+  "Kandy": {
+    "status": "Source checked",
+    "summary": "Kandy, known in Sinhala as Maha Nuvara, sits in a hill-ringed valley in central Sri Lanka. It is the capital of the Central Province and an important administrative and religious city, surrounded by tropical plantations and tea country.",
+    "explore": "Pair the Temple of the Sacred Tooth Relic with the historic city centre and restored Kandyan-era buildings such as Ehelepola Walawwa, now home to a wax museum and cultural displays.",
+    "photo": "Look for layered views across the hill-ringed city, Kandyan architectural details and the courtyards of historic buildings. Be mindful of worshippers and local rules at religious sites.",
+    "visit": "Kandy is an established visitor destination. Check opening and access arrangements at individual heritage sites, and observe local dress and photography guidance at religious places.",
+    "source": "Sri Lanka Tourism Development Authority — Tourist Attractions",
+    "url": "https://sltda.gov.lk/en/tourist-attractions"
+  },
+  "Ehelepola Walawwa Wax Museum": {
+    "status": "Source checked",
+    "summary": "Set within the restored Ehelepola Walawwa in Kandy, Sri Lanka’s first historical wax museum opened on 17 July 2025. Its displays use lifelike figures and recreated interiors to interpret the Kandyan Kingdom’s people, architecture, customs and crafts.",
+    "explore": "See the wax figures of historical personalities associated with the Kandyan Kingdom, then explore displays on traditional industries, royal customs and historic dining practices within the walawwa complex.",
+    "photo": "Photograph the mansion’s architecture and courtyard for a sense of the setting; ask staff about photography permissions inside the exhibition rooms.",
+    "visit": "The museum is part of the Ehelepola Walawwa visitor complex and is presented on the site’s official visitor website. Confirm current opening arrangements, admission and any access restrictions before visiting.",
+    "source": "Ehelepola Walawwa — Official visitor website; President’s Office of Sri Lanka",
+    "url": "https://www.ehelepolawalawwa.lk/"
+  },
+  "Hin Nam No National Park": {
+    "status": "Source checked",
+    "summary": "Hin Nam No National Park protects a vast limestone-karst landscape in Khammouane Province, Laos. In 2025 it became part of the transboundary Phong Nha-Ke Bang National Park and Hin Nam No National Park UNESCO World Heritage property, extending the listed landscape across the Lao–Vietnamese border.",
+    "explore": "The park’s visitor programme includes boat journeys into Xe Bang Fai Cave, village-based forest walks, waterfalls and routes associated with the historic Ho Chi Minh Trail. The park website lists local tourism groups and suggested itineraries.",
+    "photo": "Look for limestone cliffs, forested karst, river passages and the immense chambers of Xe Bang Fai Cave. Keep distance from wildlife and respect village and cultural protocols.",
+    "visit": "The park asks visitors to hire local guides for village and cave walks and warns that unexploded ordnance remains in the area, so visitors must stay on used paths. Arrange guides, boat services and accommodation with local communities before travelling.",
+    "source": "Hin Nam No National Park — Visit; UNESCO World Heritage Centre",
+    "url": "https://hinnamno.org/visit-2/"
+  },
+  "Gola Rainforest National Park": {
+    "status": "Source checked",
+    "summary": "Gola Rainforest National Park spans three protected forest blocks in Sierra Leone’s Eastern and Southern Provinces. Together with Tiwai Island Wildlife Sanctuary, it forms the Gola-Tiwai Complex, inscribed on the UNESCO World Heritage List in 2025 and protecting one of the largest remaining blocks of Upper Guinean rainforest.",
+    "explore": "Choose guided rainforest walks and birdwatching, or arrange a community stay around Lalehun and other park villages. Specialist trips can focus on rare forest birds and mammals; multi-day hikes can connect Gola South with the already-listed Tiwai Island Wildlife Sanctuary.",
+    "photo": "Work with guides to photograph rainforest canopy, forest trails and birdlife without disturbing wildlife or community activities.",
+    "visit": "Advance booking is required to arrange permits, food, accommodation, camping equipment and guides. The park requires all visitors to be accompanied by park staff and a community guide; contact Gola Rainforest Conservation before travelling.",
+    "source": "Gola Rainforest National Park — Visitor Information; UNESCO World Heritage Centre",
+    "url": "https://golarainforest.org/visiting-gola"
+  },
+  "Cavernas do Peruaçu National Park": {
+    "status": "Source checked",
+    "summary": "In northern Minas Gerais, Brazil, Cavernas do Peruaçu National Park protects a striking karst landscape of deep canyons, vast caves, limestone arches and underground river passages. The Peruaçu River Canyon, entirely within the park, was inscribed on the UNESCO World Heritage List in 2025 for its exceptional natural beauty and geological significance.",
+    "explore": "Janelão Cave and the Arco do André route reveal monumental chambers, natural skylights, limestone formations and views of the Peruaçu canyon. Official park itineraries also include other caves, viewpoints and trails through the region’s dry forests.",
+    "photo": "Use the cave skylights to show the contrast between the semi-arid surface and the greener chambers below. Treat rock art and archaeological features as protected heritage and follow guide instructions.",
+    "visit": "All visits require an accredited environmental guide and advance scheduling with ICMBio; the visit is confirmed only after email confirmation. The official visitor page currently lists Tuesday–Sunday, 08:00–18:00, with entry to attractions ending earlier; verify current conditions and guide availability before travel.",
+    "source": "ICMBio — Cavernas do Peruaçu Visitor Information; UNESCO World Heritage Centre",
+    "url": "https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/cerrado/lista-de-ucs/parna-cavernas-do-peruacu/informacoes-sobre-visitacao-parna-cavernas-do-peruacu"
   }
 };

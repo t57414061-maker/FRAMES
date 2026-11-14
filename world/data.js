@@ -964,7 +964,8 @@ window.FRAME_WORLD_DATA = {
           "Vientiane",
           "Luang Prabang",
           "Plain of Jars",
-          "Kuang Si Falls"
+          "Kuang Si Falls",
+          "Hin Nam No National Park"
         ],
         [
           "Lebanon",
@@ -1079,7 +1080,9 @@ window.FRAME_WORLD_DATA = {
           "Sri Jayawardenepura Kotte",
           "Sigiriya",
           "Temple of the Sacred Tooth Relic",
-          "Yala National Park"
+          "Yala National Park",
+          "Kandy",
+          "Ehelepola Walawwa Wax Museum"
         ],
         [
           "Syria",
@@ -2145,7 +2148,8 @@ window.FRAME_WORLD_DATA = {
           "Freetown",
           "Tiwai Island",
           "Tacugama Chimpanzee Sanctuary",
-          "Bunce Island"
+          "Bunce Island",
+          "Gola Rainforest National Park"
         ],
         [
           "Somalia",
@@ -2159,7 +2163,9 @@ window.FRAME_WORLD_DATA = {
           "Pretoria",
           "Table Mountain National Park",
           "Robben Island",
-          "iSimangaliso Wetland Park"
+          "iSimangaliso Wetland Park",
+          "Golden Gate Highlands National Park",
+          "Kgodumodumo Dinosaur Interpretation Centre"
         ],
         [
           "South Sudan",
@@ -2439,7 +2445,8 @@ window.FRAME_WORLD_DATA = {
           "Iguaçu National Park",
           "Rio de Janeiro Historic Landscapes",
           "Lençóis Maranhenses",
-          "Amazonia Theaters"
+          "Amazonia Theaters",
+          "Cavernas do Peruaçu National Park"
         ],
         [
           "Chile",
@@ -2598,7 +2605,9 @@ window.FRAME_WORLD_DATA = {
           "Honiara",
           "Marovo Lagoon",
           "East Rennell",
-          "Bonegi Beach"
+          "Bonegi Beach",
+          "Tulagi",
+          "Nambawan Haus Museum"
         ],
         [
           "Tonga",
