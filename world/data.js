@@ -1138,7 +1138,9 @@ window.FRAME_WORLD_DATA = {
           "Samarkand",
           "Bukhara Historic Centre",
           "Khiva Itchan Kala",
-          "Tashkent Modernist Architecture"
+          "Tashkent Modernist Architecture",
+          "Margilan",
+          "Burkhoniddin Marginoni Tourism Complex"
         ],
         [
           "Vietnam",
@@ -1913,7 +1915,13 @@ window.FRAME_WORLD_DATA = {
           "Mount Karthala",
           "Mohéli Marine Park",
           "Chomoni Beach",
-          "The Medinas of the Historic Sultanates of the Comoros"
+          "The Medinas of the Historic Sultanates of the Comoros",
+          "Moroni Historic Medina",
+          "Ntsudjini Historic Medina",
+          "Itsandra Historic Medina",
+          "Ikoni Historic Medina",
+          "Mutsamudu Historic Medina",
+          "Domoni Historic Medina"
         ],
         [
           "Republic of the Congo",
@@ -2124,7 +2132,11 @@ window.FRAME_WORLD_DATA = {
           "Obo National Park",
           "Pico Cão Grande",
           "Ilhéu das Rolas",
-          "The Roças of São Tomé and Príncipe"
+          "The Roças of São Tomé and Príncipe",
+          "Roça Monte Café",
+          "Casa Museu Almada Negreiros",
+          "Bom Sucesso Botanical Garden",
+          "São Nicolau Waterfall"
         ],
         [
           "Senegal",
@@ -2439,7 +2451,10 @@ window.FRAME_WORLD_DATA = {
           "Iguaçu National Park",
           "Rio de Janeiro Historic Landscapes",
           "Lençóis Maranhenses",
-          "Amazonia Theaters"
+          "Amazonia Theaters",
+          "Anavilhanas National Park",
+          "Jaú National Park",
+          "Mamirauá Sustainable Development Reserve"
         ],
         [
           "Chile",
