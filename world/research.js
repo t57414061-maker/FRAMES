@@ -1564,5 +1564,140 @@ window.FRAME_WORLD_RESEARCH = {
     "visit": "The site is in a rural area and may have limited facilities. Confirm route conditions and visitor arrangements before travelling.",
     "source": "Albanian National Tourism Agency — Amantia Archaeological Park",
     "url": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+  },
+  "Moroni Historic Medina": {
+    "status": "Source checked",
+    "summary": "The historic medina of Moroni is one of the six component towns in the 2026-inscribed Medinas of the Historic Sultanates of the Comoros. The serial property preserves urban fabric shaped by Swahili traditions, Islamic social practices and Indian Ocean exchange.",
+    "explore": "Use the UNESCO component map as a starting point, then explore historic lanes and public spaces with local interpretation. Across the six medinas, UNESCO identifies compact urban fabrics, stone houses, palaces, public squares and defensive structures.",
+    "photo": "Work from public lanes and squares; ask before photographing residents, private homes or religious interiors.",
+    "visit": "This is a living urban quarter rather than a ticketed attraction. Confirm local access and guide arrangements, and respect homes, mosques and community protocols.",
+    "source": "UNESCO World Heritage Centre — 2026 inscription and component map",
+    "url": "https://whc.unesco.org/en/list/1768/maps/"
+  },
+  "Ntsudjini Historic Medina": {
+    "status": "Source checked",
+    "summary": "Ntsudjini is one of the six historic towns included in the Comoros' 2026 UNESCO World Heritage property. Its medina forms part of an island urban tradition that developed from early settlements into sultanate city-states.",
+    "explore": "Explore the historic town through its public spaces and street pattern, using local interpretation to understand the shared social and architectural traditions of the Comorian medinas.",
+    "photo": "Look for the relationship between historic lanes and the wider town; seek permission before photographing people, homes or active religious spaces.",
+    "visit": "The medina is part of a living town, not a managed ticketed site. Check local access and guide arrangements, and follow community protocols.",
+    "source": "UNESCO World Heritage Centre — 2026 inscription and component map",
+    "url": "https://whc.unesco.org/en/list/1768/maps/"
+  },
+  "Itsandra Historic Medina": {
+    "status": "Source checked",
+    "summary": "Itsandra is one of the six historic Comorian towns inscribed as part of the Medinas of the Historic Sultanates of the Comoros in 2026. The serial property documents the archipelago's historic urbanism and Indian Ocean cultural connections.",
+    "explore": "Walk only where local access is appropriate and use community interpretation to understand the medina's place within the wider sultanate network.",
+    "photo": "Photograph public streets and architectural details discreetly; ask before recording residents, private property or worship.",
+    "visit": "This is a lived-in historic quarter. Confirm local access and any guide arrangements, and respect private homes and religious practice.",
+    "source": "UNESCO World Heritage Centre — 2026 inscription and component map",
+    "url": "https://whc.unesco.org/en/list/1768/maps/"
+  },
+  "Ikoni Historic Medina": {
+    "status": "Source checked",
+    "summary": "Ikoni is a named component of the six-town Medinas of the Historic Sultanates of the Comoros, inscribed on the UNESCO World Heritage List in 2026. Its historic fabric contributes to the property's record of Comorian island urban culture.",
+    "explore": "Use the UNESCO map to locate the protected component, then learn about the historic town through local voices and interpretation of the wider medina tradition.",
+    "photo": "Keep photography observational and low-impact; ask permission before photographing residents, homes or religious interiors.",
+    "visit": "The historic area sits within a living community. Confirm local access and guide arrangements before visiting; do not treat private or sacred spaces as public attractions.",
+    "source": "UNESCO World Heritage Centre — 2026 inscription and component map",
+    "url": "https://whc.unesco.org/en/list/1768/maps/"
+  },
+  "Mutsamudu Historic Medina": {
+    "status": "Source checked",
+    "summary": "Mutsamudu's historic medina, on the island of Anjouan, is one of six component towns in the Comoros' 2026 UNESCO World Heritage property. The series preserves former sultanate urban centres and traditions shaped by Indian Ocean exchange.",
+    "explore": "Explore the old urban fabric with local interpretation, paying attention to the relationship between lanes, public spaces and the town's continuing community life.",
+    "photo": "Look for architectural textures and the historic street pattern from public spaces; ask before photographing people, homes or religious interiors.",
+    "visit": "This is a living medina, not a ticketed monument. Confirm local access and guide arrangements, and respect residents and active religious spaces.",
+    "source": "UNESCO World Heritage Centre — 2026 inscription and component map",
+    "url": "https://whc.unesco.org/en/list/1768/maps/"
+  },
+  "Domoni Historic Medina": {
+    "status": "Source checked",
+    "summary": "Domoni is one of the six historic towns that make up the Medinas of the Historic Sultanates of the Comoros, inscribed by UNESCO in 2026. Its inclusion recognises the archipelago's distinctive historic urban fabric and living social traditions.",
+    "explore": "Approach the medina as part of a connected island heritage landscape; use local interpretation to understand the shared history of the former sultanate towns.",
+    "photo": "Frame public lanes and building details without intruding on homes or ceremonies; ask before photographing residents.",
+    "visit": "The medina is embedded in a living town. Confirm local access and guide arrangements, and follow community and religious protocols.",
+    "source": "UNESCO World Heritage Centre — 2026 inscription and component map",
+    "url": "https://whc.unesco.org/en/list/1768/maps/"
+  },
+  "Roça Monte Café": {
+    "status": "Source checked",
+    "summary": "Roça Monte Café is an 1858 plantation estate in São Tomé's Mé-Zóchi district and one of the six component sites in the 2026 UNESCO-listed Roças property. It remains associated with coffee cultivation and houses the island's Coffee Museum.",
+    "explore": "Visit the Coffee Museum to follow the process from planting and harvesting through drying and the finished product. Read the estate as part of a wider colonial plantation system built on forced migration and labour.",
+    "photo": "Document the plantation's buildings, working landscape and coffee heritage without romanticising the coercive labour history or disrupting local work.",
+    "visit": "São Tomé and Príncipe's official tourism portal lists the Coffee Museum as open 9 a.m.–5 p.m.; Sunday visits require prior appointment. Confirm current arrangements before travelling.",
+    "source": "São Tomé and Príncipe official tourism portal; UNESCO World Heritage Centre — Roças component map",
+    "url": "https://turismo.gov.st/en/downtown-sao-tome"
+  },
+  "Casa Museu Almada Negreiros": {
+    "status": "Source checked",
+    "summary": "Casa Museu Almada Negreiros is a house museum at Roça Saudade, near Roça Monte Café. It interprets the life and work of José de Almada Negreiros, the artist and writer born on São Tomé in 1893, and also presents work by São Toméan artists and craftspeople.",
+    "explore": "Join a guided visit to learn about Almada Negreiros and explore the historic house and its art-exhibition spaces.",
+    "photo": "Ask before photographing interiors, artworks, staff or visitors, and respect the character of the historic house.",
+    "visit": "The official tourism portal describes guided visits and recent renovations but does not publish opening hours. Confirm arrangements with the site or local tourism office.",
+    "source": "São Tomé and Príncipe official tourism portal — Downtown São Tomé",
+    "url": "https://turismo.gov.st/en/downtown-sao-tome"
+  },
+  "Bom Sucesso Botanical Garden": {
+    "status": "Source checked",
+    "summary": "Bom Sucesso Botanical Garden lies in the island's central highlands, in an area formerly associated with Roça Monte Café. The official tourism portal describes more than 400 endemic plant species and identifies the garden as a gateway to Obô Natural Park.",
+    "explore": "Explore the botanical collection and learn how the garden supports education, conservation and research before continuing onto authorised routes in the surrounding forest.",
+    "photo": "Focus on plant forms and habitat details; do not pick plants or leave marked paths.",
+    "visit": "The tourism portal recommends a certified local guide for marked trails in the area. Check current garden access and trail conditions before setting out.",
+    "source": "São Tomé and Príncipe official tourism portal — Downtown São Tomé",
+    "url": "https://turismo.gov.st/en/downtown-sao-tome"
+  },
+  "São Nicolau Waterfall": {
+    "status": "Source checked",
+    "summary": "São Nicolau Waterfall is a forest-framed cascade in central São Tomé, located beyond Roça Saudade. The national tourism portal identifies it as one of the island's best-known waterfalls.",
+    "explore": "Experience the waterfall as part of the island's central highland landscape, where plantation heritage, forest and water routes sit close together.",
+    "photo": "Use established viewpoints and keep clear of slippery edges; avoid climbing on wet rock or disturbing the surrounding vegetation.",
+    "visit": "The official tourism portal does not publish fixed hours or access conditions. Confirm the current route locally and follow certified-guide advice for nearby marked trails.",
+    "source": "São Tomé and Príncipe official tourism portal — Downtown São Tomé",
+    "url": "https://turismo.gov.st/en/downtown-sao-tome"
+  },
+  "Anavilhanas National Park": {
+    "status": "Source checked",
+    "summary": "Anavilhanas National Park protects a vast river archipelago of forested islands and channels on the Rio Negro in Amazonas, Brazil. A 2026 Ministry of Tourism guide highlights boat excursions through the archipelago as a key way to experience its changing floodplain landscapes.",
+    "explore": "Explore the channels and islands by authorised boat excursion, learning how the blackwater river and seasonally flooded igapó forest shape the park.",
+    "photo": "Photograph from boats and authorised viewpoints; keep distance from wildlife and follow park rules around sensitive habitats.",
+    "visit": "ICMBio manages the park and publishes visitor information. Confirm current access rules, water-level conditions and local operator arrangements before travelling.",
+    "source": "Brazil Ministry of Tourism — Central Amazon Conservation Complex; ICMBio — Anavilhanas National Park",
+    "url": "https://www.gov.br/turismo/pt-br/assuntos/noticias/amazonia-central-patrimonio-mundial-da-unesco-protege-mais-de-6-milhoes-de-hectares-de-floresta/"
+  },
+  "Jaú National Park": {
+    "status": "Source checked",
+    "summary": "Jaú National Park is a major protected landscape in central Amazonia, where blackwater rivers, flooded forests, seasonal beaches and archaeological traces form part of the Central Amazon Conservation Complex.",
+    "explore": "ICMBio describes river journeys along the Jaú, Carabinani and Unini as a way to experience the park's igapó forests, wildlife and seasonal river landscapes.",
+    "photo": "Work from authorised boats and established locations; do not disturb wildlife, remove archaeological material or enter restricted areas.",
+    "visit": "ICMBio's visitor information notes that specialist tourism operators serve the Manaus–Jaú route. This is a remote river destination; confirm operator arrangements, current access rules and conditions with ICMBio before travel.",
+    "source": "ICMBio — Jaú National Park visitor information; Brazil Ministry of Tourism — Central Amazon Conservation Complex",
+    "url": "https://www.gov.br/icmbio/pt-br/assuntos/unidade-de-conservacao/unidades-de-biomas/amazonia/lista-de-ucs/parna-do-jau/informacoes-sobre-visitacao-2013-parna-do-jau"
+  },
+  "Mamirauá Sustainable Development Reserve": {
+    "status": "Source checked",
+    "summary": "Mamirauá protects seasonally flooded várzea forests and lakes in the Middle Solimões region of Amazonas. Its community-based tourism model is centred on Uakari Lodge, where local residents, guides and researchers help interpret the reserve.",
+    "explore": "Join organised wildlife and forest excursions, learn about floodplain ecology and meet community members through the reserve's established community-based tourism programme.",
+    "photo": "Use low-impact wildlife photography and follow local guidance around communities, research areas and sensitive habitats.",
+    "visit": "Visitor access is organised through Uakari Lodge and its current packages, transfers and guided activities. Check availability and arrangements directly with the official lodge before travelling.",
+    "source": "Instituto Mamirauá — Uakari Lodge and community-based tourism; Brazil Ministry of Tourism",
+    "url": "https://mamiraua.org.br/noticias/pousada-flutuante-com-reconhecimento-internacional-une-comunidades-tradicionais-ciencia-e-turismo-na-amazonia/"
+  },
+  "Margilan": {
+    "status": "Source checked",
+    "summary": "Margilan is a historic city in Uzbekistan's Fergana Valley, long associated with Silk Road trade, silk-making and traditional crafts. The national tourism board highlights the city as a growing cultural destination beyond the country's best-known heritage centres.",
+    "explore": "Discover Margilan's craft and silk traditions, and include the recently opened Burkhoniddin Marginoni complex for a contemporary presentation of Fergana Valley history and culture.",
+    "photo": "Look for the textures of silk, craft workshops and the city's historic urban fabric; ask before photographing artisans or private workspaces.",
+    "visit": "Use current local tourism information for workshop visits and cultural venues; opening arrangements differ by site and are not specified in the cited overview.",
+    "source": "Uzbekistan Travel — national tourism portal",
+    "url": "https://uzbekistan.travel/en/o/burkhoniddin-marginoni-tourism-complex-new-symbol-modern-margilan/"
+  },
+  "Burkhoniddin Marginoni Tourism Complex": {
+    "status": "Source checked",
+    "summary": "Officially opened on 27 April 2026 in Margilan's Navruz neighbourhood, the 35-hectare Burkhoniddin Marginoni Tourism Complex brings together cultural, educational and visitor facilities celebrating the Fergana Valley and the legacy of scholar Burkhoniddin Marginoni.",
+    "explore": "Explore the local-history museum, Maqom Theatre, House of Otabek and Kumush, open-air amphitheatre, writers and artists alley, and the complex's public recreational spaces.",
+    "photo": "Capture the contemporary architecture and cultural spaces respectfully; check photography rules inside the museum and performance venues.",
+    "visit": "Uzbekistan Travel describes guided tours, cultural events and visitor facilities but does not provide a fixed public schedule. Confirm current opening arrangements and event programmes locally.",
+    "source": "Uzbekistan Travel — Burkhoniddin Marginoni Tourism Complex",
+    "url": "https://uzbekistan.travel/en/o/burkhoniddin-marginoni-tourism-complex-new-symbol-modern-margilan/"
   }
 };
