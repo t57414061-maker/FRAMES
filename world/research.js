@@ -1564,5 +1564,59 @@ window.FRAME_WORLD_RESEARCH = {
     "visit": "The site is in a rural area and may have limited facilities. Confirm route conditions and visitor arrangements before travelling.",
     "source": "Albanian National Tourism Agency — Amantia Archaeological Park",
     "url": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+  },
+  "Samoa Culture and Arts Centre": {
+    "status": "Source checked",
+    "summary": "A newly opened cultural centre beside Samoa’s Ministry of Education and Culture in Apia, presenting Samoan arts, traditions and fa’a Samoa through exhibition galleries, interactive activities, workshops and cultural programmes.",
+    "explore": "Explore displays on weaving, carving and tattooing, learn about fa’a Samoa, and look for participatory activities such as pandanus weaving and traditional dance. The centre also hosts cultural performances, workshops and educational programmes with local practitioners.",
+    "photo": "Look for the contemporary building’s fale-inspired forms, tapa-cloth designs and carved wooden motifs. Ask before photographing artisans, performers or participants in workshops.",
+    "visit": "The ministry describes the centre as newly opened and welcoming visitors, but its page does not publish opening hours, admission details or a regular performance schedule. Confirm current public access and programme arrangements with the Ministry of Education and Culture.",
+    "source": "Samoa Ministry of Education and Culture — Samoa Culture and Arts Centre",
+    "url": "https://www.mesc.gov.ws/samoa-culture-and-arts-centre/"
+  },
+  "Damodar Arts Village": {
+    "status": "Source checked",
+    "summary": "A redeveloped cultural and lifestyle destination in Pacific Harbour, Fiji, officially opened in October 2025. It revives the former Arts Village and Cultural Centre as a place for Fijian performance, craft, community enterprise and visitor experiences.",
+    "explore": "The official tourism feature describes a recreated Fijian island village with a bure kalou, chief’s bure and artisan bures, alongside meke performances, storytelling, Beqa firewalking, craft outlets and cafés.",
+    "photo": "Capture the village architecture, craft demonstrations and performances as cultural experiences rather than staged backdrops. Ask performers and artisans before making close portraits or recordings.",
+    "visit": "Fiji’s tourism feature confirms the village officially opened on 20 October 2025 and describes its cultural and artisan offerings. It does not provide a current daily schedule or admission information, so check the operator’s latest arrangements before visiting.",
+    "source": "Fiji Tourism — Damodar Arts Village Opens",
+    "url": "https://specialist.fiji.travel/news/damodar-arts-village-opens"
+  },
+  "Serengeti Visitor Centre": {
+    "status": "Source checked",
+    "summary": "The reconstructed and expanded Serengeti Visitor Centre at Seronera, in central Serengeti National Park, was inaugurated by Tanzania National Parks on 7 October 2026 as part of the park’s 75th-anniversary programme.",
+    "explore": "TANAPA describes exhibitions on Serengeti wildlife, ecology, conservation history and cultural significance, a dedicated migration walkway, more than 700 metres of interpretive walking trails, rest areas and cultural spaces. The centre also provides information about Tanzania’s national parks.",
+    "photo": "Look for the migration interpretation, conservation displays and the relationship between the visitor centre and the central Serengeti landscape. Follow staff guidance on photography inside exhibition spaces.",
+    "visit": "TANAPA confirms the centre’s inauguration and visitor facilities but does not publish daily opening hours, admission details or booking instructions in its announcement. Check TANAPA’s current visitor information before visiting.",
+    "source": "Tanzania National Parks (TANAPA) — TANAPA unveils a new visitor centre in Serengeti",
+    "url": "https://www.tanzaniaparks.go.tz/news/tanapa-unveils-1-3-million-euros-ultra-modern-visitors-centre-in-serengeti@VTJGc2RHVmtYMStPTUxyV0ltSVpSWUFQVDBkaWxLUUl4ckNJY1VyNmJNMD0"
+  },
+  "Grasslands National Park": {
+    "status": "Source checked",
+    "summary": "Formally declared on 9 October 2026, Grasslands National Park comprises 18 properties covering 10,225.9242 hectares in South Africa’s Eastern Cape highlands between Nqanqarhu and Rhodes. The designation protects under-represented grassland ecosystems and part of the Eastern Cape Drakensberg Strategic Water Source Area.",
+    "explore": "Read the park as a new conservation landscape shaped by biodiversity stewardship: participating landowners retain ownership while committing their properties to agreed conservation arrangements. The declaration establishes the park’s protected status, not a published visitor route or developed attraction.",
+    "photo": "Photograph the highland grassland landscape only from places where public access is lawful, or with the relevant landowner’s permission. The participating properties remain privately owned under stewardship agreements.",
+    "visit": "The South African Government confirms the national-park declaration and SANParks management responsibility, but the announcement does not specify public access, visitor facilities, trails or operating arrangements. Do not assume the 18 properties are freely accessible; confirm any access directly with SANParks.",
+    "source": "South African Government — Minister declares new national park in Eastern Cape",
+    "url": "https://www.gov.za/news/media-statements/minister-david-maynier-declares-new-national-park-eastern-cape-09-oct-2026"
+  },
+  "Tswaing Meteorite Crater": {
+    "status": "Source checked",
+    "summary": "A Ditsong-managed conservation and heritage landscape near Soshanguve, northwest of Pretoria, centred on one of the world’s best-preserved meteorite impact craters. The impact occurred about 220,000 years ago; the crater’s saline lake and the remains of a historic salt and soda-ash industry connect its geology with human use of the landscape.",
+    "explore": "Use the crater lookout, follow the 7.2-kilometre hiking trail, and learn about the crater lake, wetland habitats and saltworks remains. Ditsong also lists guided tours, birdwatching and community-linked heritage and environmental education.",
+    "photo": "Frame the crater rim and saline basin from the designated lookout, then look for wetland textures and the historic industrial remains. Stay on established routes and avoid disturbing the wetland or archaeological material.",
+    "visit": "Ditsong currently lists admission hours as weekdays 07:30–16:00 and weekends 06:00–14:00, except Christmas Day and Good Friday. The official page links a separate price list; confirm fees, guided-tour availability and trail conditions directly with Ditsong.",
+    "source": "Ditsong Museums of South Africa — Tswaing Meteorite Crater",
+    "url": "https://ditsong.org.za/en/our-museums/ditsong-tswaing-meteorite-crater/"
+  },
+  "China Great Wall Museum": {
+    "status": "Source checked",
+    "summary": "At the foot of the Badaling Great Wall, the China Great Wall Museum reopened to the public on 24 October 2026 after a major renovation that began in April 2022. The renewed museum presents the Wall’s history and culture through themed galleries, digital interpretation and more than 700 cultural relics.",
+    "explore": "Explore the Peace Hall, themed exhibition halls, digital exhibition hall and Great Wall Hall, whose glass façade frames views toward the Badaling Great Wall and its pedestrian street. The permanent exhibition is complemented by special and digital displays.",
+    "photo": "Use the Great Wall Hall’s panoramic glazing to connect the museum interior with the Badaling landscape. Check on-site rules before photographing individual objects or temporary exhibitions.",
+    "visit": "The Beijing municipal government reports a trial opening from 24 October 2026, daily 09:00–17:00 with last admission at 16:30, closed Tuesdays except public holidays, and free admission. During the trial phase reservations are not required, but entry is capped at 4,000 visitors per day. Visitors using non-Chinese identity documents must register their details; children aged 14 and under must be accompanied by an adult. Recheck the official page for changes.",
+    "source": "Beijing Municipal Government — China Great Wall Museum Reopens to Public After Renovation",
+    "url": "https://english.beijing.gov.cn/beijinginfo/culture/culturaltreasures/cityofmuseums/news/202610/t20261027_4920317.html"
   }
 };

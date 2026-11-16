@@ -692,7 +692,8 @@ window.FRAME_WORLD_DATA = {
           "Great Wall of China",
           "Forbidden City",
           "Terracotta Army",
-          "Jingdezhen Handicraft Porcelain Industry Sites"
+          "Jingdezhen Handicraft Porcelain Industry Sites",
+          "China Great Wall Museum"
         ],
         [
           "Georgia",
@@ -2159,7 +2160,9 @@ window.FRAME_WORLD_DATA = {
           "Pretoria",
           "Table Mountain National Park",
           "Robben Island",
-          "iSimangaliso Wetland Park"
+          "iSimangaliso Wetland Park",
+          "Grasslands National Park",
+          "Tswaing Meteorite Crater"
         ],
         [
           "South Sudan",
@@ -2181,7 +2184,8 @@ window.FRAME_WORLD_DATA = {
           "Dodoma",
           "Serengeti National Park",
           "Ngorongoro Conservation Area",
-          "Mount Kilimanjaro"
+          "Mount Kilimanjaro",
+          "Serengeti Visitor Centre"
         ],
         [
           "Togo",
@@ -2535,7 +2539,8 @@ window.FRAME_WORLD_DATA = {
           "Suva",
           "Mamanuca Islands",
           "Bouma National Heritage Park",
-          "Sigatoka Sand Dunes"
+          "Sigatoka Sand Dunes",
+          "Damodar Arts Village"
         ],
         [
           "Kiribati",
@@ -2591,7 +2596,8 @@ window.FRAME_WORLD_DATA = {
           "Apia",
           "To Sua Ocean Trench",
           "Robert Louis Stevenson Museum",
-          "Lalomanu Beach"
+          "Lalomanu Beach",
+          "Samoa Culture and Arts Centre"
         ],
         [
           "Solomon Islands",
