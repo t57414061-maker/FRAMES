@@ -1072,7 +1072,9 @@ window.FRAME_WORLD_DATA = {
           "Seoul",
           "Changdeokgung Palace",
           "Jeju Volcanic Island",
-          "Gyeongju Historic Areas"
+          "Gyeongju Historic Areas",
+          "Jeonju",
+          "Jeonju ASEAN Hall"
         ],
         [
           "Sri Lanka",
@@ -1138,7 +1140,10 @@ window.FRAME_WORLD_DATA = {
           "Samarkand",
           "Bukhara Historic Centre",
           "Khiva Itchan Kala",
-          "Tashkent Modernist Architecture"
+          "Tashkent Modernist Architecture",
+          "State Museum of the History of Uzbekistan",
+          "Andijan",
+          "Andijan Regional State Museum of History and Culture"
         ],
         [
           "Vietnam",
@@ -1863,7 +1868,8 @@ window.FRAME_WORLD_DATA = {
           "Gaborone",
           "Okavango Delta",
           "Chobe National Park",
-          "Tsodilo Hills"
+          "Tsodilo Hills",
+          "Kgalagadi Transfrontier Park"
         ],
         [
           "Burkina Faso",
@@ -1976,7 +1982,8 @@ window.FRAME_WORLD_DATA = {
           "Addis Ababa",
           "Lalibela",
           "Simien Mountains National Park",
-          "Fasil Ghebbi"
+          "Fasil Ghebbi",
+          "Bale Mountains National Park"
         ],
         [
           "Gabon",
