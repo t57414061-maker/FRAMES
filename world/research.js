@@ -1564,5 +1564,50 @@ window.FRAME_WORLD_RESEARCH = {
     "visit": "The site is in a rural area and may have limited facilities. Confirm route conditions and visitor arrangements before travelling.",
     "source": "Albanian National Tourism Agency — Amantia Archaeological Park",
     "url": "https://akt.gov.al/en/attractions/Amantia-Archaeological-Park/"
+  },
+  "Jeonju ASEAN Hall": {
+    "status": "Source checked",
+    "summary": "Opened on 17 September 2026 at the Korea Traditional Culture Center in Jeonju, the Jeonju ASEAN Hall is a permanent exhibition and cultural-exchange space introducing the arts, crafts and traditions of the 11 ASEAN member states. It is the ASEAN-Korea Centre’s third ASEAN Hall and its first venue in Korea’s Honam region.",
+    "explore": "Explore the permanent exhibition “ASEAN: Where Hands Bridge Time”, which brings together around 70 traditional objects including masks, textiles, musical instruments and puppets. The hall also has a library-style cultural space and year-round educational, hands-on and exchange programmes.",
+    "photo": "Look for the textures, patterns and craft techniques represented in the masks, textiles, instruments and puppets. Follow any on-site photography guidance and ask before making close portraits of staff or programme participants.",
+    "visit": "The ASEAN-Korea Centre lists the hall on the first floor of the Korea Traditional Culture Center, 20 Hyeonmu 1-gil, Wansan-gu, Jeonju. Published hours are Monday–Saturday, 09:00–18:00; it is closed Sundays and public holidays. Admission is free. Check the Centre’s page or the hall’s official social account for programme updates.",
+    "source": "ASEAN-Korea Centre — Jeonju ASEAN Hall Inaugural Exhibition",
+    "url": "https://www.aseankorea.org/travel/board/31/57825/board_view.do?bcstIdx2=78"
+  },
+  "State Museum of the History of Uzbekistan": {
+    "status": "Source checked",
+    "summary": "Tashkent’s State Museum of the History of Uzbekistan reopened to visitors on 24 July 2026 following a major renovation. Its renewed exhibition uses interactive and multimedia interpretation to trace the country’s history from early civilizations to the present.",
+    "explore": "Look for archaeological discoveries, displays on the Great Silk Road and historical figures, alongside sections covering Uzbekistan’s development since independence and more recent national reforms.",
+    "photo": "The renewed galleries and multimedia displays offer a visual route through Uzbekistan’s archaeological and cultural history. Check the museum’s current rules before photographing individual objects or exhibitions.",
+    "visit": "The Tourism Committee of the Republic of Uzbekistan confirms that the renovated museum has reopened to visitors. Its reopening notice does not publish current opening hours, admission prices or reservation requirements, so confirm those details directly with the museum before visiting.",
+    "source": "Tourism Committee of the Republic of Uzbekistan — Renovated State Museum of the History of Uzbekistan",
+    "url": "https://gov.uz/en/uzbektourism/news/view/197142"
+  },
+  "Andijan Regional State Museum of History and Culture": {
+    "status": "Source checked",
+    "summary": "A regional museum in Andijan, Uzbekistan, established in 1934 and based in its present building since 1982. A 2026 regional-government profile records recent reconstruction and upgraded visitor facilities. Its collections span archaeology, manuscripts, fine art, ethnography and traditional crafts, with more than 156,000 objects overall.",
+    "explore": "Explore archaeological material from the Early Paleolithic to the 15th century, manuscripts and historical documents, paintings, sculpture and displays of pottery, embroidery, jewellery, knife-making, carpet weaving and wood carving. The regional administration says the archaeological collection contains more than 50,000 objects and draws on research at over 200 ancient settlements in the region.",
+    "photo": "The museum building is noted for its monumental decorative relief. Inside, look for the variety of archaeological, manuscript, fine-art and craft collections; follow staff guidance before photographing exhibits.",
+    "visit": "The Andijan regional administration confirms the museum’s recent reconstruction and improved visitor facilities, but its 2026 article does not publish opening hours, admission prices or booking arrangements. Confirm current access directly with the museum; do not rely on older third-party listings for fees or schedules.",
+    "source": "Andijan Regional Administration — Andijan Regional State Museum of History and Culture",
+    "url": "https://gov.uz/en/andijan/news/view/209115"
+  },
+  "Kgalagadi Transfrontier Park": {
+    "status": "Source checked",
+    "summary": "A 37,000-square-kilometre transboundary protected landscape shared by Botswana and South Africa, officially opened in May 2002. Around three-quarters of the park lies in Botswana. The unfenced Kalahari landscape allows wildlife to move across the international boundary as one ecological system.",
+    "explore": "Explore the Nossob River valley, the Botswana-side wilderness trails and the Mabuasehube area with its large salt pans and campsites. The park’s red dunes, fossil river valleys, dry riverbeds and waterholes support distinctive desert wildlife and birdlife.",
+    "photo": "Look for the changing colours of the dunes and pans, the dry Nossob riverbed and wildlife gathering at waterholes. Keep a respectful distance from animals and follow park rules in sensitive wilderness areas.",
+    "visit": "Botswana Tourism describes self-drive camping and mobile tours, while SANParks lists access through gates in Botswana and South Africa (as well as Namibia). Gate arrangements and entry or exit times vary and may change; confirm current details with the relevant park authority. Botswana Tourism notes that wilderness-trail vehicle numbers are controlled and self-drive campers must travel in a convoy of at least two vehicles.",
+    "source": "Botswana Tourism Organisation — Kgalagadi Transfrontier Park; South African National Parks — Entrance Gates",
+    "url": "https://botswanatourism.co.bw/index.php/explore/kgalagadi-transfrontier-park"
+  },
+  "Bale Mountains National Park": {
+    "status": "Source checked",
+    "summary": "A 215,000-hectare highland protected landscape in Ethiopia’s south-eastern Highlands, inscribed on the UNESCO World Heritage List in 2023. Its Afro-alpine plateaus, volcanic ridges, glacial lakes, wetlands and Harenna Forest support exceptional biodiversity, including the Ethiopian wolf, mountain nyala and Bale monkey.",
+    "explore": "The park’s landscape shifts from the Sanetti Plateau and alpine moorlands to bamboo and cloud forests in the Harenna slopes. The Ethiopian Wildlife Conservation Authority lists trekking, mountain climbing, wildlife viewing, birdwatching and horse riding among the activities.",
+    "photo": "Use the contrast between the open high-altitude plateau, glacial lakes and misty Harenna Forest. Photograph wildlife from a respectful distance and follow ranger guidance in sensitive habitats.",
+    "visit": "The Ethiopian Wildlife Conservation Authority says permits are issued at the park headquarters in Dinsho and visitors must register on arrival. It lists community lodges, guesthouses in Dinsho and designated camping sites. Confirm current route access and arrangements with EWCA; the park’s visitor page does not guarantee that every trail or area is open at all times.",
+    "source": "Ethiopian Wildlife Conservation Authority — Bale Mountains National Park; UNESCO World Heritage Centre — Bale Mountains National Park",
+    "url": "https://ewca.gov.et/bale-mountains-national-park/"
   }
 };
